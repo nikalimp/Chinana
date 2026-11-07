@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chinana — прототип главной A «Почерк Ника»</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Только для прототипа: в проде шрифты локально (woff2), иероглифы — subset -->
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=PT+Serif:ital,wght@1,400;1,700&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#C8102E; --red-dark:#8E1220; --yellow:#FFC72C;
+    --cream:#FFF8EC; --beige:#EADBC2; --beige-dark:#D8C29E;
+    --ink:#1F1410; --ink-2:#5A4A40; --black:#14100E;
+    --line:rgba(31,20,16,.10);
+    --sans:"Onest",system-ui,sans-serif; --serif:"PT Serif",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace; --zh:"Noto Serif SC",serif;
+    --pad:clamp(16px,4vw,40px); --max:1240px;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  em{font-family:var(--serif);font-style:italic;font-weight:400}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad);position:relative}
+  /* видимая 12-колоночная сетка как графический приём */
+  .grid-lines{position:absolute;inset:0;pointer-events:none;display:grid;grid-template-columns:repeat(12,1fr);gap:20px;padding:0 var(--pad);max-width:var(--max);margin:0 auto}
+  .grid-lines span{border-left:1px solid var(--line)}
+  .grid-lines span:last-child{border-right:1px solid var(--line)}
+  @media (max-width:760px){.grid-lines{grid-template-columns:repeat(4,1fr)}.grid-lines span:nth-child(n+5){display:none}.grid-lines span:nth-child(4){border-right:1px solid var(--line)}}
+  .mono{font-family:var(--mono);font-size:13px;letter-spacing:.02em}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--red-dark)}
+  h1,h2{text-transform:uppercase;font-weight:700;letter-spacing:-.01em;line-height:1.02}
+  h2{font-size:clamp(28px,4.2vw,48px)}
+  .btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);transition:background .2s,color .2s}
+  .btn:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+  .btn-red{background:var(--red);border-color:var(--red);color:#fff}
+  .btn-red:hover{background:var(--red-dark);border-color:var(--red-dark)}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+  .mark{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);padding:0 .08em}
+  section{position:relative;padding:clamp(64px,9vw,120px) 0;border-top:1px solid var(--line)}
+
+  /* шапка */
+  header{position:sticky;top:0;z-index:5;background:rgba(255,248,236,.92);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:21px;letter-spacing:-.02em}
+  .seal{width:34px;height:34px;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--zh);font-weight:900;font-size:20px;border-radius:4px}
+  .nav ul{display:flex;gap:26px;list-style:none;padding:0;font-size:15px}
+  .nav ul a{text-decoration:none}
+  .nav ul a:hover{color:var(--red)}
+  @media (max-width:960px){.nav ul{display:none}}
+  .nav .btn{min-height:42px;padding:0 20px;font-size:15px}
+
+  /* первый экран */
+  .hero{border-top:0;text-align:center;padding-top:clamp(56px,8vw,104px);overflow:hidden}
+  .hero .zh-bg{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);font-family:var(--zh);font-weight:900;font-size:clamp(220px,34vw,470px);line-height:1;color:var(--red);opacity:.06;white-space:nowrap;pointer-events:none;user-select:none}
+  .hero h1{font-size:clamp(40px,7.4vw,96px);max-width:12ch;margin:22px auto 0}
+  .hero .sub-zh{font-family:var(--zh);font-weight:500;font-size:clamp(18px,2vw,24px);color:var(--red-dark);margin-top:16px;letter-spacing:.12em}
+  .hero .answer{max-width:62ch;margin:28px auto 0;font-size:clamp(17px,1.6vw,20px);color:var(--ink-2)}
+  .hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+  .name-note{display:inline-flex;gap:14px;align-items:baseline;margin-top:56px;padding:14px 22px;border:1px solid var(--line);background:var(--cream);text-align:left}
+  .name-note b{font-family:var(--zh);font-size:22px;color:var(--red);white-space:nowrap}
+  .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .tag{font-family:var(--mono);font-size:12px;padding:6px 12px;border:1px solid var(--ink);border-radius:999px;background:var(--cream)}
+
+  /* программы */
+  .head{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:end;margin-bottom:44px}
+  .head h2{grid-column:1/8}
+  .head p{grid-column:8/13;color:var(--ink-2)}
+  @media (max-width:860px){.head{display:block}.head p{margin-top:14px}}
+  .programs{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink)}
+  @media (max-width:1000px){.programs{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.programs{grid-template-columns:1fr}}
+  .prog{background:var(--cream);padding:26px 22px 24px;border-right:1px solid var(--ink);display:flex;flex-direction:column;gap:14px;min-height:400px;transition:background .2s}
+  .prog:last-child{border-right:0}
+  @media (max-width:1000px){.prog:nth-child(2n){border-right:0}.prog:nth-child(-n+2){border-bottom:1px solid var(--ink)}}
+  @media (max-width:560px){.prog{border-right:0;border-bottom:1px solid var(--ink)}.prog:last-child{border-bottom:0}}
+  .prog:hover{background:#fff}
+  .prog .num{display:flex;justify-content:space-between;align-items:baseline}
+  .prog .num span:last-child{font-family:var(--zh);font-size:26px;color:var(--red)}
+  .prog h3{font-size:22px;text-transform:uppercase;line-height:1.1}
+  .prog dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;border-top:1px solid var(--line);padding-top:14px}
+  .prog dt{font-family:var(--mono);font-size:12px;color:var(--ink-2);text-transform:uppercase;padding-top:2px}
+  .prog .price{margin-top:auto;font-size:15px}
+  .prog .price b{font-size:24px;display:block}
+  .prog a.more{font-weight:600;text-decoration:none;color:var(--red-dark)}
+  .prog a.more:hover{text-decoration:underline}
+  .estimate{font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+
+  /* грант — тёмный блок */
+  .dark{background:var(--black);color:var(--cream)}
+  .dark .grid-lines span{border-color:rgba(255,248,236,.07)}
+  .dark .eyebrow{color:var(--yellow)}
+  .grant{display:grid;grid-template-columns:repeat(12,1fr);gap:20px;align-items:start}
+  .grant .l{grid-column:1/7}
+  .grant .r{grid-column:8/13}
+  @media (max-width:860px){.grant{display:block}.grant .r{margin-top:36px}}
+  .grant h2{margin-top:14px}
+  .grant p{color:#E9DCC8;margin-top:22px;max-width:52ch}
+  .grant ul{list-style:none;padding:0;border-top:1px solid rgba(255,248,236,.18)}
+  .grant li{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid rgba(255,248,236,.18)}
+  .grant li .mono{color:var(--yellow);min-width:28px}
+  .grant .btn{margin-top:30px;border-color:var(--cream);color:var(--cream)}
+  .grant .btn:hover{background:var(--cream);color:var(--black)}
+  .big-zh{font-family:var(--zh);font-weight:900;font-size:clamp(90px,12vw,150px);color:var(--red);line-height:1;margin-bottom:10px}
+
+  /* этапы */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+  @media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.steps{grid-template-columns:1fr}}
+  .step{border-top:2px solid var(--ink);padding-top:18px}
+  .step .mono{color:var(--red)}
+  .step h3{font-size:19px;margin:10px 0 8px}
+  .step p{font-size:15px;color:var(--ink-2)}
+  .terms{margin-top:56px;display:grid;grid-template-columns:repeat(12,1fr);gap:20px;background:var(--beige);padding:32px}
+  .terms .l{grid-column:1/6}
+  .terms .r{grid-column:6/13;display:flex;gap:28px;flex-wrap:wrap;align-items:center}
+  @media (max-width:860px){.terms{display:block}.terms .r{margin-top:18px}}
+  .terms h3{font-size:26px;text-transform:uppercase;line-height:1.1}
+  .half{display:flex;gap:12px;align-items:center}
+  .half .box{width:56px;height:56px;border:1.5px solid var(--ink);display:grid;place-items:center;font-family:var(--mono);font-weight:500}
+  .half .box.f{background:var(--yellow)}
+
+  /* вузы */
+  .unis{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink)}
+  @media (max-width:860px){.unis{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.unis{grid-template-columns:1fr}}
+  .uni{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:22px;display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:center;text-decoration:none;transition:background .2s}
+  .uni:hover{background:var(--beige)}
+  .uni .zh{grid-row:1/3;font-family:var(--zh);font-weight:900;font-size:34px;color:var(--red);writing-mode:vertical-rl;letter-spacing:.05em;line-height:1}
+  .uni b{font-size:17px}
+  .uni span{font-size:14px;color:var(--ink-2)}
+  .uni .cta{grid-column:2;font-family:var(--mono);font-size:12px;color:var(--red-dark);margin-top:6px}
+  .unis-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:24px}
+
+  /* FAQ */
+  .faq{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+  .faq .head2{grid-column:1/5}
+  .faq .list{grid-column:5/13}
+  @media (max-width:860px){.faq{display:block}.faq .list{margin-top:28px}}
+  details{border-top:1px solid var(--ink)}
+  details:last-child{border-bottom:1px solid var(--ink)}
+  summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;gap:20px;font-weight:600;font-size:18px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:var(--mono);font-weight:400;font-size:22px;color:var(--red)}
+  details[open] summary::after{content:"−"}
+  details p{padding:0 0 22px;color:var(--ink-2);max-width:64ch}
+
+  /* CTA */
+  .final{background:var(--red);color:#fff;text-align:center;border-top:0;overflow:hidden}
+  .final .grid-lines span{border-color:rgba(255,255,255,.12)}
+  .final h2{font-size:clamp(34px,6vw,76px);max-width:14ch;margin:0 auto}
+  .final p{margin:22px auto 0;max-width:52ch;color:#FFE7E3}
+  .final .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .final .btn-y{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
+  .final .btn-y:hover{background:#fff;border-color:#fff}
+  .final .btn-o{border-color:#fff;color:#fff}
+  .final .btn-o:hover{background:#fff;color:var(--red-dark)}
+  .final .zh-bg{position:absolute;right:-2%;bottom:-18%;font-family:var(--zh);font-weight:900;font-size:clamp(200px,28vw,380px);color:#fff;opacity:.08;line-height:1;pointer-events:none}
+
+  footer{background:var(--black);color:#CDBFA9;padding:56px 0 40px;font-size:14px}
+  .foot{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+  .foot .c1{grid-column:1/5}.foot .c2{grid-column:6/9}.foot .c3{grid-column:9/13}
+  @media (max-width:760px){.foot{display:block}.foot>div+div{margin-top:28px}}
+  .foot ul{list-style:none;padding:0;display:grid;gap:8px}
+  .foot a{text-decoration:none}.foot a:hover{color:#fff}
+  .foot .logo{color:var(--cream)}
+  .legal{margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,248,236,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .proto{position:fixed;bottom:14px;left:14px;z-index:9;font-family:var(--mono);font-size:11px;background:var(--ink);color:var(--cream);padding:7px 11px;border-radius:999px;opacity:.85}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Chinana — на главную"><span class="seal" aria-hidden="true">去</span>Chinana</a>
+    <nav aria-label="Основная навигация">
+      <ul>
+        <li><a href="#programs">Программы</a></li>
+        <li><a href="#grant">Гранты</a></li>
+        <li><a href="#faq">CSCA</a></li>
+        <li><a href="#unis">Вузы</a></li>
+        <li><a href="#terms">Стоимость</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-red" href="#final">хочу в Китай</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="zh-bg" aria-hidden="true">去中国</div>
+  <div class="wrap">
+    <p class="eyebrow">Языковой год · Foundation · Бакалавриат · Магистратура</p>
+    <h1>Поступление в Китай для <span class="mark">взрослых</span></h1>
+    <p class="sub-zh" lang="zh-Hans">为成年人申请中国大学</p>
+    <p class="answer">Chinana помогает взрослым из России поступить в вузы Китая — на языковой год, foundation, бакалавриат или магистратуру, в том числе <em>по гранту</em>. Подбираем программу, готовим документы и ведём до приглашения вуза. Оплата 50/50.</p>
+    <div class="ctas">
+      <a class="btn btn-red" href="#final">хочу в Китай →</a>
+      <a class="btn btn-ghost" href="#grant">проверить шанс на грант</a>
+    </div>
+    <div class="tags" aria-label="Кому подходит">
+      <span class="tag">18+</span><span class="tag">можно без китайского</span><span class="tag">гранты CSC</span><span class="tag">онлайн по всей России</span>
+    </div>
+    <div class="name-note"><b lang="zh-Hans">去中国</b><span><span class="mono">qù Zhōngguó</span><br><em>«поехать в Китай»</em> — так звучит Chinana по-китайски</span></div>
+  </div>
+</section>
+
+<section id="programs">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head">
+      <h2>Четыре пути <em style="text-transform:none">в китайский вуз</em></h2>
+      <p>Выберите по цели и уровню языка. На каждой странице программы — требования, сроки подачи и вузы, где есть места.</p>
+    </div>
+    <div class="programs">
+      <article class="prog">
+        <div class="num"><span class="mono">01</span><span lang="zh-Hans" aria-hidden="true">语</span></div>
+        <h3>Языковой год</h3>
+        <p>Китайский в университете, жизнь в кампусе. Самый мягкий вход.</p>
+        <dl><dt>Срок</dt><dd>семестр или год</dd><dt>Язык</dt><dd>с нуля</dd><dt>Грант</dt><dd>бывает</dd></dl>
+        <p class="price">услуга от<b>80 000 ₽</b><span class="estimate">ориентир, уточняется</span></p>
+        <a class="more" href="#">Подробнее →</a>
+      </article>
+      <article class="prog">
+        <div class="num"><span class="mono">02</span><span lang="zh-Hans" aria-hidden="true">预</span></div>
+        <h3>Foundation</h3>
+        <p>Год подготовки к бакалавриату: язык и профильные предметы.</p>
+        <dl><dt>Срок</dt><dd>1 год</dd><dt>Язык</dt><dd>с нуля</dd><dt>Дальше</dt><dd>бакалавриат</dd></dl>
+        <p class="price">услуга от<b>80 000 ₽</b><span class="estimate">ориентир, уточняется</span></p>
+        <a class="more" href="#">Подробнее →</a>
+      </article>
+      <article class="prog">
+        <div class="num"><span class="mono">03</span><span lang="zh-Hans" aria-hidden="true">本</span></div>
+        <h3>Бакалавриат</h3>
+        <p>4 года на китайском или английском после 11 класса или колледжа.</p>
+        <dl><dt>Срок</dt><dd>4 года</dd><dt>Язык</dt><dd>HSK или англ.</dd><dt>Экзамен</dt><dd>CSCA</dd></dl>
+        <p class="price">услуга от<b>120 000 ₽</b><span class="estimate">ориентир, уточняется</span></p>
+        <a class="more" href="#">Подробнее →</a>
+      </article>
+      <article class="prog">
+        <div class="num"><span class="mono">04</span><span lang="zh-Hans" aria-hidden="true">硕</span></div>
+        <h3>Магистратура</h3>
+        <p>2–3 года после бакалавриата, часто по гранту правительства Китая.</p>
+        <dl><dt>Срок</dt><dd>2–3 года</dd><dt>Язык</dt><dd>HSK или англ.</dd><dt>Грант</dt><dd>CSC</dd></dl>
+        <p class="price">услуга от<b>120 000 ₽</b><span class="estimate">ориентир, уточняется</span></p>
+        <a class="more" href="#">Подробнее →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="grant" class="dark">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap grant">
+    <div class="l">
+      <div class="big-zh" lang="zh-Hans" aria-hidden="true">奖学金</div>
+      <p class="eyebrow">Грант CSC</p>
+      <h2>Учёба в Китае <em style="text-transform:none">может стоить ноль</em></h2>
+      <p>Стипендия правительства Китая покрывает обучение, общежитие и страховку и платит 2 500–3 500 юаней в месяц. Подают через посольство или через вуз — расскажем, какой путь реальнее для вас.</p>
+      <a class="btn" href="#">Как получить грант →</a>
+    </div>
+    <div class="r">
+      <ul>
+        <li><span class="mono">01</span><span>Обучение — полностью</span></li>
+        <li><span class="mono">02</span><span>Общежитие в кампусе</span></li>
+        <li><span class="mono">03</span><span>Медицинская страховка</span></li>
+        <li><span class="mono">04</span><span>Стипендия 2 500–3 500 ¥ в месяц</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="terms">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><h2>Как мы ведём <em style="text-transform:none">поступление</em></h2><p>От первого созвона до приглашения вуза — один куратор и понятный план.</p></div>
+    <div class="steps">
+      <div class="step"><span class="mono">01</span><h3>Диагностика</h3><p>Разбираем цель, возраст, язык и бюджет. Говорим честно, какие варианты реальны.</p></div>
+      <div class="step"><span class="mono">02</span><h3>Подбор вузов</h3><p>3–5 вузов и грантов под ваш профиль, с ценой и сроками подачи.</p></div>
+      <div class="step"><span class="mono">03</span><h3>Документы и подача</h3><p>Переводы, study plan, мотивационное письмо, заявки в вузы.</p></div>
+      <div class="step"><span class="mono">04</span><h3>Приглашение и виза</h3><p>Получаем приглашение, помогаем с визой и дорогой.</p></div>
+    </div>
+    <div class="terms">
+      <div class="l"><p class="eyebrow">Условия</p><h3>Оплата 50/50</h3></div>
+      <div class="r">
+        <div class="half"><span class="box f">50%</span><span>после договора</span></div>
+        <div class="half"><span class="box">50%</span><span>после приглашения вуза</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="unis">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><h2>Вузы Китая</h2><p>Каталог вузов, которые принимают иностранцев: город, программы, язык обучения, гранты и цены.</p></div>
+    <div class="unis">
+      <a class="uni" href="#"><span class="zh" lang="zh-Hans">清华</span><b>Университет Цинхуа</b><span>Пекин</span><span class="cta">консультация →</span></a>
+      <a class="uni" href="#"><span class="zh" lang="zh-Hans">北大</span><b>Пекинский университет</b><span>Пекин</span><span class="cta">консультация →</span></a>
+      <a class="uni" href="#"><span class="zh" lang="zh-Hans">复旦</span><b>Университет Фудань</b><span>Шанхай</span><span class="cta">консультация →</span></a>
+      <a class="uni" href="#"><span class="zh" lang="zh-Hans">交大</span><b>Шанхайский университет Цзяотун</b><span>Шанхай</span><span class="cta">консультация →</span></a>
+      <a class="uni" href="#"><span class="zh" lang="zh-Hans">浙大</span><b>Чжэцзянский университет</b><span>Ханчжоу</span><span class="cta">консультация →</span></a>
+      <a class="uni" href="#"><span class="zh" lang="zh-Hans">南大</span><b>Нанкинский университет</b><span>Нанкин</span><span class="cta">консультация →</span></a>
+    </div>
+    <div class="unis-foot"><span class="mono">У вузов партнёра здесь будет «поступить в этот вуз»</span><a class="btn btn-ghost" href="#">Весь каталог →</a></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap faq">
+    <div class="head2"><p class="eyebrow">Частые вопросы</p><h2 style="margin-top:14px">Спрашивают <em style="text-transform:none">чаще всего</em></h2></div>
+    <div class="list">
+      <details open><summary>До какого возраста можно поступить в Китай?</summary><p>На языковые курсы едут и в 18, и в 35. У бакалавриата и магистратуры лимиты свои у каждого вуза и гранта — проверим на диагностике.</p></details>
+      <details><summary>Можно ли поступить без знания китайского?</summary><p>Да: через языковой год или foundation, либо на программу на английском. Путь подберём под ваш уровень.</p></details>
+      <details><summary>Что такое экзамен CSCA и нужно ли его сдавать?</summary><p>CSCA — новый экзамен для иностранцев, которые поступают в бакалавриат Китая. Расскажем, какие предметы сдавать и как готовиться.</p></details>
+      <details><summary>Сколько стоят ваши услуги?</summary><p>От 80 000 ₽ за языковой год и от 120 000 ₽ за бакалавриат или магистратуру. Оплата 50/50: вторая часть — после приглашения вуза.</p></details>
+      <details><summary>Признаётся ли китайский диплом в России?</summary><p>Ответ готовим со ссылкой на официальный источник — в прототипе не заполнен.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="final" class="final">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="zh-bg" aria-hidden="true">走吧</div>
+  <div class="wrap">
+    <h2>Узнайте, куда вы проходите</h2>
+    <p>Ответьте на 5 вопросов в Telegram-боте — пришлём вузы и гранты, которые подходят вам, и запишем на бесплатную диагностику.</p>
+    <div class="ctas">
+      <a class="btn btn-y" href="#">хочу в Китай → бот</a>
+      <a class="btn btn-o" href="#">Telegram-канал</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div class="c1"><a class="logo" href="#top"><span class="seal" aria-hidden="true">去</span>Chinana</a><p style="margin-top:14px;max-width:34ch">Поступление в вузы Китая для взрослых: языковой год, foundation, бакалавриат, магистратура, гранты.</p></div>
+      <div class="c2"><ul><li><a href="#programs">Программы</a></li><li><a href="#grant">Грант CSC</a></li><li><a href="#faq">Экзамен CSCA</a></li><li><a href="#unis">Вузы Китая</a></li><li><a href="#terms">Стоимость</a></li></ul></div>
+      <div class="c3"><ul><li><a href="#">Telegram-бот</a></li><li><a href="#">Telegram-канал</a></li><li><a href="#">Контакты</a></li></ul></div>
+    </div>
+    <div class="legal"><span>Самозанятый TODO(Ник): ФИО · ИНН 667109362983</span><span><a href="#">Политика конфиденциальности</a> · <a href="#">Согласие на обработку данных</a></span></div>
+  </div>
+</footer>
+
+<div class="proto" aria-hidden="true">прототип A · «Почерк Ника»</div>
+</body>
+</html>
