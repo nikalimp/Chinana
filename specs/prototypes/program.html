@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chinana — прототип шаблона программы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Только для прототипа: в проде шрифты локально (woff2), иероглифы — subset -->
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&family=PT+Serif:ital,wght@1,400;1,700&family=JetBrains+Mono:wght@400;500&family=Noto+Serif+SC:wght@500;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --red:#C8102E; --red-dark:#8E1220; --yellow:#FFC72C;
+    --cream:#FFF8EC; --beige:#EADBC2; --beige-dark:#D8C29E;
+    --ink:#1F1410; --ink-2:#5A4A40; --black:#14100E;
+    --line:rgba(31,20,16,.10);
+    --sans:"Onest",system-ui,sans-serif; --serif:"PT Serif",Georgia,serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace; --zh:"Noto Serif SC",serif;
+    --pad:clamp(16px,4vw,40px); --max:1240px;
+  }
+  *{box-sizing:border-box;margin:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  em{font-family:var(--serif);font-style:italic;font-weight:400}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad);position:relative}
+  /* видимая 12-колоночная сетка как графический приём */
+  .grid-lines{position:absolute;inset:0;pointer-events:none;display:grid;grid-template-columns:repeat(12,1fr);gap:0;padding:0 var(--pad);max-width:var(--max);margin:0 auto}
+  .grid-lines span{border-left:1px solid var(--line)}
+  .grid-lines span:last-child{border-right:1px solid var(--line)}
+  @media (max-width:760px){.grid-lines{grid-template-columns:repeat(4,1fr)}.grid-lines span:nth-child(n+5){display:none}.grid-lines span:nth-child(4){border-right:1px solid var(--line)}}
+  .mono{font-family:var(--mono);font-size:13px;letter-spacing:.02em}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--red-dark)}
+  h1,h2{text-transform:uppercase;font-weight:700;letter-spacing:-.01em;line-height:1.02}
+  h2{font-size:clamp(28px,4.2vw,48px)}
+  .btn{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 26px;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);transition:background .2s,color .2s}
+  .btn:focus-visible,a:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+  .btn-red{background:var(--red);border-color:var(--red);color:#fff}
+  .btn-red:hover{background:var(--red-dark);border-color:var(--red-dark)}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+  .mark{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 92%,transparent 92%);padding:0 .08em}
+  section{position:relative;padding:clamp(64px,9vw,120px) 0;border-top:1px solid var(--line)}
+
+  /* шапка */
+  header{position:sticky;top:0;z-index:5;background:rgba(255,248,236,.92);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:21px;letter-spacing:-.02em}
+  .seal{width:34px;height:34px;background:var(--red);color:#fff;display:grid;place-items:center;font-family:var(--zh);font-weight:900;font-size:20px;border-radius:4px}
+  .nav ul{display:flex;gap:26px;list-style:none;padding:0;font-size:15px}
+  .nav ul a{text-decoration:none}
+  .nav ul a:hover{color:var(--red)}
+  @media (max-width:960px){.nav ul{display:none}}
+  .nav .btn{min-height:42px;padding:0 20px;font-size:15px}
+
+  /* первый экран */
+  .hero{border-top:0;text-align:center;padding-top:clamp(56px,8vw,104px);overflow:hidden}
+  .hero .zh-bg{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);font-family:var(--zh);font-weight:900;font-size:clamp(220px,34vw,470px);line-height:1;color:var(--red);opacity:.06;white-space:nowrap;pointer-events:none;user-select:none}
+  .hero h1{font-size:clamp(40px,7.4vw,96px);max-width:12ch;margin:22px auto 0}
+  .hero .sub-zh{font-family:var(--zh);font-weight:500;font-size:clamp(18px,2vw,24px);color:var(--red-dark);margin-top:16px;letter-spacing:.12em}
+  .hero .answer{max-width:62ch;margin:28px auto 0;font-size:clamp(17px,1.6vw,20px);color:var(--ink-2)}
+  .hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+  .name-note{display:inline-flex;gap:14px;align-items:baseline;margin-top:56px;padding:14px 22px;border:1px solid var(--line);background:var(--cream);text-align:left}
+  .name-note b{font-family:var(--zh);font-size:22px;color:var(--red);white-space:nowrap}
+  .tags{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:26px}
+  .tag{font-family:var(--mono);font-size:12px;padding:6px 12px;border:1px solid var(--ink);border-radius:999px;background:var(--cream)}
+
+  /* программы */
+  .head{text-align:center;margin:0 auto 48px;max-width:900px}
+  .head .eyebrow{margin-bottom:14px}
+  .head p{color:var(--ink-2);max-width:56ch;margin:18px auto 0}
+  .cards{display:grid;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+  .cards>*{border-left:1px solid var(--ink);border-top:1px solid var(--ink)}
+  .programs,.steps{grid-template-columns:repeat(4,1fr)}
+  @media (max-width:1000px){.programs,.steps{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.programs,.steps{grid-template-columns:1fr}}
+  .prog{background:var(--cream);padding:26px 22px 24px;display:flex;flex-direction:column;gap:14px;min-height:400px;transition:background .2s}
+  .prog:hover{background:#fff}
+  .prog .num{display:flex;justify-content:space-between;align-items:baseline}
+  .prog .num span:last-child{font-family:var(--zh);font-size:26px;color:var(--red)}
+  .prog h3{font-size:22px;text-transform:uppercase;line-height:1.1}
+  .prog dl{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:14px;border-top:1px solid var(--line);padding-top:14px}
+  .prog dt{font-family:var(--mono);font-size:12px;color:var(--ink-2);text-transform:uppercase;padding-top:2px}
+  .prog .price{margin-top:auto;font-size:15px}
+  .prog .price b{font-size:24px;display:block}
+  .prog a.more{font-weight:600;text-decoration:none;color:var(--red-dark)}
+  .prog a.more:hover{text-decoration:underline}
+  .estimate{font-family:var(--mono);font-size:11px;color:var(--ink-2)}
+
+  /* грант — тёмный блок */
+  .dark{background:var(--black);color:var(--cream)}
+  .dark .grid-lines span{border-color:rgba(255,248,236,.07)}
+  .dark .eyebrow{color:var(--yellow)}
+  .grant{display:grid;grid-template-columns:repeat(2,1fr);align-items:start}
+  .grant .l{padding-right:40px}
+  @media (max-width:860px){.grant{display:block}.grant .r{margin-top:36px}}
+  .dark .head p{color:#E9DCC8}
+  .grant p{color:#E9DCC8;max-width:52ch}
+  .grant ul{list-style:none;padding:0;border-top:1px solid rgba(255,248,236,.18)}
+  .grant li{display:flex;gap:18px;padding:16px 0;border-bottom:1px solid rgba(255,248,236,.18)}
+  .grant li .mono{color:var(--yellow);min-width:28px}
+  .grant .btn{margin-top:30px;border-color:var(--cream);color:var(--cream)}
+  .grant .btn:hover{background:var(--cream);color:var(--black)}
+  .big-zh{font-family:var(--zh);font-weight:900;font-size:clamp(90px,12vw,150px);color:var(--red);line-height:1;margin-bottom:18px}
+
+  /* этапы */
+  .step{background:var(--cream);padding:26px 22px 28px;min-height:220px}
+  .step .mono{color:var(--red)}
+  .step h3{font-size:19px;margin:10px 0 8px}
+  .step p{font-size:15px;color:var(--ink-2)}
+  .terms{display:grid;grid-template-columns:repeat(2,1fr);background:var(--beige);border:1px solid var(--ink);border-top:0}
+  .terms>div{padding:28px 22px}
+  .terms .r{display:flex;gap:28px;flex-wrap:wrap;align-items:center;border-left:1px solid var(--ink)}
+  @media (max-width:560px){.terms{grid-template-columns:1fr}.terms .r{border-left:0;border-top:1px solid var(--ink)}}
+  .terms h3{font-size:26px;text-transform:uppercase;line-height:1.1}
+  .half{display:flex;gap:12px;align-items:center}
+  .half .box{width:56px;height:56px;border:1.5px solid var(--ink);display:grid;place-items:center;font-family:var(--mono);font-weight:500}
+  .half .box.f{background:var(--yellow)}
+
+  /* вузы */
+  .unis{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:860px){.unis{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.unis{grid-template-columns:1fr}}
+  .uni{padding:22px;display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:center;text-decoration:none;transition:background .2s}
+  .uni:hover{background:var(--beige)}
+  .uni .zh{grid-row:1/3;font-family:var(--zh);font-weight:900;font-size:34px;color:var(--red);writing-mode:vertical-rl;letter-spacing:.05em;line-height:1}
+  .uni b{font-size:17px}
+  .uni span{font-size:14px;color:var(--ink-2)}
+  .uni .cta{grid-column:2;font-family:var(--mono);font-size:12px;color:var(--red-dark);margin-top:6px}
+  .unis-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:24px}
+
+  /* FAQ */
+  .faq-list{max-width:calc(100% * 8 / 12);margin:0 auto}
+  @media (max-width:860px){.faq-list{max-width:none}}
+  details{border-top:1px solid var(--ink)}
+  details:last-child{border-bottom:1px solid var(--ink)}
+  summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;gap:20px;font-weight:600;font-size:18px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";font-family:var(--mono);font-weight:400;font-size:22px;color:var(--red)}
+  details[open] summary::after{content:"−"}
+  details p{padding:0 0 22px;color:var(--ink-2);max-width:64ch}
+
+  /* CTA */
+  .final{background:var(--red);color:#fff;text-align:center;border-top:0;overflow:hidden}
+  .final .grid-lines span{border-color:rgba(255,255,255,.12)}
+  .final h2{font-size:clamp(34px,6vw,76px);max-width:14ch;margin:0 auto}
+  .final p{margin:22px auto 0;max-width:52ch;color:#FFE7E3}
+  .final .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+  .final .btn-y{background:var(--yellow);border-color:var(--yellow);color:var(--ink)}
+  .final .btn-y:hover{background:#fff;border-color:#fff}
+  .final .btn-o{border-color:#fff;color:#fff}
+  .final .btn-o:hover{background:#fff;color:var(--red-dark)}
+  .final .zh-bg{position:absolute;right:-2%;bottom:-18%;font-family:var(--zh);font-weight:900;font-size:clamp(200px,28vw,380px);color:#fff;opacity:.08;line-height:1;pointer-events:none}
+
+  footer{background:var(--black);color:#CDBFA9;padding:56px 0 40px;font-size:14px}
+  .foot{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+  .foot .c1{grid-column:1/5}.foot .c2{grid-column:6/9}.foot .c3{grid-column:9/13}
+  @media (max-width:760px){.foot{display:block}.foot>div+div{margin-top:28px}}
+  .foot ul{list-style:none;padding:0;display:grid;gap:8px}
+  .foot a{text-decoration:none}.foot a:hover{color:#fff}
+  .foot .logo{color:var(--cream)}
+  .legal{margin-top:44px;padding-top:20px;border-top:1px solid rgba(255,248,236,.12);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .proto{position:fixed;bottom:14px;left:14px;z-index:9;font-family:var(--mono);font-size:11px;background:var(--ink);color:var(--cream);padding:7px 11px;border-radius:999px;opacity:.85}
+
+  .crumbs{font-family:var(--mono);font-size:12px;color:var(--ink-2);text-align:center}
+  .crumbs a{text-decoration:none}.crumbs a:hover{color:var(--red)}
+  .page-hero{text-align:center;border-top:0;overflow:hidden;padding-top:clamp(40px,6vw,80px)}
+  .page-hero h1{font-size:clamp(38px,6.4vw,84px);max-width:14ch;margin:18px auto 0}
+  .page-hero .answer{max-width:64ch;margin:26px auto 0;font-size:clamp(17px,1.6vw,20px);color:var(--ink-2)}
+  .page-hero .ctas{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+  .facts{grid-template-columns:repeat(4,1fr);margin-top:56px;text-align:left}
+  @media (max-width:1000px){.facts{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.facts{grid-template-columns:1fr}}
+  .fact{padding:22px;background:var(--cream)}
+  .fact .mono{color:var(--ink-2);text-transform:uppercase;font-size:12px}
+  .fact b{display:block;font-size:22px;margin-top:8px;line-height:1.2}
+  .fact span.s{display:block;font-size:14px;color:var(--ink-2);margin-top:6px}
+  .three{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:860px){.three{grid-template-columns:1fr}}
+  .cell{padding:26px 22px;background:var(--cream)}
+  .cell h3{font-size:19px;margin:10px 0 8px}
+  .cell p{font-size:15px;color:var(--ink-2)}
+  .cell .mono{color:var(--red)}
+  .five{grid-template-columns:repeat(5,1fr)}
+  @media (max-width:1100px){.five{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.five{grid-template-columns:1fr}}
+  .incl{grid-template-columns:2fr 1fr}
+  @media (max-width:860px){.incl{grid-template-columns:1fr}}
+  .incl ul{list-style:none;padding:0;columns:2;column-gap:40px}
+  @media (max-width:560px){.incl ul{columns:1}}
+  .incl li{padding:10px 0;border-bottom:1px solid var(--line);break-inside:avoid;display:flex;gap:12px}
+  .incl li::before{content:"—";color:var(--red);font-family:var(--mono)}
+  .price-card{background:var(--beige);padding:28px 22px;display:flex;flex-direction:column;gap:14px}
+  .price-card b{font-size:36px;line-height:1}
+  table.t{width:100%;border-collapse:collapse;font-size:16px}
+  table.t th,table.t td{border:1px solid var(--ink);padding:16px 22px;text-align:left;vertical-align:top}
+  table.t th{font-family:var(--mono);font-size:12px;text-transform:uppercase;font-weight:500;color:var(--ink-2);width:25%;background:var(--cream)}
+  table.t td small{display:block;color:var(--ink-2);font-size:13px;margin-top:4px}
+  .uni-row .uni .cta.apply{color:#fff;background:var(--red);padding:3px 10px;border-radius:999px;justify-self:start}
+  .note{font-family:var(--mono);font-size:12px;color:var(--ink-2);margin-top:14px;text-align:center}
+  .related{grid-template-columns:repeat(3,1fr)}
+  @media (max-width:860px){.related{grid-template-columns:1fr}}
+  .related a{display:block;padding:26px 22px;text-decoration:none;background:var(--cream);transition:background .2s}
+  .related a:hover{background:#fff}
+  .related h3{font-size:22px;text-transform:uppercase;margin:10px 0 6px}
+  .related p{font-size:15px;color:var(--ink-2)}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#" aria-label="Chinana — на главную"><span class="seal" aria-hidden="true">去</span>Chinana</a>
+    <nav aria-label="Основная навигация"><ul><li><a href="#">Программы</a></li><li><a href="#">Гранты</a></li><li><a href="#">CSCA</a></li><li><a href="#">Вузы</a></li><li><a href="#">Стоимость</a></li></ul></nav>
+    <a class="btn btn-red" href="#final">Хочу в Китай</a>
+  </div>
+</header>
+<main>
+
+<section class="page-hero">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="zh-bg" aria-hidden="true" style="position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);font-family:var(--zh);font-weight:900;font-size:clamp(220px,32vw,440px);color:var(--red);opacity:.06;pointer-events:none;white-space:nowrap">语言</div>
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Хлебные крошки"><a href="#">Программы</a> / Языковой год</nav>
+    <h1>Языковой год <em style="text-transform:none">в Китае</em></h1>
+    <p class="answer">Языковой год — семестр или год китайского языка в университете Китая. Подходит без знания языка и почти без возрастных ограничений: на курсы едут и в 18, и в 35. После него можно поступить в бакалавриат или магистратуру того же вуза.</p>
+    <div class="ctas"><a class="btn btn-red" href="#final">Хочу на языковой год →</a><a class="btn btn-ghost" href="#">Проверить шанс на грант</a></div>
+    <div class="cards facts">
+      <div class="fact"><span class="mono">Срок</span><b>Семестр или год</b><span class="s">Старт в сентябре и марте</span></div>
+      <div class="fact"><span class="mono">Язык</span><b>С нуля</b><span class="s">Группы по уровню HSK</span></div>
+      <div class="fact"><span class="mono">Требования</span><b>Школа + 18 лет</b><span class="s">Лимиты — у каждого вуза</span></div>
+      <div class="fact"><span class="mono">Грант</span><b>Бывает</b><span class="s">CSC и гранты вузов</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Кому подходит</p><h2>Языковой год <em style="text-transform:none">для вас, если</em></h2></div>
+    <div class="cards three">
+      <div class="cell"><span class="mono">01</span><h3>Хотите учиться в Китае, но нет языка</h3><p>Год языка — вход в бакалавриат или магистратуру на китайском.</p></div>
+      <div class="cell"><span class="mono">02</span><h3>Решили сменить жизнь</h3><p>Год в кампусе, чтобы понять страну, прежде чем ехать надолго.</p></div>
+      <div class="cell"><span class="mono">03</span><h3>Китайский нужен для работы</h3><p>Язык с носителями и HSK к концу года.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Сопровождение</p><h2>Что входит</h2></div>
+    <div class="cards incl">
+      <div class="cell"><ul><li>Подбор 3–5 вузов и грантов</li><li>Проверка и перевод документов</li><li>Мотивационное письмо и study plan</li><li>Подача заявок в вузы</li><li>Сопровождение до приглашения</li><li>Консультация по визе X1/X2</li><li>Медкомиссия и справки</li><li>План дороги и первых дней</li></ul></div>
+      <div class="price-card"><span class="mono">Услуга от</span><b>80 000 ₽</b><span class="estimate">Ориентир, уточняется</span><p>Оплата 50/50: вторая часть — после приглашения вуза.</p><a class="btn btn-red" href="#final">Хочу на языковой год</a></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Порядок</p><h2>Как проходит <em style="text-transform:none">поступление</em></h2></div>
+    <div class="cards steps">
+      <div class="cell"><span class="mono">01</span><h3>Диагностика</h3><p>Цель, возраст, бюджет, сроки.</p></div>
+      <div class="cell"><span class="mono">02</span><h3>Подбор вузов</h3><p>3–5 вузов и гранты под вас.</p></div>
+      <div class="cell"><span class="mono">03</span><h3>Документы и подача</h3><p>Переводы, письма, заявки в вузы.</p></div>
+      <div class="cell"><span class="mono">04</span><h3>Приглашение и виза</h3><p>Приглашение вуза, виза и дорога.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Требования</p><h2>Что нужно <em style="text-transform:none">для поступления</em></h2></div>
+    <table class="t">
+      <tr><th>Возраст</th><td>От 18 лет<small>Верхний лимит задаёт вуз; для языковых курсов он обычно мягче</small></td></tr>
+      <tr><th>Образование</th><td>Аттестат 11 класса или выше</td></tr>
+      <tr><th>Язык</th><td>Не нужен<small>Уровень определят тестом в первые дни</small></td></tr>
+      <tr><th>Документы</th><td>Загранпаспорт, аттестат с переводом, медсправка, справка о несудимости</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="uni-row">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Где учиться</p><h2>Вузы <em style="text-transform:none">с языковым годом</em></h2></div>
+    <div class="cards unis">
+      <a class="uni" href="#"><span class="zh" lang="zh-Hans">南大</span><b>Нанкинский университет</b><span>Нанкин</span><span class="cta apply">Поступить →</span></a>
+      <a class="uni" href="#"><span class="zh" lang="zh-Hans">复旦</span><b>Университет Фудань</b><span>Шанхай</span><span class="cta">Консультация →</span></a>
+      <a class="uni" href="#"><span class="zh" lang="zh-Hans">浙大</span><b>Чжэцзянский университет</b><span>Ханчжоу</span><span class="cta">Консультация →</span></a>
+    </div>
+    <p class="note">В прототипе «Поступить» показан для примера: у вуза партнёра. Список партнёра — позже.</p>
+  </div>
+</section>
+
+<section>
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Бюджет</p><h2>Сколько стоит <em style="text-transform:none">год</em></h2><p>Ориентиры — заполняются фактами из каталога вузов. Подробный расчёт — на странице «Стоимость».</p></div>
+    <table class="t">
+      <tr><th>Обучение</th><td>TODO: диапазон по вузам каталога, ¥ в год</td></tr>
+      <tr><th>Общежитие</th><td>TODO: диапазон, ¥ в месяц</td></tr>
+      <tr><th>Жизнь</th><td>TODO: ориентир по городам</td></tr>
+      <tr><th>Сопровождение Chinana</th><td>От 80 000 ₽<small>Ориентир, уточняется</small></td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Частые вопросы</p><h2>Про языковой год</h2></div>
+    <div class="faq-list">
+      <details open><summary>Можно ли получить грант на языковой год?</summary><p>Да: у правительства Китая и у отдельных вузов есть гранты на языковые программы. Мест меньше, чем на бакалавриат и магистратуру.</p></details>
+      <details><summary>Что делать после языкового года?</summary><p>Поступать в бакалавриат или магистратуру — часто в тот же вуз.</p></details>
+      <details><summary>В каком городе лучше учиться?</summary><p>Пекин и Шанхай дороже, регионы дешевле и спокойнее. Подберём по бюджету.</p></details>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="wrap">
+    <div class="head"><h2>Другие программы</h2></div>
+    <div class="cards related">
+      <a href="#"><span class="mono">02</span><h3>Foundation</h3><p>Год подготовки к бакалавриату.</p></a>
+      <a href="#"><span class="mono">03</span><h3>Бакалавриат</h3><p>4 года после 11 класса или колледжа.</p></a>
+      <a href="#"><span class="mono">04</span><h3>Магистратура</h3><p>2–3 года, часто по гранту.</p></a>
+    </div>
+  </div>
+</section>
+
+<section id="final" class="final">
+  <div class="grid-lines" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  <div class="zh-bg" aria-hidden="true">走吧</div>
+  <div class="wrap">
+    <h2>Узнайте, куда вы проходите</h2>
+    <p>Ответьте на несколько вопросов в Telegram-боте — пришлём вузы и гранты, которые подходят вам.</p>
+    <div class="ctas"><a class="btn btn-y" href="#">Хочу в Китай → бот</a></div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><div class="legal" style="margin-top:0;border-top:0;padding-top:0"><span>Самозанятый Никита Алимпиев · ИНН 667109362983</span><span><a href="#">Политика конфиденциальности</a> · <a href="#">Согласие на обработку данных</a></span></div></div></footer>
+<div class="proto" aria-hidden="true">прототип · шаблон программы</div>
+</body>
+</html>
