@@ -1,7 +1,7 @@
 // llms.txt и llms-full.txt (https://llmstxt.org) — генерируются из того же контента, что и страницы.
 import { site } from "@/content/site";
-import { services } from "@/content/services";
-import { about, home } from "@/content/home";
+import { programs, formatRub } from "@/content/programs";
+import { home } from "@/content/home";
 import { getPosts } from "./posts";
 
 // Простой текст для нейросетей: неразрывные пробелы типографа заменяем обычными
@@ -28,11 +28,11 @@ export function llmsTxt() {
 
 > ${home.answer}
 
-## Услуги
-${services.map((s) => `- [${s.title}](${site.url}/services/${s.slug}/): ${s.short} ${s.prices[0] ? `${s.prices[0].name} — ${s.prices[0].value}.` : ""}`).join("\n")}
+## Программы
+${programs.map((p) => `- [${p.title}](${site.url}/programs/${p.slug}/): ${p.short} Сопровождение — от ${formatRub(p.price)}, оплата 50/50.`).join("\n")}
 ${posts.length ? `\n## Статьи\n${posts.map((p) => `- [${p.title}](${site.url}/blog/${p.slug}/): ${p.description}`).join("\n")}\n` : ""}
-## О компании
-- [О компании](${site.url}/about/): ${site.tagline}
+## О сервисе
+- ${site.tagline}
 - [Контакты](${site.url}/contacts/)
 - Подробная версия для LLM: ${site.url}/llms-full.txt
 
@@ -42,12 +42,12 @@ ${contacts()}
 }
 
 export function llmsFullTxt() {
-  const blocks = services.map(
-    (s) =>
-      `## ${s.h1}\nURL: ${site.url}/services/${s.slug}/\n\n${s.answer}\n\nКому подходит:\n${s.forWhom.map((f) => `- ${f}`).join("\n")}\n\nЧто входит:\n${s.includes.map((i) => `- ${i.title}: ${i.text}`).join("\n")}\n\nСтоимость:\n${s.prices.map((p) => `- ${p.name}: ${p.value}${p.note ? ` (${p.note})` : ""}`).join("\n")}\n\nСроки: ${s.timeline}\n${s.faq.length ? `\nВопросы:\n${s.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}\n` : ""}`,
+  const blocks = programs.map(
+    (p) =>
+      `## ${p.h1} ${p.h1Accent}\nURL: ${site.url}/programs/${p.slug}/\n\n${p.answer}\n\n${p.facts.map((f) => `- ${f.label}: ${f.value} (${f.note})`).join("\n")}\n\nКому подходит:\n${p.forWhom.map((f) => `- ${f.title}: ${f.text}`).join("\n")}\n\nТребования:\n${p.requirements.map((r) => `- ${r.label}: ${r.value}${r.note ? ` (${r.note})` : ""}`).join("\n")}\n\nСопровождение: от ${formatRub(p.price)}, оплата 50/50.\n\nВопросы:\n${p.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}\n`,
   );
   const posts = getPosts().map((p) => `## ${p.title}\nURL: ${site.url}/blog/${p.slug}/\nДата: ${p.updated ?? p.date}\n\n${p.body}`);
   return plain(
-    `${llmsTxt()}\n---\n\n# Частые вопросы\n\n${home.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}\n\n---\n\n# Услуги\n\n${blocks.join("\n\n")}\n\n---\n\n# О компании\n\n${about.body}\n${posts.length ? `\n---\n\n# Статьи\n\n${posts.join("\n\n")}\n` : ""}`,
+    `${llmsTxt()}\n---\n\n# Частые вопросы\n\n${home.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}\n\n---\n\n# Программы\n\n${blocks.join("\n\n")}\n${posts.length ? `\n---\n\n# Статьи\n\n${posts.join("\n\n")}\n` : ""}`,
   );
 }

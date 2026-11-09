@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import "@fontsource-variable/inter/wght.css"; // шрифт локально: заменить на шрифт бренда из specs/03-design.md
+import "@fontsource/onest/400.css";
+import "@fontsource/onest/500.css";
+import "@fontsource/onest/600.css";
+import "@fontsource/onest/700.css";
+import "@fontsource/pt-serif/400-italic.css";
+import "@fontsource/jetbrains-mono/400.css";
+import "@fontsource/jetbrains-mono/500.css";
+import "@fontsource/noto-serif-sc/900.css"; // делится на диапазоны unicode-range: браузер грузит только нужные иероглифы
 import "./globals.css";
 import { site } from "@/content/site";
 import { Header } from "@/components/header";

@@ -13,26 +13,26 @@ export type OrgType =
   | "Store";
 
 export const site = {
-  url: "https://example.ru", // TODO(клиент): боевой домен без слеша на конце
-  name: "TODO(клиент): Бренд",
-  legalName: "TODO(клиент): ООО «Название»",
+  url: "https://chinana.ru",
+  name: "Chinana",
+  legalName: "Самозанятый Никита Алимпиев",
   // Тип организации в Schema.org — самый точный из подходящих: https://schema.org/LocalBusiness#subtypes
-  orgType: "LocalBusiness" as OrgType,
-  title: "TODO(клиент): Бренд — услуга в городе", // title главной, до 60 символов
-  description: "TODO(клиент): описание компании для поиска и нейросетей, 120⁠–⁠160 символов, с фактами: что, где, для кого, цена или срок.",
+  orgType: "ProfessionalService" as OrgType,
+  title: "Поступление в Китай для взрослых: программы и гранты", // title главной, до 60 символов
+  description: "Поступление в вузы Китая для взрослых из России: языковой год, foundation, бакалавриат и магистратура, гранты CSC. Оплата 50/50.",
   // Одна фраза о компании для llms.txt и футера
-  tagline: "TODO(клиент): что делаем и для кого",
+  tagline: "Поступление в вузы Китая для взрослых: языковой год, foundation, бакалавриат, магистратура, гранты.",
   lang: "ru",
   locale: "ru_RU",
-  foundingYear: 2015, // TODO(клиент)
+  foundingYear: 2026,
   areaServed: ["RU"],
 
   contacts: {
     phone: "", // формат +7XXXXXXXXXX; пусто — блок не показывается
     phoneDisplay: "",
     email: "",
-    telegram: "", // https://t.me/…
-    whatsapp: "", // https://wa.me/7XXXXXXXXXX
+    telegram: "https://t.me/chinana",
+    whatsapp: "",
     address: {
       street: "",
       city: "",
@@ -41,44 +41,50 @@ export const site = {
       country: "RU",
     },
     geo: null as null | { lat: number; lng: number },
-    hours: "", // для людей: «Пн–Пт 9:00–19:00»
-    openingHours: [] as { days: string[]; opens: string; closes: string }[], // для Schema: days — Monday…Sunday
+    hours: "",
+    openingHours: [] as { days: string[]; opens: string; closes: string }[],
   },
 
-  // Главное целевое действие — на него ведут все CTA
+  // Главное целевое действие — чат менеджера (spec v0.4: бота и формы пока нет)
   cta: {
-    label: "TODO(клиент): Записаться",
-    href: "https://t.me/TODO", // TODO(клиент): ссылка на мессенджер, форму или tel:
+    label: "Хочу в Китай",
+    href: "https://t.me/chinana",
   },
 
-  // Реквизиты для футера и политики ПДн (152-ФЗ)
+  // Реквизиты для футера и политики ПДн (152-ФЗ). Самозанятый (НПД) — без ОГРН
   legal: {
-    inn: "TODO(клиент)",
-    ogrn: "TODO(клиент)",
-    privacyEmail: "", // почта для запросов по персональным данным; пусто — берётся contacts.email
+    status: "самозанятый (налог на профессиональный доход)",
+    inn: "667109362983",
+    ogrn: "",
+    privacyEmail: "", // TODO(Ник): почта для запросов по персональным данным
   },
 
-  // Профили бренда на внешних площадках: одинаковые название, адрес и телефон везде
-  sameAs: [] as string[],
-  socials: [] as { label: string; href: string }[], // Instagram и Facebook — с «*» в label
-  metaNote: "", // «*Meta Platforms Inc. признана экстремистской и запрещена в РФ» — если есть ссылки на Instagram/Facebook
+  // Профили бренда на внешних площадках
+  sameAs: ["https://t.me/chinana"] as string[],
+  socials: [{ label: "Telegram", href: "https://t.me/chinana" }] as { label: string; href: string }[],
+  metaNote: "",
 
-  // Лицо компании — основатель или эксперт. null, если не нужен
   person: null as null | { name: string; jobTitle: string; description: string; sameAs: string[] },
 
-  metrikaId: 0, // номер счётчика Яндекс Метрики; 0 — счётчик не подключается (на боевом домене npm run check этого не пропустит)
-  darkTheme: true, // переключатель темы в шапке
+  metrikaId: 0, // TODO(Ник): номер счётчика Яндекс Метрики
+  darkTheme: false, // только светлая тема (spec §9)
 
-  // Функции включаются и выключаются флагами, а не удалением кода (стандарт §1.9):
-  // снятый с сайта блок остаётся в репозитории и возвращается одной строкой.
+  // Функции включаются и выключаются флагами, а не удалением кода (стандарт §1.9)
   features: {
-    blog: true, // блог: пункт меню, /blog/, статьи в sitemap и llms.txt
+    blog: false, // P1: контент-завод после запуска
+    news: false, // P1: новости вузов (design-news-factory.md)
+    calculator: false, // P1
+    leadForm: false, // отложено вместе с ботом (spec v0.4)
+    stats: false, // цифры доверия — ждём факты партнёра
+    reviews: false, // отзывы и кейсы — ждём партнёра
   },
 };
 
 export const nav = [
-  { href: "/services/", label: "Услуги" },
+  { href: "/programs/", label: "Программы" },
+  { href: "/grants/csc/", label: "Гранты" },
+  { href: "/exams/csca/", label: "CSCA" },
+  { href: "/universities/", label: "Вузы" },
+  { href: "/cost/", label: "Стоимость" },
   ...(site.features.blog ? [{ href: "/blog/", label: "Блог" }] : []),
-  { href: "/about/", label: "О компании" },
-  { href: "/contacts/", label: "Контакты" },
 ];
