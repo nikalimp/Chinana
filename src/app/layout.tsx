@@ -6,7 +6,7 @@ import "@fontsource/onest/700.css";
 import "@fontsource/pt-serif/400-italic.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
-import "@fontsource/noto-serif-sc/900.css"; // делится на диапазоны unicode-range: браузер грузит только нужные иероглифы
+import "./zh-font.css"; // подмножество Noto Serif SC 900 — только иероглифы сайта (scripts/cjk-font.py)
 import "./globals.css";
 import { site } from "@/content/site";
 import { Header } from "@/components/header";

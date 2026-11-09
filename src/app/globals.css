@@ -34,7 +34,7 @@
   --font-sans: "Onest", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "PT Serif", Georgia, serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
-  --font-zh: "Noto Serif SC", serif;
+  --font-zh: "Noto Serif SC Subset", "Noto Serif SC", serif;
   --radius-sm: 0;
   --radius-md: 0;
   --radius-lg: 0;

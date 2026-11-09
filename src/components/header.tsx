@@ -6,9 +6,10 @@ import { Button } from "./ui/button";
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <Link href="/" aria-label={`${site.name} — на главную`} className={`flex items-center gap-2.5 text-[21px] font-bold tracking-tight ${className ?? ""}`}>
+    <Link href="/" className={`flex items-center gap-2.5 text-[21px] font-bold tracking-tight ${className ?? ""}`}>
       <span aria-hidden="true" className="grid size-[34px] place-items-center rounded-[4px] bg-primary font-zh text-xl font-black text-primary-foreground">去</span>
       {site.name}
+      <span className="sr-only"> — на главную</span>
     </Link>
   );
 }
