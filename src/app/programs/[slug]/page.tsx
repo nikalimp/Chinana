@@ -38,8 +38,8 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
         <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 text-[clamp(220px,32vw,440px)] text-primary opacity-[0.06]">{p.zh}</div>
         <Container>
           <p className="font-mono text-xs uppercase tracking-wide text-primary">Программа {p.num} · {p.zh}</p>
-          <h1 className="mx-auto mt-[18px] max-w-[14ch] text-[clamp(38px,6.4vw,84px)]">{p.h1} <em>{p.h1Accent}</em></h1>
-          <p className="mx-auto mt-6 max-w-[64ch] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{p.answer}</p>
+          <h1 className="mx-auto mt-[18px] max-w-[9.3em] text-[clamp(38px,6.4vw,84px)]">{p.h1} <em>{p.h1Accent}</em></h1>
+          <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{p.answer}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild><a href={site.cta.href}>{p.cta} →</a></Button>
             <Button asChild variant="outline"><Link href="/grants/csc/">Проверить шанс на грант</Link></Button>

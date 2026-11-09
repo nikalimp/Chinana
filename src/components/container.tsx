@@ -41,7 +41,7 @@ export function SectionHead({ eyebrow, title, accent, text, className, inverse, 
       <H className={cn(as === "h1" ? "text-[clamp(38px,6.4vw,84px)]" : "text-[clamp(28px,4.2vw,48px)]")}>
         {title}{accent && <> <em>{accent}</em></>}
       </H>
-      {text && <p className={cn("mx-auto mt-4 max-w-[56ch]", inverse ? "text-inverse-muted" : "text-muted-foreground")}>{text}</p>}
+      {text && <p className={cn("mx-auto mt-4 max-w-[37.2em]", inverse ? "text-inverse-muted" : "text-muted-foreground")}>{text}</p>}
     </div>
   );
 }

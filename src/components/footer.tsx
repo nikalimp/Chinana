@@ -10,7 +10,7 @@ export function Footer() {
       <Container className="grid gap-8 md:grid-cols-12">
         <div className="md:col-span-4">
           <Logo className="text-inverse-foreground" />
-          <p className="mt-3.5 max-w-[34ch]">{site.tagline}</p>
+          <p className="mt-3.5 max-w-[22.6em]">{site.tagline}</p>
         </div>
         <ul className="grid gap-2 md:col-span-3 md:col-start-6">
           {programs.map((p) => (

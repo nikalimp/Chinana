@@ -11,7 +11,7 @@ export function FaqList({ items }: { items: Faq[] }) {
             <span aria-hidden="true" className="font-mono text-[22px] leading-none text-primary group-open:hidden">+</span>
             <span aria-hidden="true" className="hidden font-mono text-[22px] leading-none text-primary group-open:inline">−</span>
           </summary>
-          <p className="max-w-[64ch] pb-5 text-muted-foreground">{f.a}</p>
+          <p className="max-w-[42.6em] pb-5 text-muted-foreground">{f.a}</p>
         </details>
       ))}
     </div>

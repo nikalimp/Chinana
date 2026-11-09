@@ -35,8 +35,8 @@ export default function UniversitiesPage() {
         <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[45%] -translate-x-1/2 -translate-y-1/2 text-[clamp(200px,30vw,420px)] text-primary opacity-[0.06]">大学</div>
         <Container>
           <p className="font-mono text-xs uppercase tracking-wide text-primary">Каталог вузов</p>
-          <h1 className="mx-auto mt-[18px] max-w-[16ch] text-[clamp(36px,6vw,80px)]">Университеты Китая <em>для россиян</em></h1>
-          <p className="mx-auto mt-6 max-w-[64ch] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">
+          <h1 className="mx-auto mt-[18px] max-w-[10.6em] text-[clamp(36px,6vw,80px)]">Университеты Китая <em>для россиян</em></h1>
+          <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">
             В каталоге {universities.length} университетов Китая, которые принимают иностранцев. Для каждого — рейтинг, программы, цены в юанях, гранты, требования HSK и общежитие по данным сайта вуза. Языковые курсы стоят от 6500 до 18 000 юаней за семестр, бакалавриат и магистратура — обычно от 20 000 до 50 000 юаней в год. Каталог пополняется каждую неделю.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">

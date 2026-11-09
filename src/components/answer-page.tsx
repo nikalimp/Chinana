@@ -37,8 +37,8 @@ export function AnswerPage({ a, children }: { a: Answer; children?: React.ReactN
         <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 text-[clamp(200px,30vw,420px)] text-primary opacity-[0.06]">{a.zh}</div>
         <Container>
           <p className="font-mono text-xs uppercase tracking-wide text-primary">{a.eyebrow}</p>
-          <h1 className="mx-auto mt-[18px] max-w-[16ch] text-[clamp(36px,6vw,80px)]">{a.h1} <em>{a.h1Accent}</em></h1>
-          <p className="mx-auto mt-6 max-w-[64ch] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{a.answer}</p>
+          <h1 className="mx-auto mt-[18px] max-w-[10.6em] text-[clamp(36px,6vw,80px)]">{a.h1} <em>{a.h1Accent}</em></h1>
+          <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{a.answer}</p>
           <p className="mt-4 font-mono text-xs text-muted-foreground">Факты проверены {dateRu(a.updated)}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild><a href={site.cta.href}>Задать вопрос менеджеру →</a></Button>
@@ -60,7 +60,7 @@ export function AnswerPage({ a, children }: { a: Answer; children?: React.ReactN
         <Section key={s.id} id={s.id}>
           <Container>
             <SectionHead eyebrow={s.eyebrow} title={s.title} accent={s.accent} />
-            <div className="mx-auto max-w-[72ch] space-y-4 text-[17px]">
+            <div className="mx-auto max-w-[47.9em] space-y-4 text-[17px]">
               {s.paragraphs?.map((p, i) => <p key={i}>{p}{i === s.paragraphs!.length - 1 && !s.list && !s.table && <Ref n={s.src} />}</p>)}
               {s.list && (
                 <ul>
@@ -112,7 +112,7 @@ export function AnswerPage({ a, children }: { a: Answer; children?: React.ReactN
       <Section>
         <Container>
           <SectionHead eyebrow="Проверка фактов" title="Источники" />
-          <ol className="mx-auto max-w-[72ch] space-y-2 text-[15px]">
+          <ol className="mx-auto max-w-[47.9em] space-y-2 text-[15px]">
             {a.sources.map((s, i) => (
               <li key={s.url} id={`src-${i + 1}`} className="flex gap-3 border-b border-grid-line py-2">
                 <span className="font-mono text-primary">[{i + 1}]</span>
@@ -120,7 +120,7 @@ export function AnswerPage({ a, children }: { a: Answer; children?: React.ReactN
               </li>
             ))}
           </ol>
-          <div className="mx-auto mt-10 flex max-w-[72ch] flex-wrap gap-3">
+          <div className="mx-auto mt-10 flex max-w-[47.9em] flex-wrap gap-3">
             {a.related.map((r) => <Button key={r.href} asChild variant="outline"><Link href={r.href}>{r.label}</Link></Button>)}
           </div>
         </Container>

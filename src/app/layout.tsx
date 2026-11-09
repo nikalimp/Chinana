@@ -6,6 +6,7 @@ import "@fontsource/onest/700.css";
 import "@fontsource/pt-serif/400-italic.css";
 import "@fontsource/jetbrains-mono/400.css";
 import "@fontsource/jetbrains-mono/500.css";
+import "./font-fallbacks.css"; // запасные шрифты с метриками Onest и PT Serif — против сдвига вёрстки (scripts/font-fallbacks.py)
 import "./zh-font.css"; // подмножество Noto Serif SC 900 — только иероглифы сайта (scripts/cjk-font.py)
 import "./globals.css";
 import { site } from "@/content/site";
@@ -24,8 +25,10 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
+// Метрика грузится после загрузки страницы, когда браузер свободен: не мешает первому экрану (TBT в Lighthouse).
+// Очередь ym() создаётся сразу, поэтому вызовы до загрузки tag.js не теряются.
 const metrikaScript = (id: number) =>
-  `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=${id}','ym');ym(${id},'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});`;
+  `(function(m,e,t,r,i){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();function go(){for(var j=0;j<e.scripts.length;j++){if(e.scripts[j].src===r)return}var k=e.createElement(t),a=e.getElementsByTagName(t)[0];k.async=1;k.src=r;a.parentNode.insertBefore(k,a)}function idle(){(m.requestIdleCallback||function(f){setTimeout(f,1500)})(go,{timeout:4000})}e.readyState==='complete'?idle():m.addEventListener('load',idle)})(window,document,'script','https://mc.yandex.ru/metrika/tag.js?id=${id}','ym');ym(${id},'init',{ssr:true,webvisor:true,clickmap:true,referrer:document.referrer,url:location.href,accurateTrackBounce:true,trackLinks:true});`;
 
 const themeScript = `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark')}catch(e){}})()`;
 
