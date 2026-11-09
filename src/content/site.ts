@@ -56,7 +56,7 @@ export const site = {
     status: "самозанятый (налог на профессиональный доход)",
     inn: "667109362983",
     ogrn: "",
-    privacyEmail: "", // TODO(Ник): почта для запросов по персональным данным
+    privacyEmail: "nikitaaalimpiev@gmail.com",
   },
 
   // Профили бренда на внешних площадках
@@ -66,7 +66,7 @@ export const site = {
 
   person: null as null | { name: string; jobTitle: string; description: string; sameAs: string[] },
 
-  metrikaId: 0, // TODO(Ник): номер счётчика Яндекс Метрики
+  metrikaId: 114137119,
   darkTheme: false, // только светлая тема (spec §9)
 
   // Функции включаются и выключаются флагами, а не удалением кода (стандарт §1.9)
@@ -82,9 +82,10 @@ export const site = {
 
 export const nav = [
   { href: "/programs/", label: "Программы" },
-  { href: "/grants/csc/", label: "Гранты" },
-  { href: "/exams/csca/", label: "CSCA" },
-  { href: "/universities/", label: "Вузы" },
-  { href: "/cost/", label: "Стоимость" },
+  // Включить, когда страница собрана (T10–T15):
+  // { href: "/grants/csc/", label: "Гранты" },
+  // { href: "/exams/csca/", label: "CSCA" },
+  // { href: "/universities/", label: "Вузы" },
+  // { href: "/cost/", label: "Стоимость" },
   ...(site.features.blog ? [{ href: "/blog/", label: "Блог" }] : []),
 ];
