@@ -10,7 +10,7 @@ import { StepCard, UniCard } from "@/components/cards";
 import { FaqList } from "@/components/faq";
 import { CtaFinal } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
-import { breadcrumbs, faqSchema, graph, serviceSchema } from "@/lib/schema";
+import { faqSchema, graph, serviceSchema } from "@/lib/schema";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -31,15 +31,13 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
   const others = programs.filter((x) => x.slug !== p.slug);
   return (
     <>
-      <JsonLd data={graph(serviceSchema(p), faqSchema(p.faq), breadcrumbs([{ name: "Программы", path: "/programs/" }, { name: p.title, path: `/programs/${p.slug}/` }]))} />
+      <JsonLd data={graph(serviceSchema(p), faqSchema(p.faq))} />
 
       <section className="relative overflow-hidden pb-[clamp(64px,9vw,120px)] pt-[clamp(40px,6vw,80px)] text-center">
         <GridLines />
         <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 text-[clamp(220px,32vw,440px)] text-primary opacity-[0.06]">{p.zh}</div>
         <Container>
-          <nav aria-label="Хлебные крошки" className="font-mono text-xs text-muted-foreground">
-            <Link href="/programs/" className="hover:text-primary">Программы</Link> / {p.title}
-          </nav>
+          <p className="font-mono text-xs uppercase tracking-wide text-primary">Программа {p.num} · {p.zh}</p>
           <h1 className="mx-auto mt-[18px] max-w-[14ch] text-[clamp(38px,6.4vw,84px)]">{p.h1} <em>{p.h1Accent}</em></h1>
           <p className="mx-auto mt-6 max-w-[64ch] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{p.answer}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">

@@ -7,7 +7,7 @@ import { StepCard } from "@/components/cards";
 import { FaqList } from "@/components/faq";
 import { CtaFinal } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
-import { answerSchema, breadcrumbs, faqSchema, graph } from "@/lib/schema";
+import { answerSchema, faqSchema, graph } from "@/lib/schema";
 
 // Ссылка-сноска на источник: [1] ведёт к списку источников внизу страницы.
 function Ref({ n }: { n?: number | number[] }) {
@@ -28,20 +28,15 @@ function Ref({ n }: { n?: number | number[] }) {
 const dateRu = (iso: string) => new Date(iso).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" });
 
 export function AnswerPage({ a, children }: { a: Answer; children?: React.ReactNode }) {
-  const deep = a.path.split("/").filter(Boolean).length > 1; // крошки — только со второго уровня (стандарт §2.4)
   return (
     <>
-      <JsonLd data={graph(answerSchema(a), faqSchema(a.faq), deep && breadcrumbs([{ name: a.crumb, path: a.path }]))} />
+      <JsonLd data={graph(answerSchema(a), faqSchema(a.faq))} />
 
       <section className="relative overflow-hidden pb-[clamp(64px,9vw,120px)] pt-[clamp(40px,6vw,80px)] text-center">
         <GridLines />
         <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 text-[clamp(200px,30vw,420px)] text-primary opacity-[0.06]">{a.zh}</div>
         <Container>
-          {deep ? (
-            <nav aria-label="Хлебные крошки" className="font-mono text-xs text-muted-foreground">
-              <Link href="/" className="hover:text-primary">Главная</Link> / {a.crumb}
-            </nav>
-          ) : <p className="font-mono text-xs uppercase text-primary">{a.eyebrow}</p>}
+          <p className="font-mono text-xs uppercase tracking-wide text-primary">{a.eyebrow}</p>
           <h1 className="mx-auto mt-[18px] max-w-[16ch] text-[clamp(36px,6vw,80px)]">{a.h1} <em>{a.h1Accent}</em></h1>
           <p className="mx-auto mt-6 max-w-[64ch] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{a.answer}</p>
           <p className="mt-4 font-mono text-xs text-muted-foreground">Факты проверены {dateRu(a.updated)}</p>

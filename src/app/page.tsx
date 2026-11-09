@@ -4,9 +4,10 @@ import { home } from "@/content/home";
 import { programs } from "@/content/programs";
 import { Container, Eyebrow, GridLines, Section, SectionHead } from "@/components/container";
 import { Button } from "@/components/ui/button";
-import { ProgramCard, StepCard, UniCard } from "@/components/cards";
+import { ProgramCard, StepCard } from "@/components/cards";
 import { FaqList } from "@/components/faq";
 import { CtaFinal } from "@/components/cta";
+import { UniMap } from "@/components/uni-map";
 import { JsonLd } from "@/components/json-ld";
 import { faqSchema, graph } from "@/lib/schema";
 
@@ -94,9 +95,7 @@ export default function Home() {
       <Section id="unis">
         <Container>
           <SectionHead title={home.unisHead.title} text={home.unisHead.text} />
-          <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {home.universities.map((u) => <UniCard key={u.name} {...u} href={`/universities/${u.slug}/`} />)}
-          </div>
+          <UniMap />
           <div className="mt-6 flex justify-center">
             <Button asChild variant="outline"><Link href="/universities/">Весь каталог →</Link></Button>
           </div>

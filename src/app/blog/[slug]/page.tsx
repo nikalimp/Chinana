@@ -5,10 +5,9 @@ import remarkGfm from "remark-gfm";
 import { formatDate, getPost, getPosts } from "@/lib/posts";
 import { site } from "@/content/site";
 import { Container, Section } from "@/components/container";
-import { Crumbs } from "@/components/crumbs";
 import { Cta } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
-import { articleSchema, breadcrumbs, graph } from "@/lib/schema";
+import { articleSchema, graph } from "@/lib/schema";
 
 export const dynamicParams = false;
 
@@ -34,10 +33,10 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
   if (!p) notFound();
   return (
     <>
-      <JsonLd data={graph(articleSchema(p), breadcrumbs([{ name: "Главная", path: "/" }, { name: "Блог", path: "/blog/" }, { name: p.title, path: `/blog/${p.slug}/` }]))} />
+      <JsonLd data={graph(articleSchema(p))} />
       <Section className="pt-12">
         <Container className="max-w-3xl">
-          <Crumbs items={[{ name: "Главная", path: "/" }, { name: "Блог", path: "/blog/" }, { name: p.title }]} />
+          <p className="mb-4 font-mono text-xs uppercase tracking-wide text-primary">Блог</p>
           <h1 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">{p.title}</h1>
           <p className="mt-4 text-sm text-muted-foreground">
             {site.person ? site.person.name : site.name} · <time dateTime={p.date}>{formatDate(p.date)}</time>
