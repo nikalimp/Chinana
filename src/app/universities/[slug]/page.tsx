@@ -10,7 +10,7 @@ import { UniCard } from "@/components/cards";
 import { FaqList } from "@/components/faq";
 import { CtaFinal } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
-import { breadcrumbs, faqSchema, graph, uniSchema } from "@/lib/schema";
+import { faqSchema, graph, uniSchema } from "@/lib/schema";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -41,17 +41,14 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
 
   return (
     <>
-      <JsonLd data={graph(uniSchema(u), faqSchema(faq), breadcrumbs([{ name: "Вузы", path: "/universities/" }, { name: u.nameRu, path: uniPath(u) }]))} />
+      <JsonLd data={graph(uniSchema(u), faqSchema(faq))} />
 
       <section className="relative overflow-hidden pb-[clamp(64px,9vw,120px)] pt-[clamp(40px,6vw,80px)] text-center">
         <GridLines />
         <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 text-[clamp(180px,26vw,380px)] text-primary opacity-[0.06]">{u.zhShort}</div>
         <Container>
-          <nav aria-label="Хлебные крошки" className="font-mono text-xs text-muted-foreground">
-            <Link href="/universities/" className="hover:text-primary">Вузы</Link> / {u.nameRu}
-          </nav>
-          <p lang="zh-Hans" className="mt-[18px] font-zh text-2xl font-black text-primary">{u.nameZh}</p>
-          <h1 className="mx-auto mt-3 max-w-[18ch] text-[clamp(34px,5.6vw,76px)]">{u.nameRu}: <em>поступление для россиян</em></h1>
+          <p className="font-mono text-xs uppercase tracking-wide text-primary"><span lang="zh-Hans" className="font-zh text-sm font-black">{u.nameZh}</span> · {u.city}</p>
+          <h1 className="mx-auto mt-[18px] max-w-[18ch] text-[clamp(34px,5.6vw,76px)]">{u.nameRu}: <em>поступление для россиян</em></h1>
           <p className="mx-auto mt-6 max-w-[64ch] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{uniAnswer(u)}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild><a href={site.cta.href}>{cta} →</a></Button>
