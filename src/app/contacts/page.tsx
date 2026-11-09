@@ -6,8 +6,8 @@ import { JsonLd } from "@/components/json-ld";
 import { graph, orgId } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Контакты: телефон, адрес и часы работы", // бренд добавит шаблон title из layout
-  description: `Как связаться с ${site.name}: телефон, мессенджеры, адрес и часы работы.`,
+  title: "Контакты: менеджер Chinana в Telegram", // бренд добавит шаблон title из layout
+  description: `Как связаться с ${site.name}: менеджер в Telegram @chinana отвечает о программах, грантах и поступлении в вузы Китая. Работаем онлайн по всей России.`,
   alternates: { canonical: "/contacts/" },
 };
 
@@ -27,7 +27,8 @@ export default function Contacts() {
       <JsonLd data={graph({ "@type": "ContactPage", about: { "@id": orgId } })} />
       <Section className="pt-12">
         <Container className="max-w-3xl">
-          <h1 className="text-3xl font-semibold tracking-tight sm:text-4xl">Контакты</h1>
+          <h1 className="text-[clamp(38px,6vw,72px)]">Контакты</h1>
+          <p className="mt-5 text-muted-foreground">Пишите менеджеру в Telegram: расскажите о цели, возрасте и образовании — подберём программы и гранты и проведём бесплатную диагностику. Работаем онлайн по всей России.</p>
           <dl className="mt-8 divide-y border-y">
             {rows.length === 0 && <p className="py-4 text-muted-foreground">TODO(клиент): контакты в src/content/site.ts</p>}
             {rows.map((r) => (
@@ -38,7 +39,7 @@ export default function Contacts() {
             ))}
           </dl>
           <Button asChild size="lg" className="mt-8"><a href={site.cta.href}>{site.cta.label}</a></Button>
-          <p className="mt-10 text-sm text-muted-foreground">{site.legalName} · ИНН {site.legal.inn} · ОГРН {site.legal.ogrn}</p>
+          <p className="mt-10 text-sm text-muted-foreground">{site.legalName} · ИНН {site.legal.inn}</p>
         </Container>
       </Section>
     </>

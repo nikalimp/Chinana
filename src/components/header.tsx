@@ -3,23 +3,31 @@ import { Menu, X } from "lucide-react";
 import { nav, site } from "@/content/site";
 import { Container } from "./container";
 import { Button } from "./ui/button";
-import { ThemeToggle } from "./theme-toggle";
 
-// Мобильное меню на <details>: открывается без JavaScript, ссылки — обычные <a>.
+export function Logo({ className }: { className?: string }) {
+  return (
+    <Link href="/" aria-label={`${site.name} — на главную`} className={`flex items-center gap-2.5 text-[21px] font-bold tracking-tight ${className ?? ""}`}>
+      <span aria-hidden="true" className="grid size-[34px] place-items-center rounded-[4px] bg-primary font-zh text-xl font-black text-primary-foreground">去</span>
+      {site.name}
+    </Link>
+  );
+}
+
+// Мобильное меню на <details>: открывается без JavaScript
 function MobileMenu() {
   return (
-    <details className="group/m md:hidden">
-      <summary aria-label="Открыть меню" className="inline-flex size-11 cursor-pointer list-none items-center justify-center rounded-md hover:bg-accent [&::-webkit-details-marker]:hidden">
-        <Menu className="size-5 group-open/m:hidden" />
-        <X className="hidden size-5 group-open/m:block" />
+    <details className="group/m lg:hidden">
+      <summary aria-label="Открыть меню" className="inline-flex size-11 cursor-pointer list-none items-center justify-center [&::-webkit-details-marker]:hidden">
+        <Menu className="size-6 group-open/m:hidden" />
+        <X className="hidden size-6 group-open/m:block" />
       </summary>
-      <div className="absolute inset-x-0 top-14 max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-b bg-background px-4 pb-6 pt-2 shadow-lg">
-        <ul className="border-b py-3">
+      <div className="absolute inset-x-0 top-[68px] border-b border-border bg-background px-[clamp(16px,4vw,40px)] pb-6">
+        <ul>
           {nav.map((n) => (
-            <li key={n.href}><a href={n.href} className="block py-2.5 text-[15px]">{n.label}</a></li>
+            <li key={n.href} className="border-b border-grid-line"><a href={n.href} className="block py-3.5 text-lg font-medium">{n.label}</a></li>
           ))}
         </ul>
-        <Button asChild size="lg" className="mt-5 w-full"><a href={site.cta.href}>{site.cta.label}</a></Button>
+        <Button asChild className="mt-5 w-full"><a href={site.cta.href}>{site.cta.label}</a></Button>
       </div>
     </details>
   );
@@ -27,16 +35,15 @@ function MobileMenu() {
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b bg-background/85 backdrop-blur">
-      <Container className="grid h-14 grid-cols-[1fr_auto] items-center gap-6 md:grid-cols-[1fr_auto_1fr]">
-        <Link href="/" className="justify-self-start font-semibold tracking-tight">{site.name}</Link>
-        <nav aria-label="Основное меню" className="hidden items-center justify-center gap-6 text-sm text-muted-foreground md:flex">
+    <header className="sticky top-0 z-40 border-b border-grid-line bg-background/90 backdrop-blur">
+      <Container className="flex h-[68px] items-center justify-between gap-5">
+        <Logo />
+        <nav aria-label="Основное меню" className="hidden items-center gap-7 text-[15px] lg:flex">
           {nav.map((n) => (
-            <Link key={n.href} href={n.href} className="hover:text-foreground">{n.label}</Link>
+            <Link key={n.href} href={n.href} className="hover:text-primary">{n.label}</Link>
           ))}
         </nav>
-        <div className="flex items-center justify-end gap-1">
-          {site.darkTheme && <ThemeToggle />}
+        <div className="flex items-center gap-2">
           <Button asChild size="sm" className="hidden sm:inline-flex"><a href={site.cta.href}>{site.cta.label}</a></Button>
           <MobileMenu />
         </div>

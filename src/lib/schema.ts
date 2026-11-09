@@ -1,6 +1,6 @@
 // JSON-LD по стандарту AI-Ready сайта, §5. Один @graph на страницу, сущности связаны через @id.
 import { site } from "@/content/site";
-import type { Faq, Service } from "@/content/services";
+import type { Faq, Program } from "@/content/programs";
 
 export const orgId = `${site.url}/#org`;
 export const websiteId = `${site.url}/#website`;
@@ -37,7 +37,7 @@ export const personSchema: Record<string, unknown> | null = site.person && {
   jobTitle: site.person.jobTitle,
   description: site.person.description,
   worksFor: { "@id": orgId },
-  url: `${site.url}/about/`,
+  url: site.url,
   ...(site.person.sameAs.length && { sameAs: site.person.sameAs }),
 };
 
@@ -57,22 +57,23 @@ export function faqSchema(faq: Faq[]) {
   };
 }
 
-export function serviceSchema(s: Service) {
+export function serviceSchema(p: Program) {
+  // Цену в разметку не кладём: на сайте она — ориентир «от» (стандарт: не размечать то, чего нет на странице как факт)
   return {
     "@type": "Service",
-    name: s.title,
-    serviceType: s.h1,
-    description: s.answer,
-    url: `${site.url}/services/${s.slug}/`,
+    name: p.title,
+    serviceType: `Сопровождение поступления: ${p.title.toLowerCase()} в Китае`,
+    description: p.answer,
+    url: `${site.url}/programs/${p.slug}/`,
     provider: { "@id": orgId },
     areaServed: site.areaServed,
-    offers: s.prices.map((p) => ({
-      "@type": "Offer",
-      name: p.name,
-      description: [p.value, p.note].filter(Boolean).join(". "),
-      priceCurrency: "RUB",
-      ...(p.amount ? { price: String(p.amount) } : {}),
-    })),
+  };
+}
+
+export function itemList(items: { name: string; path: string }[]) {
+  return {
+    "@type": "ItemList",
+    itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, url: `${site.url}${it.path}` })),
   };
 }
 

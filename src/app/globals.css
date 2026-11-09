@@ -1,75 +1,76 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
 
 /* Токены бренда — из specs/03-design.md §3. Дефолт: нейтральная тема shadcn + синий акцент.
    Серая тема без настройки под бренд = недоделка (стандарт §6). */
 :root {
-  --radius: 0.5rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.205 0 0);
-  --card: oklch(0.99 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.52 0 0);
-  --accent: oklch(0.965 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --border: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --brand: oklch(0.55 0.15 255);
-  --brand-bg: oklch(0.97 0.02 255);
-}
-
-.dark {
-  --background: oklch(0.17 0 0);
-  --foreground: oklch(0.93 0 0);
-  --card: oklch(0.2 0 0);
-  --primary: oklch(0.93 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.26 0 0);
-  --secondary-foreground: oklch(0.93 0 0);
-  --muted: oklch(0.25 0 0);
-  --muted-foreground: oklch(0.66 0 0);
-  --accent: oklch(0.255 0 0);
-  --accent-foreground: oklch(0.93 0 0);
-  --border: oklch(1 0 0 / 10%);
-  --ring: oklch(0.556 0 0);
-  --brand: oklch(0.74 0.12 255);
-  --brand-bg: oklch(0.74 0.12 255 / 12%);
+  /* Токены — specs/03-design.md §3 (утверждено Ником 2026-11-09). Только светлая тема. */
+  --radius: 0rem;
+  --radius-media: 6px;
+  --background: oklch(98.1% 0.018 81.3);
+  --foreground: oklch(20.4% 0.020 40.9);
+  --card: oklch(98.1% 0.018 81.3);
+  --card-hover: oklch(100% 0 0);
+  --primary: oklch(53.0% 0.207 22.3);
+  --primary-foreground: oklch(100% 0 0);
+  --brand: oklch(41.7% 0.156 22.7);
+  --brand-bg: oklch(89.7% 0.037 80.6);
+  --secondary: oklch(89.7% 0.037 80.6);
+  --secondary-foreground: oklch(20.4% 0.020 40.9);
+  --secondary-strong: oklch(82.3% 0.054 80.0);
+  --muted: oklch(89.7% 0.037 80.6);
+  --muted-foreground: oklch(42.3% 0.027 53.8);
+  --accent: oklch(85.7% 0.165 86.5);
+  --accent-foreground: oklch(20.4% 0.020 40.9);
+  --inverse: oklch(17.7% 0.008 48.3);
+  --inverse-foreground: oklch(98.1% 0.018 81.3);
+  --inverse-muted: oklch(90.0% 0.030 78.8);
+  --border: oklch(20.4% 0.020 40.9);
+  --grid-line: oklch(20.4% 0.020 40.9 / 10%);
+  --ring: oklch(53.0% 0.207 22.3);
 }
 
 @theme inline {
-  --font-sans: "Inter Variable", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
-  --radius-sm: calc(var(--radius) - 4px);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) + 4px);
+  --font-sans: "Onest", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "PT Serif", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-zh: "Noto Serif SC", serif;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-media: var(--radius-media);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
+  --color-card-hover: var(--card-hover);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-strong: var(--secondary-strong);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
+  --color-inverse: var(--inverse);
+  --color-inverse-foreground: var(--inverse-foreground);
+  --color-inverse-muted: var(--inverse-muted);
   --color-border: var(--border);
+  --color-grid-line: var(--grid-line);
   --color-ring: var(--ring);
   --color-brand: var(--brand);
   --color-brand-bg: var(--brand-bg);
 }
 
 @layer base {
-  * { @apply border-border outline-ring/50; }
+  * { @apply border-border outline-ring; }
   html { scroll-behavior: smooth; }
-  body { @apply bg-background text-foreground; font-size: 15px; -webkit-font-smoothing: antialiased; }
-  ::selection { background: oklch(0.55 0.15 255 / 20%); }
+  body { @apply bg-background text-foreground font-sans; font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+  ::selection { background: var(--accent); color: var(--foreground); }
+  h1, h2 { text-transform: uppercase; font-weight: 700; letter-spacing: -0.01em; line-height: 1.02; }
+  em { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
+  :focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
 }
 
 /* Типографика статей */
@@ -77,7 +78,7 @@
 .prose-site > * + * { margin-top: 0.85em; }
 .prose-site h2 { font-size: 1.45em; font-weight: 600; margin-top: 1.8em; line-height: 1.3; letter-spacing: -0.01em; }
 .prose-site h3 { font-size: 1.15em; font-weight: 600; margin-top: 1.4em; }
-.prose-site a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: color-mix(in oklch, var(--brand) 35%, transparent); }
+.prose-site a { color: var(--brand); text-decoration: underline; text-underline-offset: 3px; }
 .prose-site ul { list-style: disc; padding-left: 1.3em; }
 .prose-site ol { list-style: decimal; padding-left: 1.3em; }
 .prose-site li + li { margin-top: 0.3em; }
@@ -95,3 +96,28 @@
   details[open] > :not(summary) { animation: fade-in .25s ease-out; }
 }
 @keyframes fade-in { from { opacity: 0; translate: 0 -4px; } to { opacity: 1; translate: none; } }
+
+/* Направляющие: 12 равных колонок без зазоров (03-design §3) — сложный фон, удобнее CSS, чем классами */
+.grid-lines {
+  position: absolute; inset: 0; pointer-events: none; margin: 0 auto; max-width: 1240px;
+  padding: 0 clamp(16px, 4vw, 40px); display: grid; grid-template-columns: repeat(12, 1fr);
+}
+.grid-lines > span { border-left: 1px solid var(--grid-line); }
+.grid-lines > span:last-child { border-right: 1px solid var(--grid-line); }
+.grid-lines--inverse > span { border-color: oklch(98.1% 0.018 81.3 / 7%); }
+.grid-lines--on-primary > span { border-color: oklch(100% 0 0 / 12%); }
+@media (max-width: 760px) {
+  .grid-lines { grid-template-columns: repeat(4, 1fr); }
+  .grid-lines > span:nth-child(n + 5) { display: none; }
+  .grid-lines > span:nth-child(4) { border-right: 1px solid var(--grid-line); }
+}
+
+/* Карточки без зазоров: у карточки левая и верхняя граница, у контейнера — правая и нижняя */
+.cards { display: grid; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.cards > * { border-left: 1px solid var(--border); border-top: 1px solid var(--border); }
+
+/* Маркер под словом — жёлтый только фоном */
+.mark { background: linear-gradient(transparent 58%, var(--accent) 58%, var(--accent) 92%, transparent 92%); padding: 0 .08em; }
+
+/* Крупные декоративные иероглифы */
+.zh-bg { position: absolute; pointer-events: none; user-select: none; font-family: var(--font-zh); font-weight: 900; line-height: 1; white-space: nowrap; }

@@ -7,8 +7,8 @@ import { JsonLd } from "@/components/json-ld";
 import { graph } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "TODO(клиент): Блог — статьи и ответы на вопросы",
-  description: "TODO(клиент): о чём блог и кому он полезен, 120⁠–⁠160 символов.",
+  title: "Блог о поступлении в Китай: гранты, экзамены, вузы",
+  description: "Статьи о поступлении в вузы Китая: гранты CSC, экзамены CSCA и HSK, документы, города и стоимость учёбы для взрослых из России.",
   alternates: { canonical: "/blog/" },
   ...(!site.features.blog && { robots: { index: false, follow: true } }),
 };
