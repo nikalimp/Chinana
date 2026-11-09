@@ -1,6 +1,8 @@
 // JSON-LD по стандарту AI-Ready сайта, §5. Один @graph на страницу, сущности связаны через @id.
 import { site } from "@/content/site";
 import type { Faq, Program } from "@/content/programs";
+import type { Answer } from "@/content/answer-types";
+import type { Uni } from "@/content/university-types";
 
 export const orgId = `${site.url}/#org`;
 export const websiteId = `${site.url}/#website`;
@@ -89,6 +91,35 @@ export function articleSchema(p: { slug: string; title: string; description: str
     author: site.person ? { "@id": personId } : { "@id": orgId },
     publisher: { "@id": orgId },
     mainEntityOfPage: `${site.url}/blog/${p.slug}/`,
+  };
+}
+
+// Страница-ответ: Article с датой проверки фактов и списком источников (citation).
+export function answerSchema(a: Answer) {
+  return {
+    "@type": "Article",
+    headline: `${a.h1} ${a.h1Accent}`,
+    description: a.metaDescription,
+    url: `${site.url}${a.path}`,
+    dateModified: a.updated,
+    inLanguage: "ru-RU",
+    author: { "@id": orgId },
+    publisher: { "@id": orgId },
+    mainEntityOfPage: `${site.url}${a.path}`,
+    citation: a.sources.map((s) => s.url),
+  };
+}
+
+// Страница вуза: CollegeOrUniversity — только то, что есть на странице (имя, город, год, сайт-источник).
+export function uniSchema(u: Uni) {
+  return {
+    "@type": "CollegeOrUniversity",
+    name: u.nameRu,
+    alternateName: [u.nameZh, u.nameEn],
+    url: `${site.url}/universities/${u.slug}/`,
+    address: { "@type": "PostalAddress", addressLocality: u.city, addressCountry: "CN" },
+    ...(u.founded && { foundingDate: String(u.founded) }),
+    ...(u.sources.some((s) => s.includes("wikipedia.org")) && { sameAs: u.sources.filter((s) => s.includes("wikipedia.org")) }),
   };
 }
 

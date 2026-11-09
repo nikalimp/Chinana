@@ -29,15 +29,15 @@ export function ProgramCard({ p }: { p: Program }) {
   );
 }
 
-export function UniCard({ zh, name, city, partner = false }: { zh: string; name: string; city: string; partner?: boolean }) {
+export function UniCard({ zh, name, city, partner = false, href }: { zh: string; name: string; city: string; partner?: boolean; href?: string }) {
   return (
-    <a href={site.cta.href} className="grid grid-cols-[auto_1fr] items-center gap-x-[18px] gap-y-1 bg-card p-[22px] transition-colors hover:bg-secondary">
+    <a href={href ?? site.cta.href} className="grid grid-cols-[auto_1fr] items-center gap-x-[18px] gap-y-1 bg-card p-[22px] transition-colors hover:bg-secondary">
       <span lang="zh-Hans" className="row-span-3 font-zh text-[34px] font-black leading-none tracking-[0.05em] text-primary [writing-mode:vertical-rl]">{zh}</span>
       <b className="text-[17px]">{name}</b>
       <span className="text-sm text-muted-foreground">{city}</span>
       {partner
         ? <span className="justify-self-start rounded-full bg-primary px-2.5 py-0.5 font-mono text-xs text-primary-foreground">Поступить →</span>
-        : <span className="font-mono text-xs text-brand">Консультация →</span>}
+        : <span className="font-mono text-xs text-brand">{href ? "Подробнее →" : "Консультация →"}</span>}
     </a>
   );
 }

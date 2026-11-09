@@ -95,7 +95,7 @@ export default function Home() {
         <Container>
           <SectionHead title={home.unisHead.title} text={home.unisHead.text} />
           <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {home.universities.map((u) => <UniCard key={u.name} {...u} />)}
+            {home.universities.map((u) => <UniCard key={u.name} {...u} href={`/universities/${u.slug}/`} />)}
           </div>
           <div className="mt-6 flex justify-center">
             <Button asChild variant="outline"><Link href="/universities/">Весь каталог →</Link></Button>

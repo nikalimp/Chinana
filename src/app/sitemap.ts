@@ -2,6 +2,8 @@ import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
 import { programs } from "@/content/programs";
 import { getPosts } from "@/lib/posts";
+import { answers } from "@/content/answers";
+import { universities, unisChecked } from "@/content/universities";
 
 export const dynamic = "force-static";
 
@@ -15,6 +17,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/`, priority: 1 },
     { url: `${site.url}/programs/`, priority: 0.9 },
     ...programs.map((p) => ({ url: `${site.url}/programs/${p.slug}/`, priority: 0.8 })),
+    ...answers.map((a) => ({ url: `${site.url}${a.path}`, lastModified: a.updated, priority: 0.8 })),
+    { url: `${site.url}/universities/`, lastModified: unisChecked, priority: 0.9 },
+    ...universities.map((u) => ({ url: `${site.url}/universities/${u.slug}/`, lastModified: unisChecked, priority: 0.7 })),
     { url: `${site.url}/contacts/`, priority: 0.6 },
     ...(site.features.blog && posts.length ? [{ url: `${site.url}/blog/`, lastModified: posts.map((p) => p.updated ?? p.date).sort().at(-1), priority: 0.7 }] : []),
     ...(site.features.blog ? posts : []).map((p) => ({ url: `${site.url}/blog/${p.slug}/`, lastModified: p.updated ?? p.date, priority: 0.7 })),

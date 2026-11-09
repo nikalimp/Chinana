@@ -3,6 +3,8 @@ import { site } from "@/content/site";
 import { programs, formatRub } from "@/content/programs";
 import { home } from "@/content/home";
 import { getPosts } from "./posts";
+import { answers } from "@/content/answers";
+import { universities, uniAnswer } from "@/content/universities";
 
 // Простой текст для нейросетей: неразрывные пробелы типографа заменяем обычными
 const plain = (s: string) => s.replace(/\u00A0/g, " ").replace(/\u2060/g, "");
@@ -30,6 +32,13 @@ export function llmsTxt() {
 
 ## Программы
 ${programs.map((p) => `- [${p.title}](${site.url}/programs/${p.slug}/): ${p.short} Сопровождение — от ${formatRub(p.price)}, оплата 50/50.`).join("\n")}
+
+## Ответы
+${answers.map((a) => `- [${a.h1} ${a.h1Accent}](${site.url}${a.path}): ${a.metaDescription}`).join("\n")}
+
+## Вузы Китая
+- [Каталог университетов](${site.url}/universities/): ${universities.length} вузов с ценами, грантами и требованиями HSK
+${universities.map((u) => `- [${u.nameRu} (${u.nameZh})](${site.url}/universities/${u.slug}/)`).join("\n")}
 ${posts.length ? `\n## Статьи\n${posts.map((p) => `- [${p.title}](${site.url}/blog/${p.slug}/): ${p.description}`).join("\n")}\n` : ""}
 ## О сервисе
 - ${site.tagline}
@@ -48,6 +57,6 @@ export function llmsFullTxt() {
   );
   const posts = getPosts().map((p) => `## ${p.title}\nURL: ${site.url}/blog/${p.slug}/\nДата: ${p.updated ?? p.date}\n\n${p.body}`);
   return plain(
-    `${llmsTxt()}\n---\n\n# Частые вопросы\n\n${home.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}\n\n---\n\n# Программы\n\n${blocks.join("\n\n")}\n${posts.length ? `\n---\n\n# Статьи\n\n${posts.join("\n\n")}\n` : ""}`,
+    `${llmsTxt()}\n---\n\n# Частые вопросы\n\n${home.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}\n\n---\n\n# Программы\n\n${blocks.join("\n\n")}\n\n---\n\n# Ответы\n\n${answers.map((a) => `## ${a.h1} ${a.h1Accent}\nURL: ${site.url}${a.path}\nФакты проверены: ${a.updated}\n\n${a.answer}\n\n${a.faq.map((f) => `- ${f.q} ${f.a}`).join("\n")}\n\nИсточники:\n${a.sources.map((x) => `- ${x.url}`).join("\n")}`).join("\n\n")}\n\n---\n\n# Вузы\n\n${universities.map((u) => `## ${u.nameRu}\nURL: ${site.url}/universities/${u.slug}/\n\n${uniAnswer(u)}`).join("\n\n")}\n${posts.length ? `\n---\n\n# Статьи\n\n${posts.join("\n\n")}\n` : ""}`,
   );
 }
