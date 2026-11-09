@@ -48,8 +48,8 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
         <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 text-[clamp(180px,26vw,380px)] text-primary opacity-[0.06]">{u.zhShort}</div>
         <Container>
           <p className="font-mono text-xs uppercase tracking-wide text-primary"><span lang="zh-Hans" className="font-zh text-sm font-black">{u.nameZh}</span> · {u.city}</p>
-          <h1 className="mx-auto mt-[18px] max-w-[18ch] text-[clamp(34px,5.6vw,76px)]">{u.nameRu}: <em>поступление для россиян</em></h1>
-          <p className="mx-auto mt-6 max-w-[64ch] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{uniAnswer(u)}</p>
+          <h1 className="mx-auto mt-[18px] max-w-[12em] text-[clamp(34px,5.6vw,76px)]">{u.nameRu}: <em>поступление для россиян</em></h1>
+          <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{uniAnswer(u)}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild><a href={site.cta.href}>{cta} →</a></Button>
             <Button asChild variant="outline"><Link href="/grants/csc/">Как получить грант</Link></Button>
@@ -74,7 +74,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
         <Section>
           <Container>
             <SectionHead eyebrow="О вузе" title="Чем известен" accent={u.nameRu} />
-            <ul className="mx-auto max-w-[72ch] text-[17px]">
+            <ul className="mx-auto max-w-[47.9em] text-[17px]">
               {u.facts.map((f) => (
                 <li key={f.text} className="flex gap-3 border-b border-grid-line py-2.5"><span aria-hidden="true" className="font-mono text-primary">—</span><span>{f.text} <a href={f.url} rel="noopener" target="_blank" className="font-mono text-[11px] text-primary hover:underline">[источник]</a></span></li>
               ))}
@@ -125,7 +125,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
               ))}
             </tbody>
           </table>
-          <p className="mx-auto mt-6 max-w-[72ch] text-muted-foreground">Если китайского пока нет, путь обычно такой: языковые курсы в Китае, затем экзамен HSK, затем поступление на степень. Для бакалавриата по гранту правительства Китая нужен ещё экзамен <Link href="/exams/csca/" className="text-primary hover:underline">CSCA</Link>.</p>
+          <p className="mx-auto mt-6 max-w-[47.9em] text-muted-foreground">Если китайского пока нет, путь обычно такой: языковые курсы в Китае, затем экзамен HSK, затем поступление на степень. Для бакалавриата по гранту правительства Китая нужен ещё экзамен <Link href="/exams/csca/" className="text-primary hover:underline">CSCA</Link>.</p>
         </Container>
       </Section>
 
@@ -133,7 +133,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
         <Section>
           <Container>
             <SectionHead eyebrow="Гранты" title="Гранты" accent="для иностранцев" text="Полный грант правительства Китая покрывает обучение, общежитие и страховку и платит стипендию." />
-            <ul className="mx-auto max-w-[72ch] text-[17px]">
+            <ul className="mx-auto max-w-[47.9em] text-[17px]">
               {u.grants.map((g) => (
                 <li key={g.name} className="flex gap-3 border-b border-grid-line py-2.5"><span aria-hidden="true" className="font-mono text-primary">—</span><span>{g.name} <a href={g.url} rel="noopener" target="_blank" className="font-mono text-[11px] text-primary hover:underline">[источник]</a></span></li>
               ))}
@@ -175,7 +175,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
           <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {others.map((o) => <UniCard key={o.slug} zh={o.zhShort} name={o.nameRu} city={o.city} partner={o.partner} href={uniPath(o)} />)}
           </div>
-          <details className="mx-auto mt-12 max-w-[72ch] text-sm text-muted-foreground">
+          <details className="mx-auto mt-12 max-w-[47.9em] text-sm text-muted-foreground">
             <summary className="cursor-pointer font-mono text-xs uppercase">Источники ({sources.length})</summary>
             <ol className="mt-3 space-y-1.5">
               {sources.map((s) => <li key={s}><a href={s} rel="noopener" target="_blank" className="break-all hover:text-primary">{s}</a></li>)}

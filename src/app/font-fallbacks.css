@@ -1,0 +1,4 @@
+/* Сгенерировано scripts/font-fallbacks.py — не править руками. */
+@font-face{font-family:'Onest Fallback';src:local("Arial"),local("ArialMT"),local("Helvetica"),local("Liberation Sans");font-weight:100 500;font-style:normal;size-adjust:103.67%;ascent-override:93.57%;descent-override:29.42%;line-gap-override:0.00%}
+@font-face{font-family:'Onest Fallback';src:local("Arial Bold"),local("Arial-BoldMT"),local("Helvetica Bold"),local("Liberation Sans Bold");font-weight:600 900;font-style:normal;size-adjust:99.92%;ascent-override:97.08%;descent-override:30.52%;line-gap-override:0.00%}
+@font-face{font-family:'PT Serif Fallback';src:local("Times New Roman Italic"),local("TimesNewRomanPS-ItalicMT"),local("Times Italic"),local("Liberation Serif Italic");font-weight:400;font-style:italic;size-adjust:99.78%;ascent-override:104.13%;descent-override:28.66%;line-gap-override:0.00%}

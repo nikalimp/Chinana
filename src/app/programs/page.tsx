@@ -27,7 +27,7 @@ export default function Programs() {
           <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
             {programs.map((p) => <ProgramCard key={p.slug} p={p} />)}
           </div>
-          <div className="mx-auto mt-14 max-w-[64ch] space-y-4 text-muted-foreground">
+          <div className="mx-auto mt-14 max-w-[42.6em] space-y-4 text-muted-foreground">
             <h2 className="text-center text-[clamp(24px,3vw,32px)] text-foreground">Как выбрать <em>программу</em></h2>
             <p>Если китайского нет, начните с языкового года: за семестр или год вы получите базу языка и поймёте, хотите ли учиться в Китае дальше. Если цель — бакалавриат, а языка или профильных предметов не хватает, подойдёт foundation: он готовит именно к поступлению.</p>
             <p>Бакалавриат подходит выпускникам школы 18+ и колледжа, магистратура — тем, у кого уже есть диплом бакалавра или специалиста. На обе программы есть гранты правительства Китая и вузов, а также программы на английском языке.</p>
