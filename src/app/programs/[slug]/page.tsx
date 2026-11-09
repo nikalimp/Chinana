@@ -118,7 +118,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
         <Container>
           <SectionHead eyebrow="Где учиться" title="Вузы" accent="для этой программы" text="Каталог вузов с ценами и грантами — в разделе «Вузы»." />
           <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {home.universities.slice(0, 3).map((u) => <UniCard key={u.name} {...u} />)}
+            {home.universities.slice(0, 3).map((u) => <UniCard key={u.name} {...u} href={`/universities/${u.slug}/`} />)}
           </div>
         </Container>
       </Section>

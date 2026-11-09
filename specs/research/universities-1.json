@@ -1,0 +1,1109 @@
+[
+ {
+  "slug": "tsinghua",
+  "nameRu": "Университет Цинхуа",
+  "nameZh": "清华大学",
+  "nameEn": "Tsinghua University",
+  "city": "Пекин",
+  "founded": 1911,
+  "rankings": [
+   {
+    "name": "QS World University Rankings",
+    "value": "17",
+    "year": 2026,
+    "url": "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+   },
+   {
+    "name": "THE World University Rankings",
+    "value": "12",
+    "year": 2026,
+    "url": "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "семестр 18 недель, 20 ак. часов в неделю; весенний (февраль–июнь) и осенний (сентябрь–январь)",
+    "priceCny": "10500",
+    "priceNote": "10 500 юаней за семестр; взнос за заявку 400 юаней; страховка 300 юаней за семестр. Данные Beijing.gov (2024)",
+    "url": "https://english.beijing.gov.cn/studyinginbeijing/programsnews/202409/t20240906_3791415.html"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский и английский (Chinese-English taught)",
+    "duration": "4 года (медицина — 8 лет)",
+    "priceCny": "26000–40000",
+    "priceNote": "26 000 — экономика, финансы, менеджмент, право; 30 000 — инженерия, CS, архитектура, естественные науки; 40 000 — искусство; клиническая медицина 40 000–70 000 по этапам",
+    "url": "https://international.join-tsinghua.edu.cn/Admission1/Fees.htm"
+   },
+   {
+    "type": "bachelor",
+    "language": "английский",
+    "duration": "4 года",
+    "priceCny": "100000",
+    "priceNote": "100 000 юаней в год — англоязычные программы Zijing College, Zhishan College и двойной диплом Tsinghua–CUHK по экономике",
+    "url": "https://international.join-tsinghua.edu.cn/Admission1/Fees.htm"
+   },
+   {
+    "type": "master",
+    "language": "китайский / английский (зависит от программы)",
+    "duration": "2–3 года",
+    "priceCny": "30000–99000",
+    "priceNote": "Официальная таблица «Tuition Fees 2026» не получена; диапазон 30 000–99 000 юаней в год взят из стороннего обзора wentchina.com — требуется проверка",
+    "url": "https://wentchina.com/tsinghua-tuition-fees-2026/"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая (CGS), полная и частичная — указана в наборе в магистратуру и аспирантуру 2026",
+    "url": "https://yz.tsinghua.edu.cn/en/info/1035/1523.htm"
+   },
+   {
+    "name": "Стипендия правительства Пекина (Beijing Government Scholarship) — покрывает обучение",
+    "url": "https://yz.tsinghua.edu.cn/en/info/1035/1523.htm"
+   },
+   {
+    "name": "Стипендии для первокурсников бакалавриата (Freshmen Scholarships)",
+    "url": "https://international.join-tsinghua.edu.cn/Admission1/Fees.htm"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "HSK 5, не менее 60 баллов в каждой из трёх частей (программы Chinese-English taught)",
+   "master": "Задаётся факультетом в каталоге программ, единого уровня нет",
+   "url": "https://international.join-tsinghua.edu.cn/Admission1/Eligibility.htm"
+  },
+  "dorm": {
+   "priceCny": "40–80",
+   "period": "день",
+   "url": "https://is.tsinghua.edu.cn/info/1348/1378.htm"
+  },
+  "applicationFeeCny": "800",
+  "applicationWindow": "Бакалавриат 2027: 1-й раунд 30.09.2026–20.11.2026 (результаты в январе 2027), 2-й раунд 21.11.2026–28.02.2027 (результаты в начале мая 2027). Магистратура и аспирантура: обычно с сентября по февраль, срок зависит от программы",
+  "facts": [
+   {
+    "text": "Подача на бакалавриат 2027 идёт в два раунда: первый закрывается 20 ноября 2026",
+    "url": "https://international.join-tsinghua.edu.cn/Admission1/Schedule.htm"
+   },
+   {
+    "text": "Обучение на англоязычных программах бакалавриата стоит 100 000 юаней в год, примерно в 3–4 раза дороже двуязычных",
+    "url": "https://international.join-tsinghua.edu.cn/Admission1/Fees.htm"
+   },
+   {
+    "text": "Для двуязычного бакалавриата нужен HSK 5 и не менее 60 баллов в каждой части",
+    "url": "https://international.join-tsinghua.edu.cn/Admission1/Eligibility.htm"
+   },
+   {
+    "text": "Иностранные студенты живут в Zijing Apartment (корпуса 19–23): 40 юаней в день в двухместной комнате, 80 — в одноместной (данные 2021)",
+    "url": "https://is.tsinghua.edu.cn/info/1348/1378.htm"
+   }
+  ],
+  "sources": [
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://www.topuniversities.com/qs-top-uni-wur",
+   "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary",
+   "https://international.join-tsinghua.edu.cn/Admission1/Fees.htm",
+   "https://international.join-tsinghua.edu.cn/Admission1/Eligibility.htm",
+   "https://international.join-tsinghua.edu.cn/Admission1/Schedule.htm",
+   "https://yz.tsinghua.edu.cn/en/info/1035/1523.htm",
+   "https://english.beijing.gov.cn/studyinginbeijing/programsnews/202409/t20240906_3791415.html",
+   "https://is.tsinghua.edu.cn/info/1348/1378.htm",
+   "https://wentchina.com/tsinghua-tuition-fees-2026/",
+   "https://en.wikipedia.org/wiki/Tsinghua_University"
+  ],
+  "gaps": [
+   "Год основания не подтверждён источником",
+   "Официальная стоимость магистратуры (таблица Tuition Fees 2026) не найдена, диапазон взят из стороннего обзора",
+   "Явное указание на CSC Type B (через университет) не найдено, упомянута только CGS",
+   "Цены общежития датированы 2021 годом",
+   "Заметные сильные направления не подтверждены официальным источником"
+  ]
+ },
+ {
+  "slug": "peking",
+  "nameRu": "Пекинский университет",
+  "nameZh": "北京大学",
+  "nameEn": "Peking University",
+  "city": "Пекин",
+  "founded": 1898,
+  "rankings": [
+   {
+    "name": "QS World University Rankings",
+    "value": "14",
+    "year": 2026,
+    "url": "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+   },
+   {
+    "name": "THE World University Rankings",
+    "value": "13",
+    "year": 2026,
+    "url": "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "обычно 1 семестр, продление до 4 семестров",
+    "priceCny": "18000",
+    "priceNote": "18 000 юаней за семестр плюс учебники 150–300; взнос за заявку 400. Данные Beijing.gov (2024)",
+    "url": "https://english.beijing.gov.cn/studyinginbeijing/programsnews/202409/t20240906_3791413.html"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский",
+    "duration": "1–2 года подготовки (Yuke) + бакалавриат",
+    "priceCny": "",
+    "priceNote": "Стоимость бакалавриата не найдена. Подготовительная программа Yuke: 27 000 юаней за семестр",
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=772"
+   },
+   {
+    "type": "master",
+    "language": "китайский / английский",
+    "duration": "2–3 года",
+    "priceCny": "",
+    "priceNote": "Для большинства программ стоимость не утверждена («сообщим после утверждения»). Известные цены за весь срок: International Chinese Education — 78 000, Master of Finance (Guanghua) — 128 000, LLM — 160 000, Global MBA — 188 000",
+    "url": "https://isd.pku.edu.cn/userfiles/editor/202511100936379905.pdf"
+   },
+   {
+    "type": "master",
+    "language": "английский",
+    "duration": "3 года",
+    "priceCny": "50000",
+    "priceNote": "50 000 юаней в год — англоязычная магистратура School of Computer Science (набор 2026)",
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=739"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая, Type B",
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=729"
+   },
+   {
+    "name": "Стипендия правительства Пекина для иностранных студентов (типы A, B, C)",
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=729"
+   },
+   {
+    "name": "Стипендия Пекинского университета для новых иностранных студентов",
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=729"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "",
+   "master": "HSK 6: от 200 баллов для естественных наук, от 210 для гуманитарных; письмо не ниже 65",
+   "url": "https://isd.pku.edu.cn/en/detail.php?id=729"
+  },
+  "dorm": {
+   "priceCny": "80",
+   "period": "день (примерно; PKU Zhongguanyuan Global Village, подготовительная программа)",
+   "url": "https://isd.pku.edu.cn/en/detail.php?id=772"
+  },
+  "applicationFeeCny": "800",
+  "applicationWindow": "Магистратура и аспирантура 2027: 26.10.2026–25.12.2026 (по пекинскому времени). Подготовительная программа (набор 2026): 24.11.2025–08.05.2026. Окно бакалавриата 2027 не найдено",
+  "facts": [
+   {
+    "text": "Набор в магистратуру и аспирантуру 2027 закрывается 25 декабря 2026, можно подать не больше двух заявок",
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=729"
+   },
+   {
+    "text": "Для китаеязычной магистратуры нужен HSK 6 (200–210 баллов), это одно из самых строгих требований",
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=729"
+   },
+   {
+    "text": "Самоплатящие студенты сами ищут жильё на кампусе или вне его, жильё гарантировано только по стипендии",
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=729"
+   },
+   {
+    "text": "Для подготовки к бакалавриату есть годичная программа Yuke",
+    "url": "https://isd.pku.edu.cn/en/detail.php?id=772"
+   }
+  ],
+  "sources": [
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://www.topuniversities.com/qs-top-uni-wur",
+   "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary",
+   "https://isd.pku.edu.cn/en/detail.php?id=729",
+   "https://isd.pku.edu.cn/userfiles/editor/202511100936379905.pdf",
+   "https://english.beijing.gov.cn/studyinginbeijing/programsnews/202409/t20240906_3791413.html",
+   "https://isd.pku.edu.cn/en/detail.php?id=772",
+   "https://isd.pku.edu.cn/en/detail.php?id=739",
+   "https://en.wikipedia.org/wiki/Peking_University"
+  ],
+  "gaps": [
+   "Год основания не подтверждён",
+   "Стоимость бакалавриата не найдена",
+   "HSK для бакалавриата не найден",
+   "Окно подачи на бакалавриат 2027 не найдено",
+   "Стоимость стандартной магистратуры не утверждена (на сайте «сообщим позже»)",
+   "Цена общежития для студентов программ, кроме Yuke, не найдена"
+  ]
+ },
+ {
+  "slug": "fudan",
+  "nameRu": "Фуданьский университет",
+  "nameZh": "复旦大学",
+  "nameEn": "Fudan University",
+  "city": "Шанхай",
+  "founded": 1905,
+  "rankings": [
+   {
+    "name": "QS World University Rankings",
+    "value": "30",
+    "year": 2026,
+    "url": "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+   },
+   {
+    "name": "THE World University Rankings",
+    "value": "36",
+    "year": 2026,
+    "url": "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "семестр или год; весна 2027: 15.02–25.06.2027",
+    "priceCny": "10500",
+    "priceNote": "10 500 юаней за семестр, 21 000 за год (ориентировочно); взнос за заявку 400",
+    "url": "https://ices.fudan.edu.cn/_upload/article/files/9e/6d/2ced2d9b44efbf4f18ad73e0e179/7cb8d8f0-d3cb-436c-87e6-4ffb406b5737.pdf"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский",
+    "duration": "4 года",
+    "priceCny": "23000–42000",
+    "priceNote": "23 000–42 000 юаней в год в зависимости от специальности (набор 2026); точная сумма — при зачислении",
+    "url": "https://iso.fudan.edu.cn/_upload/article/files/16/79/757e35a645bca80f8d429bb5d11e/ee5986a3-fc7e-4de0-9e73-dfbf9da86888.pdf"
+   },
+   {
+    "type": "master",
+    "language": "китайский",
+    "duration": "2–3 года",
+    "priceCny": "26000–48000",
+    "priceNote": "Академическая магистратура: гуманитарные — 26 000, естественные науки — 30 000, медицина — 48 000 юаней в год. Профессиональные программы считаются отдельно",
+    "url": "https://iso.fudan.edu.cn/_upload/article/files/6b/87/c1cb39a549e58d87edd4614f856d/ea9d2f6a-44e8-47fe-acf8-3844b6f0cf33.pdf"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая — High Level Graduate Program и Silk Road Program (Type B: можно выбрать только один университет)",
+    "url": "https://iso.fudan.edu.cn/_upload/article/files/6b/87/c1cb39a549e58d87edd4614f856d/ea9d2f6a-44e8-47fe-acf8-3844b6f0cf33.pdf"
+   },
+   {
+    "name": "Стипендия правительства Шанхая (Shanghai Government Scholarship)",
+    "url": "https://iso.fudan.edu.cn/_upload/article/files/6b/87/c1cb39a549e58d87edd4614f856d/ea9d2f6a-44e8-47fe-acf8-3844b6f0cf33.pdf"
+   },
+   {
+    "name": "Стипендия Фуданьского университета для иностранных студентов",
+    "url": "https://iso.fudan.edu.cn/_upload/article/files/6b/87/c1cb39a549e58d87edd4614f856d/ea9d2f6a-44e8-47fe-acf8-3844b6f0cf33.pdf"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "HSK не обязателен; если подаётся, то HSK 5 (от 210) или HSK 6 (от 180)",
+   "master": "Гуманитарные и социальные: HSK 5 (от 240) или HSK 6 (от 180); естественные, инженерные, медицина: HSK 5 (от 210) или HSK 6 (от 180)",
+   "url": "https://iso.fudan.edu.cn/_upload/article/files/6b/87/c1cb39a549e58d87edd4614f856d/ea9d2f6a-44e8-47fe-acf8-3844b6f0cf33.pdf"
+  },
+  "dorm": {
+   "priceCny": "65–120",
+   "period": "день (долгосрочное проживание, кампус Handan; данные 2019)",
+   "url": "https://iso.fudan.edu.cn/isoenglish/8d/39/c16926a167225/page.htm"
+  },
+  "applicationFeeCny": "800",
+  "applicationWindow": "Языковой курс весна 2027: 16.10–13.12.2026. Магистратура 2026 (для ориентира): 13.10–12.12.2025 и 01–31.03.2026. Бакалавриат 2026: 01–15.01.2026 и 23.02–06.03.2026. Окна для степеней 2027 пока не опубликованы",
+  "facts": [
+   {
+    "text": "Основан в 1905 году",
+    "url": "https://iso.fudan.edu.cn/_upload/article/files/6b/87/c1cb39a549e58d87edd4614f856d/ea9d2f6a-44e8-47fe-acf8-3844b6f0cf33.pdf"
+   },
+   {
+    "text": "Входит в 30 лучших в QS 2026",
+    "url": "https://iso.fudan.edu.cn/_upload/article/files/6b/87/c1cb39a549e58d87edd4614f856d/ea9d2f6a-44e8-47fe-acf8-3844b6f0cf33.pdf"
+   },
+   {
+    "text": "21 направление входит в топ-1% ESI, 10 — в топ-1‰",
+    "url": "https://iso.fudan.edu.cn/_upload/article/files/6b/87/c1cb39a549e58d87edd4614f856d/ea9d2f6a-44e8-47fe-acf8-3844b6f0cf33.pdf"
+   },
+   {
+    "text": "Языковые курсы проходят на кампусе Handan, уровни A–J, около 9 недель на уровень",
+    "url": "https://ices.fudan.edu.cn/_upload/article/files/9e/6d/2ced2d9b44efbf4f18ad73e0e179/7cb8d8f0-d3cb-436c-87e6-4ffb406b5737.pdf"
+   }
+  ],
+  "sources": [
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://www.topuniversities.com/qs-top-uni-wur",
+   "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary",
+   "https://iso.fudan.edu.cn/_upload/article/files/6b/87/c1cb39a549e58d87edd4614f856d/ea9d2f6a-44e8-47fe-acf8-3844b6f0cf33.pdf",
+   "https://iso.fudan.edu.cn/_upload/article/files/16/79/757e35a645bca80f8d429bb5d11e/ee5986a3-fc7e-4de0-9e73-dfbf9da86888.pdf",
+   "https://ices.fudan.edu.cn/_upload/article/files/9e/6d/2ced2d9b44efbf4f18ad73e0e179/7cb8d8f0-d3cb-436c-87e6-4ffb406b5737.pdf",
+   "https://ices.fudan.edu.cn/69/08/c6658a485640/page.htm",
+   "https://iso.fudan.edu.cn/isoenglish/8d/39/c16926a167225/page.htm"
+  ],
+  "gaps": [
+   "Окна подачи на бакалавриат и магистратуру 2027 не опубликованы",
+   "Цены общежития датированы 2019 годом",
+   "Языковым студентам общежитие не гарантировано, есть только список жилья рядом"
+  ]
+ },
+ {
+  "slug": "sjtu",
+  "nameRu": "Шанхайский университет Цзяотун",
+  "nameZh": "上海交通大学",
+  "nameEn": "Shanghai Jiao Tong University",
+  "city": "Шанхай",
+  "founded": 1896,
+  "rankings": [
+   {
+    "name": "QS World University Rankings",
+    "value": "47",
+    "year": 2026,
+    "url": "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+   },
+   {
+    "name": "THE World University Rankings",
+    "value": "40",
+    "year": 2026,
+    "url": "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "семестр; осень 2026: 14.09.2026–15.01.2027, весна 2027: 01.03–02.07.2027",
+    "priceCny": "10500",
+    "priceNote": "10 500 юаней за семестр; взнос за заявку 450",
+    "url": "https://en.sjtu.edu.cn/news-events/notice/2626"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский",
+    "duration": "4 года",
+    "priceCny": "24800",
+    "priceNote": "24 800 юаней в год (набор 2026); стоимость Global Institute of Future Technology объявят отдельно",
+    "url": "https://english.shanghai.gov.cn/en-Editor'sPick-StudyinShanghai/20251204/7fd409f1a816449b870742843534be27.html"
+   },
+   {
+    "type": "master",
+    "language": "китайский",
+    "duration": "обычно 2,5 года",
+    "priceCny": "80000",
+    "priceNote": "80 000 юаней в год у большинства программ (каталог 2027); у отдельных программ — 94 000–110 000, MBA и EMBA значительно дороже",
+    "url": "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/34e4ac2d52cfe1310f9264eee4caa89a.pdf"
+   },
+   {
+    "type": "master",
+    "language": "английский",
+    "duration": "2–3 года",
+    "priceCny": "80000–150000",
+    "priceNote": "У большинства 80 000 юаней в год, у ряда программ — 100 000–150 000; MBA — дороже",
+    "url": "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/e5089f10e617b8423efcd1beb77d99ad.pdf"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая, Type B (через университет, код агентства 10248) и Type A (через посольство)",
+    "url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/270"
+   },
+   {
+    "name": "Стипендия правительства Шанхая (Shanghai Government Scholarship)",
+    "url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/270"
+   },
+   {
+    "name": "Стипендия SJTU и стипендия SJTU с освобождением от оплаты обучения",
+    "url": "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/c7778f5fc50c37b38a21e6fd3e6a7cf5.pdf"
+   },
+   {
+    "name": "International Chinese Language Teachers Scholarship",
+    "url": "https://english.shanghai.gov.cn/en-Editor'sPick-StudyinShanghai/20251204/7fd409f1a816449b870742843534be27.html"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "HSK 5 от 200 или HSK 6 от 180, письмо не ниже 60",
+   "master": "HSK 5 от 200 или HSK 6 от 180, каждая часть не ниже 60 (выше для отдельных программ)",
+   "url": "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/818821a41c6a8dd0dea02bb9eaf7269a.pdf"
+  },
+  "dorm": {
+   "priceCny": "6600–12600",
+   "period": "семестр",
+   "url": "https://english.shanghai.gov.cn/en-Editor'sPick-StudyinShanghai/20251204/7fd409f1a816449b870742843534be27.html"
+  },
+  "applicationFeeCny": "800",
+  "applicationWindow": "Магистратура и аспирантура 2027: приём с 05.11.2026; CSC Type B — 1-й раунд до 15.12.2026, финальный до 15.02.2027; стипендии Шанхая и SJTU — до 31.03.2027; самоплатящие — до 31.05.2027. Бакалавриат 2026 (для ориентира): 08.12.2025–05.02.2026 и 06.02–10.03.2026",
+  "facts": [
+   {
+    "text": "Магистратура дорогая: 80 000 юаней в год у большинства программ",
+    "url": "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/34e4ac2d52cfe1310f9264eee4caa89a.pdf"
+   },
+   {
+    "text": "Абитуриенты бакалавриата основного раунда сдают онлайн-экзамен SJTU (21–22 марта 2026)",
+    "url": "https://english.shanghai.gov.cn/en-Editor'sPick-StudyinShanghai/20251204/7fd409f1a816449b870742843534be27.html"
+   },
+   {
+    "text": "Стипендиатам CSC общежитие бесплатно не дают, вместо этого платят компенсацию 1 100 юаней в месяц",
+    "url": "https://english.shanghai.gov.cn/en-Editor'sPick-StudyinShanghai/20251204/7fd409f1a816449b870742843534be27.html"
+   },
+   {
+    "text": "Подать на CSC можно только по одному каналу: через университет (Type B) или через посольство (Type A)",
+    "url": "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/270"
+   }
+  ],
+  "sources": [
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://www.topuniversities.com/qs-top-uni-wur",
+   "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary",
+   "https://english.shanghai.gov.cn/en-Editor'sPick-StudyinShanghai/20251204/7fd409f1a816449b870742843534be27.html",
+   "https://en.sjtu.edu.cn/study-sjtu/prospective/degree-programs/270",
+   "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/c7778f5fc50c37b38a21e6fd3e6a7cf5.pdf",
+   "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/34e4ac2d52cfe1310f9264eee4caa89a.pdf",
+   "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/e5089f10e617b8423efcd1beb77d99ad.pdf",
+   "https://en.sjtu.edu.cn/storage/global/web/en/page/2026/11/818821a41c6a8dd0dea02bb9eaf7269a.pdf",
+   "https://en.sjtu.edu.cn/news-events/notice/2626",
+   "https://en.wikipedia.org/wiki/Shanghai_Jiao_Tong_University"
+  ],
+  "gaps": [
+   "Год основания не подтверждён",
+   "Окно подачи на бакалавриат 2027 не найдено"
+  ]
+ },
+ {
+  "slug": "zhejiang",
+  "nameRu": "Чжэцзянский университет",
+  "nameZh": "浙江大学",
+  "nameEn": "Zhejiang University",
+  "city": "Ханчжоу",
+  "founded": 1928,
+  "rankings": [
+   {
+    "name": "QS World University Rankings",
+    "value": "49",
+    "year": 2026,
+    "url": "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+   },
+   {
+    "name": "THE World University Rankings",
+    "value": "39",
+    "year": 2026,
+    "url": "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "семестр 17–18 недель, 18 часов в неделю",
+    "priceCny": "9000",
+    "priceNote": "9 000 юаней за семестр; взнос за заявку 400",
+    "url": "https://iczu.zju.edu.cn/admissionsen/whinesewwanguagewwwwulturewwrograms/list.htm"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский",
+    "duration": "4 года",
+    "priceCny": "19800–29800",
+    "priceNote": "19 800 — гуманитарные (философия, история, языки, журналистика); 24 800 — большинство естественных, инженерных и социальных; 29 800 — отдельные арт-программы (набор 2026)",
+    "url": "https://iczu.zju.edu.cn/_upload/article/files/e7/8c/1be7b2df433fb9427df707571d84/3300a725-ca29-443b-845f-8c1a3c15c929.pdf"
+   },
+   {
+    "type": "master",
+    "language": "китайский",
+    "duration": "2–3 года",
+    "priceCny": "22800–32800",
+    "priceNote": "Каталог 2026: чаще всего 28 800, также 22 800 (гуманитарные) и 32 800; MBA и EMBA — отдельно",
+    "url": "https://iczu.zju.edu.cn/_upload/article/files/32/c1/d48dfe1349279755c872b98ce7e1/d465a621-a100-4371-b988-bf55b6704763.pdf"
+   },
+   {
+    "type": "master",
+    "language": "английский",
+    "duration": "2–3 года",
+    "priceCny": "36800–50000",
+    "priceNote": "Каталог 2026: в основном 36 800, отдельные программы — 40 800–50 000; MBA — дороже",
+    "url": "https://iczu.zju.edu.cn/_upload/article/files/32/c1/d48dfe1349279755c872b98ce7e1/aae5a919-1f07-4115-bb1c-db41ea36e1b0.pdf"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая — Chinese University Program (CSC Type B)",
+    "url": "https://iczu.zju.edu.cn/admissionsen/wasterwswwegreewwrograms/list.htm"
+   },
+   {
+    "name": "Стипендия правительства провинции Чжэцзян (Zhejiang Government Scholarship)",
+    "url": "https://iczu.zju.edu.cn/admissionsen/wasterwswwegreewwrograms/list.htm"
+   },
+   {
+    "name": "Стипендия правительства Китая — Bilateral Program (Type A); Youth of Excellence Scheme of China",
+    "url": "https://iczu.zju.edu.cn/admissionsen/wasterwswwegreewwrograms/list.htm"
+   },
+   {
+    "name": "ZIBS Hai Scholarship; Master's Freshman Scholarship of ZJU-ISM",
+    "url": "https://iczu.zju.edu.cn/admissionsen/wasterwswwegreewwrograms/list.htm"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "Чаще всего HSK 5 (180); для части гуманитарных — HSK 6 (180–220) (набор 2026)",
+   "master": "HSK 5 (180) и выше",
+   "url": "https://iczu.zju.edu.cn/_upload/article/files/32/c1/d48dfe1349279755c872b98ce7e1/58e973ef-c184-4851-a78b-e72c230d213a.pdf"
+  },
+  "dorm": {
+   "priceCny": "",
+   "period": "",
+   "url": ""
+  },
+  "applicationFeeCny": "800",
+  "applicationWindow": "Языковой курс весна–лето 2027: 01.11–30.11.2026; осень–зима 2027: 15.04–15.05.2027. Магистратура 2026 (для ориентира): самоплатящие до 28.02.2026 (часть программ до 31.05.2026), CSC Type B до 31.12.2025. Бакалавриат 2026: до 28.02.2026. Окна для степеней 2027 не найдены",
+  "facts": [
+   {
+    "text": "Стипендия провинции Чжэцзян и CSC Type B доступны для магистратуры",
+    "url": "https://iczu.zju.edu.cn/admissionsen/wasterwswwegreewwrograms/list.htm"
+   },
+   {
+    "text": "Китаеязычный бакалавриат по гуманитарным направлениям стоит от 19 800 юаней в год, это одна из самых низких цен среди топ-вузов",
+    "url": "https://iczu.zju.edu.cn/_upload/article/files/e7/8c/1be7b2df433fb9427df707571d84/3300a725-ca29-443b-845f-8c1a3c15c929.pdf"
+   },
+   {
+    "text": "Языковой курс стоит 9 000 юаней за семестр",
+    "url": "https://iczu.zju.edu.cn/admissionsen/whinesewwanguagewwwwulturewwrograms/list.htm"
+   }
+  ],
+  "sources": [
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://www.topuniversities.com/qs-top-uni-wur",
+   "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary",
+   "https://iczu.zju.edu.cn/_upload/article/files/e7/8c/1be7b2df433fb9427df707571d84/3300a725-ca29-443b-845f-8c1a3c15c929.pdf",
+   "https://iczu.zju.edu.cn/admissionsen/wasterwswwegreewwrograms/list.htm",
+   "https://iczu.zju.edu.cn/_upload/article/files/32/c1/d48dfe1349279755c872b98ce7e1/d465a621-a100-4371-b988-bf55b6704763.pdf",
+   "https://iczu.zju.edu.cn/_upload/article/files/32/c1/d48dfe1349279755c872b98ce7e1/aae5a919-1f07-4115-bb1c-db41ea36e1b0.pdf",
+   "https://iczu.zju.edu.cn/_upload/article/files/32/c1/d48dfe1349279755c872b98ce7e1/58e973ef-c184-4851-a78b-e72c230d213a.pdf",
+   "https://iczu.zju.edu.cn/admissionsen/whinesewwanguagewwwwulturewwrograms/list.htm",
+   "https://en.wikipedia.org/wiki/Zhejiang_University"
+  ],
+  "gaps": [
+   "Год основания не подтверждён",
+   "Цена общежития не найдена (вынесена в отдельный раздел Life Guide)",
+   "Окна подачи на степени 2027 не опубликованы",
+   "В ячейке HSK для бакалавриата: требования различаются по специальностям"
+  ]
+ },
+ {
+  "slug": "nanjing",
+  "nameRu": "Нанкинский университет",
+  "nameZh": "南京大学",
+  "nameEn": "Nanjing University",
+  "city": "Нанкин",
+  "founded": 1902,
+  "rankings": [
+   {
+    "name": "QS World University Rankings",
+    "value": "103",
+    "year": 2026,
+    "url": "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+   },
+   {
+    "name": "THE World University Rankings",
+    "value": "=62",
+    "year": 2026,
+    "url": "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "от полугода до 2 лет, 20 часов в неделю",
+    "priceCny": "10500",
+    "priceNote": "10 500 юаней за семестр, 21 000 за год; взнос за заявку 500; страховка 400 за семестр",
+    "url": "https://hwxy.nju.edu.cn/lxnd/zsxx/hyxx/zqhyjx/index.html"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский",
+    "duration": "4 года",
+    "priceCny": "21000–42000",
+    "priceNote": "21 000 — гуманитарные и социальные; 24 000 — естественные, инженерные, бизнес; 42 000 — медицина (страница опубликована в 2022)",
+    "url": "https://hwxy.nju.edu.cn/lxnd/xygl/xxfy/xf/index.html"
+   },
+   {
+    "type": "master",
+    "language": "китайский / английский",
+    "duration": "2–3 года",
+    "priceCny": "25000–48000",
+    "priceNote": "25 000 — гуманитарные; 28 000 — естественные, инженерные, бизнес; 48 000 — медицина; MBA — 185 000 за 2,5 года (страница опубликована в 2022)",
+    "url": "https://hwxy.nju.edu.cn/lxnd/xygl/xxfy/xf/index.html"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая, Type B (код агентства 10284) — подтверждена для программы Silk Road (бакалавриат, деловой китайский)",
+    "url": "https://hwxy.nju.edu.cn/English/StudyatNJU/Scholarships/ChineseGovernmentScholarship/20230414/i242760.html"
+   },
+   {
+    "name": "Стипендия правительства Нанкина: 10 000 юаней для бакалавров, 20 000 для магистров и аспирантов",
+    "url": "https://hwxy.nju.edu.cn/lxnd/zsxx/jxj/njszfjxj/index.html"
+   },
+   {
+    "name": "International Chinese Language Teachers Scholarship; Confucius China Studies Program",
+    "url": "https://hwxy.nju.edu.cn/lxnd/zsxx/ssxm/DeclarationGuide/index.html"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "HSK 5 (180), каждая часть не ниже 60; для специальности «китайский язык» — HSK 4 (180)",
+   "master": "Естественные, инженерные, медицина — HSK 4; гуманитарные, социальные, бизнес — HSK 5 (при поступлении)",
+   "url": "https://hwxy.nju.edu.cn/lxnd/zsxx/bkxm/sbzn/index.html"
+  },
+  "dorm": {
+   "priceCny": "52–67",
+   "period": "день (кампус Гулоу; на кампусе Сяньлинь — 3 000 юаней за семестр за место)",
+   "url": "https://hwxy.nju.edu.cn/lxnd/xyfw/zsbx/zs/index.html"
+  },
+  "applicationFeeCny": "500–600",
+  "applicationWindow": "Бакалавриат 2027: 01.03–15.05 (подача результатов CSCA до 15.05). Магистратура и аспирантура 2027: 01.03–20.05. Языковой курс: весна — 10.10–25.12, осень — 10.03–25.06",
+  "facts": [
+   {
+    "text": "С 2026/2027 учебного года все абитуриенты бакалавриата сдают экзамен CSCA",
+    "url": "https://hwxy.nju.edu.cn/lxnd/zsxx/bkxm/sbzn/index.html"
+   },
+   {
+    "text": "Порог HSK для магистратуры одни из самых низких среди топ-вузов: HSK 4 для естественных и инженерных направлений",
+    "url": "https://hwxy.nju.edu.cn/lxnd/zsxx/ssxm/DeclarationGuide/index.html"
+   },
+   {
+    "text": "Самоплатящим новым студентам общежитие не гарантировано, мест не хватает",
+    "url": "https://hwxy.nju.edu.cn/lxnd/xyfw/zsbx/zs/index.html"
+   }
+  ],
+  "sources": [
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://www.topuniversities.com/qs-top-uni-wur",
+   "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary",
+   "https://hwxy.nju.edu.cn/lxnd/zsxx/ssxm/DeclarationGuide/index.html",
+   "https://hwxy.nju.edu.cn/lxnd/zsxx/bkxm/sbzn/index.html",
+   "https://hwxy.nju.edu.cn/lxnd/xygl/xxfy/xf/index.html",
+   "https://hwxy.nju.edu.cn/lxnd/xygl/xxfy/sqf/index.html",
+   "https://hwxy.nju.edu.cn/lxnd/xyfw/zsbx/zs/index.html",
+   "https://hwxy.nju.edu.cn/lxnd/zsxx/hyxx/zqhyjx/index.html",
+   "https://hwxy.nju.edu.cn/lxnd/zsxx/jxj/njszfjxj/index.html",
+   "https://hwxy.nju.edu.cn/English/StudyatNJU/Scholarships/ChineseGovernmentScholarship/20230414/i242760.html",
+   "https://en.wikipedia.org/wiki/Nanjing_University"
+  ],
+  "gaps": [
+   "Год основания не подтверждён",
+   "Стоимость обучения и цены общежития опубликованы в 2022 году — нужна сверка",
+   "Взнос за заявку: 500 для бакалавриата, 600 для магистратуры (одной цифры нет)"
+  ]
+ },
+ {
+  "slug": "wuhan",
+  "nameRu": "Уханьский университет",
+  "nameZh": "武汉大学",
+  "nameEn": "Wuhan University",
+  "city": "Ухань",
+  "founded": null,
+  "rankings": [
+   {
+    "name": "QS World University Rankings",
+    "value": "186",
+    "year": 2026,
+    "url": "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+   },
+   {
+    "name": "THE World University Rankings",
+    "value": "=122",
+    "year": 2026,
+    "url": "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "семестр или год",
+    "priceCny": "8500",
+    "priceNote": "8 500 юаней за семестр, 17 000 за год (страница 2024)",
+    "url": "https://admission.whu.edu.cn/info/1161/1031.htm"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский / английский",
+    "duration": "4 года",
+    "priceCny": "",
+    "priceNote": "Стоимость бакалавриата не найдена (в приложении к брошюре 2024)",
+    "url": "https://info.whu.edu.cn/info/1637/31892.htm"
+   },
+   {
+    "type": "master",
+    "language": "китайский",
+    "duration": "2–3 года",
+    "priceCny": "23000–38000",
+    "priceNote": "23 000 — гуманитарные; 28 000 — естественные и инженерные; 38 000 — медицина (Приложение V, набор 2024)",
+    "url": "https://admission.whu.edu.cn/files/1699520278930261.doc"
+   },
+   {
+    "type": "master",
+    "language": "английский",
+    "duration": "2–3 года",
+    "priceCny": "33000–50000",
+    "priceNote": "33 000 — гуманитарные; 38 000 — естественные и инженерные; 50 000 — медицина (Приложение V, набор 2024)",
+    "url": "https://admission.whu.edu.cn/files/1699520278930261.doc"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая — High Level Graduate Program (Type B), без взноса за заявку",
+    "url": "https://admission.whu.edu.cn/info/1251/5462.htm"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "HSK 4 (180)",
+   "master": "HSK 4 (180); с HSK 4 — год языка перед программой, с HSK 5 — сразу на степень",
+   "url": "https://admission.whu.edu.cn/info/1251/5462.htm"
+  },
+  "dorm": {
+   "priceCny": "9600–28000",
+   "period": "год",
+   "url": "https://admission.whu.edu.cn/files/1699520278930261.doc"
+  },
+  "applicationFeeCny": "800",
+  "applicationWindow": "Найдены только данные о наборе 2024/2026: осенний семестр — с 1 декабря по 15 июня следующего года; языковые программы весеннего набора — с октября по декабрь. Официальная брошюра 2027 не найдена",
+  "facts": [
+   {
+    "text": "Стипендиатам CSC Type B через университет не нужно платить взнос за заявку",
+    "url": "https://admission.whu.edu.cn/info/1251/5462.htm"
+   },
+   {
+    "text": "Языковой курс стоит 8 500 юаней за семестр, это одна из самых низких цен в списке",
+    "url": "https://admission.whu.edu.cn/info/1161/1031.htm"
+   }
+  ],
+  "sources": [
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://www.topuniversities.com/qs-top-uni-wur",
+   "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary",
+   "https://admission.whu.edu.cn/files/1699520278930261.doc",
+   "https://admission.whu.edu.cn/info/1161/1031.htm",
+   "https://admission.whu.edu.cn/info/1131/4221.htm",
+   "https://info.whu.edu.cn/info/1637/31892.htm",
+   "https://admission.whu.edu.cn/info/1251/5462.htm"
+  ],
+  "gaps": [
+   "Год основания не подтверждён",
+   "Стоимость бакалавриата не найдена",
+   "Стоимость магистратуры и цены общежития взяты из приложения 2024 года",
+   "Брошюра на 2027 год не найдена",
+   "Провинциальная стипендия (Хубэй/Ухань) не найдена",
+   "Заметные факты о сильных направлениях не подтверждены"
+  ]
+ },
+ {
+  "slug": "hit",
+  "nameRu": "Харбинский политехнический университет",
+  "nameZh": "哈尔滨工业大学",
+  "nameEn": "Harbin Institute of Technology",
+  "city": "Харбин",
+  "founded": 1920,
+  "rankings": [
+   {
+    "name": "QS World University Rankings",
+    "value": "256",
+    "year": 2026,
+    "url": "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+   },
+   {
+    "name": "THE World University Rankings",
+    "value": "=131",
+    "year": 2026,
+    "url": "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "семестр 16 недель; весна 2027: март–июнь, осень 2027: сентябрь–декабрь",
+    "priceCny": "7300",
+    "priceNote": "7 300 юаней за семестр, 14 600 за год; взнос за заявку 500",
+    "url": "https://studyathit.hit.edu.cn/LongwtermChineseLanguageProgram/list.htm"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский",
+    "duration": "4–5 лет",
+    "priceCny": "20000",
+    "priceNote": "20 000 юаней в год",
+    "url": "https://studyathit.hit.edu.cn/18337/list.htm"
+   },
+   {
+    "type": "bachelor",
+    "language": "английский",
+    "duration": "4–5 лет",
+    "priceCny": "26000",
+    "priceNote": "26 000 юаней в год",
+    "url": "https://studyathit.hit.edu.cn/18337/list.htm"
+   },
+   {
+    "type": "master",
+    "language": "китайский",
+    "duration": "2–3 года",
+    "priceCny": "28000",
+    "priceNote": "28 000 юаней в год",
+    "url": "https://studyathit.hit.edu.cn/18359/list.htm"
+   },
+   {
+    "type": "master",
+    "language": "английский",
+    "duration": "2–3 года",
+    "priceCny": "34000",
+    "priceNote": "34 000 юаней в год",
+    "url": "https://studyathit.hit.edu.cn/18359/list.htm"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая, Type B (магистратура и аспирантура): обучение, общежитие, 3 000–3 500 юаней в месяц",
+    "url": "https://studyathit.hit.edu.cn/18366/list.htm"
+   },
+   {
+    "name": "Стипендия правительства Китая, Type A (через посольство)",
+    "url": "https://studyathit.hit.edu.cn/18359/list.htm"
+   },
+   {
+    "name": "HIT International Students Scholarship: освобождение от оплаты на 20–100%",
+    "url": "https://studyathit.hit.edu.cn/18367/list.htm"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "HSK 4 от 210",
+   "master": "HSK 4 от 210",
+   "url": "https://studyathit.hit.edu.cn/18359/list.htm"
+  },
+  "dorm": {
+   "priceCny": "800–1000",
+   "period": "месяц (за место, без коммунальных услуг)",
+   "url": "https://studyathit.hit.edu.cn/18337/list.htm"
+  },
+  "applicationFeeCny": "400",
+  "applicationWindow": "CSC Type B 2027: 01.11.2026–20.02.2027. Языковой курс: весна 2027 — до 15.01.2027, осень 2027 — до 15.07.2027. Самоплатящих принимают круглый год (на 2026: бакалавриат — до 15.07, магистратура — до 31.05)",
+  "facts": [
+   {
+    "text": "Для бакалавриата нужен экзамен CSCA",
+    "url": "https://studyathit.hit.edu.cn/18337/list.htm"
+   },
+   {
+    "text": "Все программы бакалавриата идут на китайском",
+    "url": "https://studyathit.hit.edu.cn/18337/list.htm"
+   },
+   {
+    "text": "Самые низкие пороги HSK в списке: HSK 4 (от 210) и для бакалавриата, и для магистратуры",
+    "url": "https://studyathit.hit.edu.cn/18359/list.htm"
+   },
+   {
+    "text": "Общежитие стоит 800–1 000 юаней в месяц",
+    "url": "https://studyathit.hit.edu.cn/18337/list.htm"
+   }
+  ],
+  "sources": [
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://www.topuniversities.com/qs-top-uni-wur",
+   "https://xuanxiao.org/en/articles/the-world-university-rankings-2026-commentary",
+   "https://studyathit.hit.edu.cn/18337/list.htm",
+   "https://studyathit.hit.edu.cn/18359/list.htm",
+   "https://studyathit.hit.edu.cn/18366/list.htm",
+   "https://studyathit.hit.edu.cn/18367/list.htm",
+   "https://studyathit.hit.edu.cn/LongwtermChineseLanguageProgram/list.htm",
+   "https://en.wikipedia.org/wiki/Harbin_Institute_of_Technology"
+  ],
+  "gaps": [
+   "Год основания не подтверждён",
+   "Провинциальная стипендия Хэйлунцзяна не найдена",
+   "Языковой ячейке: «все программы бакалавриата на китайском» противоречит наличию тарифа для англоязычных — нужна сверка"
+  ]
+ },
+ {
+  "slug": "blcu",
+  "nameRu": "Пекинский университет языка и культуры",
+  "nameZh": "北京语言大学",
+  "nameEn": "Beijing Language and Culture University",
+  "city": "Пекин",
+  "founded": 1962,
+  "rankings": [
+   {
+    "name": "QS World University Rankings by Subject",
+    "value": "301–350",
+    "year": 2025,
+    "url": "https://topuniversities.com/universities/beijing-language-culture-university"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "семестр (20 часов в неделю)",
+    "priceCny": "13000",
+    "priceNote": "13 000 юаней за семестр, 25 800 за год; интенсивный курс — 21 000 (данные вуза на 2024 год)",
+    "url": "https://admission.blcu.edu.cn/en/2023/0928/c1133a2595/page.htm"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский",
+    "duration": "4 года",
+    "priceCny": "23200",
+    "priceNote": "Устаревшая брошюра (около 2017): 23 200 юаней в год",
+    "url": "https://admission.blcu.edu.cn/_upload/article/files/aa/e9/947600ec46c49a6073969f470c16/21f2d007-4623-4f99-be0a-f85d07cc420b.pdf"
+   },
+   {
+    "type": "master",
+    "language": "китайский",
+    "duration": "2–3 года",
+    "priceCny": "25700",
+    "priceNote": "Устаревшая брошюра (около 2017): 25 700 юаней в год",
+    "url": "https://admission.blcu.edu.cn/_upload/article/files/aa/e9/947600ec46c49a6073969f470c16/21f2d007-4623-4f99-be0a-f85d07cc420b.pdf"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая: двусторонняя квота, High Level Postgraduate, Silk Road, China Link",
+    "url": "https://admission.blcu.edu.cn/en/95/list.htm"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "",
+   "master": "",
+   "url": ""
+  },
+  "dorm": {
+   "priceCny": "70–300",
+   "period": "день: место в четырёхместной комнате — 70, в двухместной — 90–120, одноместная — 200–300",
+   "url": "https://admission.blcu.edu.cn/en/1499/list.htm"
+  },
+  "applicationFeeCny": "",
+  "applicationWindow": "",
+  "facts": [
+   {
+    "text": "Основан в 1962 году. Единственный вуз Китая, главная задача которого — обучать иностранцев китайскому языку и культуре; его называют «маленькой ООН»",
+    "url": "https://admission.blcu.edu.cn/_upload/article/files/aa/e9/947600ec46c49a6073969f470c16/21f2d007-4623-4f99-be0a-f85d07cc420b.pdf"
+   },
+   {
+    "text": "Входит в группу 301–350 рейтинга QS по предметам 2025",
+    "url": "https://topuniversities.com/universities/beijing-language-culture-university"
+   }
+  ],
+  "sources": [
+   "https://admission.blcu.edu.cn/_upload/article/files/aa/e9/947600ec46c49a6073969f470c16/21f2d007-4623-4f99-be0a-f85d07cc420b.pdf",
+   "https://topuniversities.com/universities/beijing-language-culture-university",
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://admission.blcu.edu.cn/en/2023/0928/c1133a2595/page.htm",
+   "https://admission.blcu.edu.cn/en/1499/list.htm",
+   "https://admission.blcu.edu.cn/en/95/list.htm"
+  ],
+  "gaps": [
+   "Нет в топ-500 QS World University Rankings 2026 и в списке THE 2026",
+   "Все цены взяты из устаревшей брошюры (около 2017) — нужна актуальная страница Time Table & Tuition на admission.blcu.edu.cn",
+   "Требования HSK не найдены",
+   "Взнос за заявку и окно подачи 2027 не найдены",
+   "Стипендии не подтверждены (на сайте есть разделы CSC, CI Scholarship)"
+  ]
+ },
+ {
+  "slug": "sysu",
+  "nameRu": "Университет Сунь Ятсена",
+  "nameZh": "中山大学",
+  "nameEn": "Sun Yat-sen University",
+  "city": "Гуанчжоу",
+  "founded": 1924,
+  "rankings": [
+   {
+    "name": "QS World University Rankings",
+    "value": "276",
+    "year": 2026,
+    "url": "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf"
+   }
+  ],
+  "programs": [
+   {
+    "type": "language",
+    "language": "китайский",
+    "duration": "семестр или учебный год",
+    "priceCny": "8700",
+    "priceNote": "8 700 юаней за семестр, 17 400 за год; регистрационный взнос 400. Страница опубликована в 2015 году, цена устарела, нужна сверка",
+    "url": "https://sti.sysu.edu.cn/en/node/387"
+   },
+   {
+    "type": "bachelor",
+    "language": "китайский",
+    "duration": "4 года",
+    "priceCny": "26000–48000",
+    "priceNote": "26 000 — гуманитарные; 33 800 — естественные, инженерные, аграрные; 48 000 — медицина (набор 2026). Все 56 программ бакалавриата на китайском",
+    "url": "https://iso.sysu.edu.cn/en/application/guide/1420575.htm"
+   },
+   {
+    "type": "master",
+    "language": "китайский / английский (часть программ)",
+    "duration": "2–3 года",
+    "priceCny": "30000–55000",
+    "priceNote": "30 000 — гуманитарные; 39 000 — естественные, инженерные, аграрные; 55 000 — медицина; IMBA — 109 000 (набор 2026)",
+    "url": "https://iso.sysu.edu.cn/en/application/guide/1420582.htm"
+   }
+  ],
+  "grants": [
+   {
+    "name": "Стипендия правительства Китая, Type B: High-Level Graduate Program, Silk Road Program, Atomic Energy Scholarship",
+    "url": "https://iso.sysu.edu.cn/en/application/guide/1420582.htm"
+   },
+   {
+    "name": "Стипендия правительства Китая, Type A: Bilateral Program, Youth of Excellence Scheme of China",
+    "url": "https://iso.sysu.edu.cn/en/application/guide/1420582.htm"
+   },
+   {
+    "name": "Стипендия правительства провинции Гуандун для выдающихся иностранных студентов: 10 000 юаней (бакалавры) и 20 000 (магистры), выплачивается один раз",
+    "url": "https://iso.sysu.edu.cn/en/application/guide/1420582.htm"
+   },
+   {
+    "name": "Стипендия Университета Сунь Ятсена для иностранных студентов; International Chinese Language Teachers Scholarship",
+    "url": "https://iso.sysu.edu.cn/en/application/guide/1420582.htm"
+   }
+  ],
+  "hskMin": {
+   "bachelor": "HSK 5 от 180 (для специальности «китайский язык» — HSK 4 от 180)",
+   "master": "HSK 5 от 180 (MTCSOL — HSK 5 от 210 и HSKK средний уровень от 60)",
+   "url": "https://iso.sysu.edu.cn/en/application/guide/1420582.htm"
+  },
+  "dorm": {
+   "priceCny": "950–1650",
+   "period": "месяц (общежитие для иностранцев на кампусах South и North; данные 2015 года)",
+   "url": "https://sti.sysu.edu.cn/en/node/387"
+  },
+  "applicationFeeCny": "400",
+  "applicationWindow": "Набор 2026 (для ориентира): бакалавриат — 01.01–28.02.2026 и 01.03–30.04.2026; магистратура — 01.01–15.02.2026 и 16.02–30.04.2026. Окна на 2027 год пока не опубликованы",
+  "facts": [
+   {
+    "text": "Основан в 1924 году доктором Сунь Ятсеном; пять кампусов в Гуанчжоу, Чжухае и Шэньчжэне, десять аффилированных больниц",
+    "url": "https://iso.sysu.edu.cn/en/application/guide/1420575.htm"
+   },
+   {
+    "text": "В 2026 году иностранцам открыты 278 программ: 56 бакалаврских, 119 магистерских, 103 докторских",
+    "url": "https://info.newsgd.com/node_2c4e4a109c/b4474c8897.shtml"
+   },
+   {
+    "text": "Часть магистратуры и аспирантуры преподаётся на английском, например физика, ядерные науки и технологии, науки об атмосфере",
+    "url": "https://info.newsgd.com/node_2c4e4a109c/b4474c8897.shtml"
+   },
+   {
+    "text": "Самоплатящим студентам общежитие не гарантировано, место на кампусе получают стипендиаты CSC и стипендии университета",
+    "url": "https://iso.sysu.edu.cn/en/application/guide/1420575.htm"
+   }
+  ],
+  "sources": [
+   "https://www.econ.muni.cz/do/econ/soubory/oddeleni/ozs/admissions/2026_QS_World_University_Rankings_1.2__For_qs.com__11.2025.pdf",
+   "https://www.topuniversities.com/qs-top-uni-wur",
+   "https://iso.sysu.edu.cn/en/application/guide/1420575.htm",
+   "https://iso.sysu.edu.cn/en/application/guide/1420582.htm",
+   "https://sti.sysu.edu.cn/en/node/387",
+   "https://info.newsgd.com/node_2c4e4a109c/b4474c8897.shtml"
+  ],
+  "gaps": [
+   "THE 2026 позиция не найдена",
+   "Цены языкового курса и общежития со страницы 2015 года — нужна актуальная сверка",
+   "Окна подачи на 2027 год не опубликованы",
+   "Языковая программа 2026/2027 на iso.sysu.edu.cn не найдена"
+  ]
+ }
+]

@@ -82,10 +82,9 @@ export const site = {
 
 export const nav = [
   { href: "/programs/", label: "Программы" },
-  // Включить, когда страница собрана (T10–T15):
-  // { href: "/grants/csc/", label: "Гранты" },
-  // { href: "/exams/csca/", label: "CSCA" },
-  // { href: "/universities/", label: "Вузы" },
-  // { href: "/cost/", label: "Стоимость" },
+  { href: "/grants/csc/", label: "Гранты" },
+  { href: "/exams/csca/", label: "CSCA" },
+  { href: "/universities/", label: "Вузы" },
+  { href: "/cost/", label: "Стоимость" },
   ...(site.features.blog ? [{ href: "/blog/", label: "Блог" }] : []),
 ];
