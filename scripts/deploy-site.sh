@@ -4,9 +4,14 @@
 # Запуск: bash scripts/deploy-site.sh            — собрать и залить
 #         bash scripts/deploy-site.sh <папка>    — залить готовую сборку (например, скачанный артефакт site-build)
 set -euo pipefail
-HOST="uXXXX@serverNNN.hosting.reg.ru"                     # SSH_USER@SSH_HOST
-DIR="/var/www/uXXXX/data/www/<домен>/"                    # SITE_DIR (+ app_path), со слешем
-KEY="$HOME/.ssh/<project>_deploy"                         # ключ деплоя проекта
+# Доступы записал мастер deploy-kit/setup-site.sh: ~/.config/nikitos/chinana.env (SSH_HOST, SSH_USER, SITE_DIR)
+ENV_FILE="$HOME/.config/nikitos/chinana.env"
+[ -f "$ENV_FILE" ] && . "$ENV_FILE"
+: "${SSH_USER:?Нет SSH_USER в $ENV_FILE — запусти setup-site.sh или впиши вручную}"
+: "${SSH_HOST:?Нет SSH_HOST в $ENV_FILE — впиши строку SSH_HOST=serverNNN.hosting.reg.ru}"
+HOST="$SSH_USER@$SSH_HOST"
+DIR="${SITE_DIR:-/var/www/$SSH_USER/data/www/chinana.ru/}"
+KEY="$HOME/.ssh/chinana_deploy"                           # ключ деплоя проекта (создал setup-site.sh)
 APP="$(cd "$(dirname "$0")/.." && pwd)"                   # папка приложения (монорепо: …/apps/site)
 OUT="${1:-}"
 EXCLUDE=(--exclude '.well-known/' --exclude 'cgi-bin/' --exclude '.ftp-deploy-sync-state.json')   # + подпапки других приложений: --exclude 'test/'
