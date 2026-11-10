@@ -7,6 +7,7 @@ import { home } from "@/content/home";
 import { Container, Eyebrow, GridLines, Section, SectionHead } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { StepCard, UniCard } from "@/components/cards";
+import { uniPhoto } from "@/content/universities";
 import { FaqList } from "@/components/faq";
 import { CtaFinal } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
@@ -116,7 +117,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
         <Container>
           <SectionHead eyebrow="Где учиться" title="Вузы" accent="для этой программы" text="Каталог вузов с ценами и грантами — в разделе «Вузы»." />
           <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {home.universities.slice(0, 3).map((u) => <UniCard key={u.name} {...u} href={`/universities/${u.slug}/`} />)}
+            {home.universities.slice(0, 3).map((u) => <UniCard key={u.name} {...u} href={`/universities/${u.slug}/`} photo={uniPhoto(u.slug)?.src} />)}
           </div>
         </Container>
       </Section>

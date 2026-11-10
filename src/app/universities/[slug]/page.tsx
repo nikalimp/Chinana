@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { site } from "@/content/site";
-import { universities, uniAnswer, uniFaq, uniPath } from "@/content/universities";
+import { universities, uniAnswer, uniFaq, uniPath, uniPhoto } from "@/content/universities";
+import { PhotoCredit } from "@/components/photo-credit";
 import { cny, programLabel } from "@/content/university-types";
 import { cityBySlugRu, cityPath } from "@/content/cities";
 import { Container, GridLines, Section, SectionHead } from "@/components/container";
@@ -38,6 +39,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
   const qs = u.rankings.find((r) => r.name.startsWith("QS"));
   const others = universities.filter((x) => x.slug !== u.slug && x.city === u.city).concat(universities.filter((x) => x.slug !== u.slug && x.city !== u.city)).slice(0, 3);
   const sources = [...new Set([...u.sources, ...u.programs.map((p) => p.url), ...u.facts.map((f) => f.url)])].filter(Boolean);
+  const photo = uniPhoto(u.slug);
   const cta = u.partner ? `Поступить в ${u.nameRu}` : "Бесплатная консультация";
 
   return (
@@ -55,7 +57,16 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
             <Button asChild><a href={site.cta.href} data-lead data-lead-context={u.nameRu}>{cta} →</a></Button>
             <Button asChild variant="outline"><Link href="/wiki/csc/">Как получить грант</Link></Button>
           </div>
-          <div className="cards mt-14 grid-cols-2 text-left lg:grid-cols-4">
+          {photo && (
+            <figure className="mt-14 border border-b-0 border-border text-left">
+              <div className="relative aspect-[16/9] overflow-hidden bg-secondary md:aspect-[21/9]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={photo.src} alt={`${u.nameRu}, кампус`} width={1200} height={675} fetchPriority="high" className="absolute inset-0 size-full object-cover" />
+              </div>
+              <figcaption className="border-t border-border bg-card px-[22px] py-2.5"><PhotoCredit p={photo} /></figcaption>
+            </figure>
+          )}
+          <div className={`cards grid-cols-2 text-left lg:grid-cols-4 ${photo ? "" : "mt-14"}`}>
             {[
               ["Город", u.city],
               ["Основан", u.founded ? String(u.founded) : "—"],
@@ -176,7 +187,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
         <Container>
           <SectionHead title="Похожие вузы" />
           <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {others.map((o) => <UniCard key={o.slug} zh={o.zhShort} name={o.nameRu} city={o.city} partner={o.partner} href={uniPath(o)} />)}
+            {others.map((o) => <UniCard key={o.slug} zh={o.zhShort} name={o.nameRu} city={o.city} partner={o.partner} href={uniPath(o)} photo={uniPhoto(o.slug)?.src} />)}
           </div>
           <details className="mx-auto mt-12 max-w-[47.9em] text-sm text-muted-foreground">
             <summary className="cursor-pointer font-mono text-xs uppercase">Источники ({sources.length})</summary>

@@ -9,6 +9,11 @@ export const unisChecked = "2026-11-09";
 
 export const uniPath = (u: Uni) => `/universities/${u.slug}/`;
 
+// Фото вуза с Wikimedia Commons (scripts/uni-photos.py): обложка 1200×675 и атрибуция по лицензии.
+export type UniPhoto = { src: string; author: string; license: string; licenseUrl: string; source: string };
+import photos from "@/content/data/uni-photos.json";
+export const uniPhoto = (slug: string): UniPhoto | undefined => (photos as Record<string, UniPhoto>)[slug];
+
 // Прямой ответ страницы вуза (первые 100 слов) — собирается из данных, без выдумок.
 export function uniAnswer(u: Uni): string {
   const qs = u.rankings.find((r) => r.name.startsWith("QS"));
