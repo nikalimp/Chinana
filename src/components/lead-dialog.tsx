@@ -55,7 +55,7 @@ export function LeadDialog({ programs, telegram, metrikaId }: { programs: Progra
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: f.get("name"), channel, contact: f.get("contact"), program: [f.get("program"), context].filter(Boolean).join(" · "),
+          name: f.get("name"), channel, contact: f.get("contact"), program: [f.get("program"), context].filter(Boolean).join(", "),
           consent: f.get("consent") === "on", website: f.get("website"), page: location.href,
         }),
       });

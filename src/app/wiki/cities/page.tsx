@@ -16,7 +16,7 @@ export default function CitiesPage() {
   return (
     <WikiShell current="/wiki/cities/">
       <JsonLd data={graph(itemList(cities.map((c) => ({ name: c.nameRu, path: cityPath(c) }))))} />
-      <p className="font-mono text-xs uppercase tracking-wide text-primary">Wiki · Города</p>
+      <p className="font-mono text-xs uppercase tracking-wide text-primary">Wiki / Города</p>
       <h1 className="mt-4 text-[clamp(32px,4.6vw,60px)]">Города Китая <em>для учёбы</em></h1>
       <p className="mt-6 max-w-[46em] text-[clamp(17px,1.5vw,19px)]">
         Город решает почти столько же, сколько вуз: от него зависят климат, расходы и дорога домой. Харбин — самый холодный: средняя температура января −17,3 °C, зато до него летают из девяти городов России. На юге, в Гуанчжоу и Сямэне, январь теплее +13 °C. Прямые рейсы из Москвы есть в Пекин, Шанхай, Ханчжоу, Ухань, Чэнду и Гуанчжоу. Ниже — 13 городов, где находятся вузы нашего каталога.

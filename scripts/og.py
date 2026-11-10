@@ -43,7 +43,7 @@ h1 em{{font-family:'PT Serif';font-style:italic;font-weight:400}}
 <div class="grid">{cols}</div>
 <div class="bg">去</div>
 <div class="logo"><div class="seal">去</div>Chinana</div>
-<div class="main"><div class="eyebrow">Языковой год · Foundation · Бакалавриат · Магистратура</div>
+<div class="main"><div class="eyebrow">Языковой год, Foundation, бакалавриат, магистратура</div>
 <h1>Поступление в&nbsp;Китай<br><em>для&nbsp;взрослых</em></h1>
 <p class="sub">Подбор вуза, гранты CSC, документы и&nbsp;виза. Цены открыто, оплата 50/50.</p></div>
 <div class="foot"><span>chinana.ru</span><span class="pill">Написать менеджеру @chinana</span></div>

@@ -48,7 +48,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
         <GridLines />
         <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 text-[clamp(180px,26vw,380px)] text-primary opacity-[0.06]">{u.zhShort}</div>
         <Container>
-          <p className="font-mono text-xs uppercase tracking-wide text-primary"><span lang="zh-Hans" className="font-zh text-sm font-black">{u.nameZh}</span> · {u.city}</p>
+          <p className="font-mono text-xs uppercase tracking-wide text-primary"><span lang="zh-Hans" className="font-zh text-sm font-black">{u.nameZh}</span> {u.city}</p>
           <h1 className="mx-auto mt-[18px] max-w-[12em] text-[clamp(34px,5.6vw,76px)]">{u.nameRu}: <em>поступление для россиян</em></h1>
           <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{uniAnswer(u)}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">

@@ -69,7 +69,7 @@ $to = $cfg['email_to'] ?? '';
 $mailOk = false;
 if ($to) {
   $subject = '=?UTF-8?B?' . base64_encode("Заявка №$id с chinana.ru") . '?=';
-  $body = "Заявка №$id · " . date('d.m.Y H:i') . "\n\n"
+  $body = "Заявка №$id, " . date('d.m.Y H:i') . "\n\n"
     . "Имя: {$lead['name']}\n"
     . "Связаться: {$channels[$lead['channel']]} — {$lead['contact']}\n"
     . "Программа: " . ($lead['program'] ?: 'не выбрана') . "\n"

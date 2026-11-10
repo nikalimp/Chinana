@@ -76,7 +76,7 @@ export default function Home() {
       </Section>
 
       <Section id="unis">
-        <Container className="max-w-[1440px]">
+        <Container>
           <SectionHead title={home.unisHead.title} accent={home.unisHead.accent} text={home.unisHead.text} />
           <UniMap />
           <div className="mt-6 flex justify-center">

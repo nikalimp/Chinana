@@ -25,10 +25,10 @@ export function Footer() {
         </nav>
         <a href={site.cta.href} data-lead className="mt-6 inline-flex rounded-full border border-inverse-foreground/30 px-5 py-2 text-inverse-foreground hover:border-inverse-foreground">Менеджер в Telegram @chinana</a>
         <div className="mt-10 flex w-full flex-col items-center gap-2 border-t border-inverse-foreground/10 pt-5">
-          <span>{shortLegal} · ИНН {site.legal.inn}</span>
+          <span>{shortLegal}, ИНН {site.legal.inn}</span>
           <span>
             <Link href="/privacy-policy/" className="underline hover:text-inverse-foreground">Политика конфиденциальности</Link>
-            {" · "}
+            {", "}
             <Link href="/consent/" className="underline hover:text-inverse-foreground">Согласие на обработку данных</Link>
           </span>
         </div>
