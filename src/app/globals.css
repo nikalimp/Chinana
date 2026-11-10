@@ -120,4 +120,6 @@
 .mark { background: linear-gradient(transparent 58%, var(--accent) 58%, var(--accent) 92%, transparent 92%); padding: 0 .08em; }
 
 /* Крупные декоративные иероглифы */
+/* Декоративный иероглиф: текст из data-zh в ::before — это украшение, не контент (контраст для него не нужен) */
+.zh-deco::before { content: attr(data-zh); }
 .zh-bg { position: absolute; pointer-events: none; user-select: none; font-family: var(--font-zh); font-weight: 900; line-height: 1; white-space: nowrap; }
