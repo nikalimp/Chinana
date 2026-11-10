@@ -24,5 +24,6 @@ jobs:
       adapter: ssh-ftp
       site_dir: "."
       out_dir: out
+      rsync_exclude: "api/config.php"
       url: https://chinana.ru
     secrets: inherit

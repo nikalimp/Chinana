@@ -41,7 +41,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
           <h1 className="mx-auto mt-[18px] max-w-[9.3em] text-[clamp(38px,6.4vw,84px)]">{p.h1} <em>{p.h1Accent}</em></h1>
           <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{p.answer}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button asChild><a href={site.cta.href}>{p.cta} →</a></Button>
+            <Button asChild><a href={site.cta.href} data-lead>{p.cta} →</a></Button>
             <Button asChild variant="outline"><Link href="/wiki/csc/">Проверить шанс на грант</Link></Button>
           </div>
           <div className="cards mt-14 grid-cols-1 text-left sm:grid-cols-2 lg:grid-cols-4">
@@ -81,7 +81,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
               <b className="text-4xl leading-none">{formatRub(p.price)}</b>
               <span className="font-mono text-[11px] text-muted-foreground">Ориентир, уточняется</span>
               <p>Оплата 50/50: вторая часть — после приглашения вуза.</p>
-              <Button asChild><a href={site.cta.href}>{p.cta}</a></Button>
+              <Button asChild><a href={site.cta.href} data-lead>{p.cta}</a></Button>
             </div>
           </div>
         </Container>

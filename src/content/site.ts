@@ -74,7 +74,7 @@ export const site = {
     blog: true, // контент-завод: «Китай изнутри», статья раз в неделю (2026-11-10)
     news: false, // P1: новости вузов (design-news-factory.md)
     calculator: false, // P1
-    leadForm: false, // отложено вместе с ботом (spec v0.4)
+    leadForm: true, // попап заявки → /api/lead.php на хостинге в РФ, почта + уведомление в Telegram без данных (решение Ника 2026-11-10)
     stats: false, // цифры доверия — ждём факты партнёра
     reviews: false, // отзывы и кейсы — ждём партнёра
   },

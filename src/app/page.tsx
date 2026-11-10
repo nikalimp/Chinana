@@ -33,7 +33,7 @@ export default function Home() {
           </h1>
           <p className="mx-auto mt-7 max-w-[41.2em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{home.answer}</p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
-            <Button asChild><a href={site.cta.href}>{site.cta.label} →</a></Button>
+            <Button asChild><a href={site.cta.href} data-lead>{site.cta.label} →</a></Button>
             <Button asChild variant="outline"><Link href="/wiki/csc/">Проверить шанс на грант</Link></Button>
           </div>
         </Container>

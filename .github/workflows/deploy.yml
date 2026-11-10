@@ -22,7 +22,7 @@ jobs:
       site_dir: "."               # монорепо: apps/site
       out_dir: out                # Vite: dist
       app_path: ""                # приложение в подпапке сайта: "test/app/"
-      rsync_exclude: ""           # подпапки других приложений и файлы только на сервере: "test/ api/config.php api/logs/"
+      rsync_exclude: "api/config.php"   # настройки формы заявок лежат только на сервере
       url: https://chinana.ru
       # media_brand: путь к brand.json от site_dir. По умолчанию content/factory/brand.json;
       # если завод ещё не переведён в content/factory/ — фактический путь (ECO-PRO: content/media/brand.json)
