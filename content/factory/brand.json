@@ -1,0 +1,18 @@
+{
+  "name": "Chinana",
+  "site": "https://chinana.ru",
+  "siteLabel": "chinana.ru",
+  "author": "",
+  "avatar": "",
+  "logo": "",
+  "logosDir": "",
+  "blogPath": "/blog/",
+  "font": { "family": "Onest", "source": "fontsource:onest" },
+  "colors": {
+    "bg": "#FFF8EC", "fg": "#1F1410", "card": "#FFF8EC", "muted": "#EADBC2", "mfg": "#5A4A40",
+    "border": "#1F1410", "brand": "#C8102E", "brandBg": "#EADBC2", "onBrand": "#FFF8EC", "shade": "rgb(31 20 16)"
+  },
+  "radius": 0,
+  "pattern": "grid",
+  "cta": { "title": "Хотите учиться в Китае?", "text": "Подберём программу, вуз и грант под ваш возраст и бюджет.", "label": "Написать @chinana →", "url": "https://t.me/chinana" }
+}

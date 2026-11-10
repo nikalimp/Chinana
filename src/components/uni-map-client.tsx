@@ -42,24 +42,15 @@ const langOpts = [
   { v: "en", l: "На английском" },
 ];
 
-function Chip({ on, onClick, children }: { on: boolean; onClick: () => void; children: React.ReactNode }) {
-  return (
-    <button type="button" aria-pressed={on} onClick={onClick} className={`rounded-full border px-3.5 py-1.5 text-sm transition-colors ${on ? "border-foreground bg-foreground text-background" : "border-border bg-card hover:border-foreground"}`}>
-      {children}
-    </button>
-  );
-}
-
 export function UniMapClient({ path, viewBox, cities, unis }: { path: string; viewBox: string; cities: Record<string, [number, number]>; unis: MapUni[] }) {
   const [type, setType] = useState<string | null>(null);
   const [lang, setLang] = useState<string | null>(null);
-  const [csc, setCsc] = useState(false);
   const [hover, setHover] = useState<string | null>(null); // город под курсором
   const [picked, setPicked] = useState<string | null>(null); // город по клику — для телефона и клавиатуры
 
   const match = useMemo(
-    () => unis.filter((u) => (!type || u.types.includes(type)) && (!lang || u.langs.includes(lang)) && (!csc || u.csc)),
-    [unis, type, lang, csc],
+    () => unis.filter((u) => (!type || u.types.includes(type)) && (!lang || u.langs.includes(lang)) ),
+    [unis, type, lang],
   );
   const byCity = useMemo(() => {
     const m = new Map<string, MapUni[]>();
@@ -69,9 +60,24 @@ export function UniMapClient({ path, viewBox, cities, unis }: { path: string; vi
   const allCities = [...new Set(unis.map((u) => u.city))];
   const city = hover ?? picked;
   const shown = city ? byCity.get(city) ?? [] : match;
-  const filtered = !!(type || lang || csc);
+  const filtered = !!(type || lang);
 
+  const select = "h-11 rounded-full border border-border bg-card pl-4 pr-10 text-[15px] appearance-none bg-[length:16px] bg-[right_14px_center] bg-no-repeat hover:border-foreground focus-visible:outline-2 focus-visible:outline-primary";
+  const chevron = { backgroundImage: "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231F1410' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E\")" };
   return (
+    <div>
+    <div className="mb-6 flex flex-wrap items-center justify-center gap-3">
+      <label className="sr-only" htmlFor="map-type">Программа</label>
+      <select id="map-type" value={type ?? ""} onChange={(e) => { setType(e.target.value || null); setPicked(null); }} className={select} style={chevron}>
+        <option value="">Все программы</option>
+        {typeOpts.map((o) => <option key={o.v} value={o.v}>{o.l}</option>)}
+      </select>
+      <label className="sr-only" htmlFor="map-lang">Язык обучения</label>
+      <select id="map-lang" value={lang ?? ""} onChange={(e) => { setLang(e.target.value || null); setPicked(null); }} className={select} style={chevron}>
+        <option value="">Любой язык обучения</option>
+        {langOpts.map((o) => <option key={o.v} value={o.v}>{o.l}</option>)}
+      </select>
+    </div>
     <div className="cards grid-cols-1 lg:grid-cols-2">
       <div className="relative bg-card p-[clamp(12px,2.5vw,28px)]">
         <svg viewBox={viewBox} role="img" aria-label={`Карта Китая: ${match.length} вузов в ${byCity.size} городах`} className="h-auto w-full">
@@ -109,29 +115,16 @@ export function UniMapClient({ path, viewBox, cities, unis }: { path: string; vi
         </svg>
       </div>
 
-      <div className="flex flex-col bg-card px-[22px] py-[22px]">
-        <fieldset>
-          <legend className="font-mono text-xs uppercase text-muted-foreground">Программа</legend>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {typeOpts.map((o) => <Chip key={o.v} on={type === o.v} onClick={() => setType(type === o.v ? null : o.v)}>{o.l}</Chip>)}
-          </div>
-        </fieldset>
-        <fieldset className="mt-4">
-          <legend className="font-mono text-xs uppercase text-muted-foreground">Язык обучения</legend>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {langOpts.map((o) => <Chip key={o.v} on={lang === o.v} onClick={() => setLang(lang === o.v ? null : o.v)}>{o.l}</Chip>)}
-            <Chip on={csc} onClick={() => setCsc(!csc)}>Есть грант CSC</Chip>
-          </div>
-        </fieldset>
-
-        <div className="mt-6 flex items-baseline justify-between border-t border-grid-line pt-4" aria-live="polite">
+      <div className="relative bg-card">
+        <div className="flex h-full max-h-[460px] flex-col px-[22px] py-[22px] lg:absolute lg:inset-0 lg:max-h-none">
+        <div className="flex items-baseline justify-between border-b border-grid-line pb-3" aria-live="polite">
           <b className="text-lg">{city ?? (filtered ? "Подходят" : "Все вузы")}</b>
           <span className="font-mono text-xs text-muted-foreground">
             {shown.length} {shown.length === 1 ? "вуз" : shown.length > 1 && shown.length < 5 ? "вуза" : "вузов"}
-            {filtered && <button type="button" onClick={() => { setType(null); setLang(null); setCsc(false); setPicked(null); }} className="ml-3 text-primary hover:underline">Сбросить</button>}
+            {filtered && <button type="button" onClick={() => { setType(null); setLang(null); setPicked(null); }} className="ml-3 text-primary hover:underline">Сбросить</button>}
           </span>
         </div>
-        <ul className="mt-2 max-h-[420px] flex-1 overflow-y-auto">
+        <ul className="mt-1 min-h-0 flex-1 overflow-y-auto overscroll-contain">
           {shown.map((u) => (
             <li key={u.slug}>
               <Link href={u.href} className="flex items-baseline gap-2 border-b border-grid-line py-2 hover:text-primary">
@@ -143,7 +136,9 @@ export function UniMapClient({ path, viewBox, cities, unis }: { path: string; vi
           ))}
           {!shown.length && <li className="py-3 text-muted-foreground">Под эти условия вузов в каталоге пока нет. Напишите менеджеру — подберём.</li>}
         </ul>
+        </div>
       </div>
+    </div>
     </div>
   );
 }

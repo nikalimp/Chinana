@@ -35,8 +35,8 @@ export function WikiNav({ current }: { current?: string }) {
         <summary className="cursor-pointer px-4 py-3 font-mono text-xs uppercase">Все статьи Wiki</summary>
         <div className="border-t border-border px-4 py-4">{list}</div>
       </details>
-      <aside className="hidden lg:block">
-        <div className="sticky top-[92px] max-h-[calc(100vh-110px)] overflow-y-auto pr-4">{list}</div>
+      <aside className="hidden lg:col-start-2 lg:row-start-1 lg:block">
+        <div className="sticky top-[92px] max-h-[calc(100vh-110px)] overflow-y-auto border-l border-grid-line pl-6">{list}</div>
       </aside>
     </>
   );
@@ -47,9 +47,9 @@ export function WikiShell({ current, children }: { current?: string; children: R
     <section className="relative overflow-hidden pb-[clamp(64px,9vw,120px)] pt-[clamp(32px,5vw,64px)]">
       <GridLines />
       <Container>
-        <div className="grid gap-x-12 lg:grid-cols-[240px_1fr]">
+        <div className="grid gap-x-12 lg:grid-cols-[1fr_240px]">
           <WikiNav current={current} />
-          <div className="min-w-0">{children}</div>
+          <div className="min-w-0 lg:col-start-1 lg:row-start-1">{children}</div>
         </div>
       </Container>
     </section>

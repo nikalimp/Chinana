@@ -21,10 +21,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const p = getPost((await params).slug);
   if (!p) return { robots: { index: false } };
   return {
-    title: p.title,
+    title: { absolute: p.title },
     description: p.description,
     alternates: { canonical: `/blog/${p.slug}/` },
-    openGraph: { type: "article", title: p.title, description: p.description, url: `${site.url}/blog/${p.slug}/`, publishedTime: p.date, modifiedTime: p.updated ?? p.date, images: ["/og.png"] },
+    openGraph: { type: "article", title: p.title, description: p.description, url: `${site.url}/blog/${p.slug}/`, publishedTime: p.date, modifiedTime: p.updated ?? p.date, images: [p.cover ?? "/og.png"] },
   };
 }
 
@@ -36,12 +36,16 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       <JsonLd data={graph(articleSchema(p))} />
       <Section className="pt-12">
         <Container className="max-w-3xl">
-          <p className="mb-4 font-mono text-xs uppercase tracking-wide text-primary">Блог</p>
-          <h1 className="text-3xl font-semibold leading-tight tracking-tight sm:text-4xl">{p.title}</h1>
+          <p className="mb-4 font-mono text-xs uppercase tracking-wide text-primary">Блог{p.rubric ? ` · ${p.rubric}` : ""}</p>
+          <h1 className="text-[clamp(30px,4.4vw,52px)] leading-tight">{p.title}</h1>
           <p className="mt-4 text-sm text-muted-foreground">
             {site.person ? site.person.name : site.name} · <time dateTime={p.date}>{formatDate(p.date)}</time>
             {p.updated && p.updated !== p.date && <> · обновлено <time dateTime={p.updated}>{formatDate(p.updated)}</time></>}
           </p>
+          {p.cover && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={p.cover} alt={p.coverAlt ?? ""} className="mt-8 aspect-[16/9] w-full border border-border object-cover" />
+          )}
           <article className="prose-site mt-10">
             <Markdown remarkPlugins={[remarkGfm]}>{p.body}</Markdown>
           </article>

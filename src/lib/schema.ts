@@ -79,9 +79,10 @@ export function itemList(items: { name: string; path: string }[]) {
   };
 }
 
-export function articleSchema(p: { slug: string; title: string; description: string; date: string; updated?: string }) {
+export function articleSchema(p: { slug: string; title: string; description: string; date: string; updated?: string; cover?: string }) {
   return {
     "@type": "BlogPosting",
+    ...(p.cover && { image: `${site.url}${p.cover}` }),
     headline: p.title,
     description: p.description,
     url: `${site.url}/blog/${p.slug}/`,

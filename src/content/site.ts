@@ -71,7 +71,7 @@ export const site = {
 
   // Функции включаются и выключаются флагами, а не удалением кода (стандарт §1.9)
   features: {
-    blog: false, // P1: контент-завод после запуска
+    blog: true, // контент-завод: «Китай изнутри», статья раз в неделю (2026-11-10)
     news: false, // P1: новости вузов (design-news-factory.md)
     calculator: false, // P1
     leadForm: false, // отложено вместе с ботом (spec v0.4)
