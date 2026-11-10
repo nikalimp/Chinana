@@ -9,6 +9,11 @@ ErrorDocument 404 /404.html
 RewriteEngine On
 # 301 переноса — сюда, по одному правилу на старый адрес (карта из specs/02-spec.md):
 # RewriteRule ^old-page/?$ /new-page/ [R=301,L]
+# 2026-11-10: страницы-ответы переехали в Wiki (решение Ника)
+RewriteRule ^grants/csc/?$ /wiki/csc/ [R=301,L]
+RewriteRule ^exams/csca/?$ /wiki/csca/ [R=301,L]
+RewriteRule ^exams/hsk/?$ /wiki/hsk/ [R=301,L]
+RewriteRule ^cost/?$ /wiki/cost/ [R=301,L]
 </IfModule>
 
 <IfModule mod_headers.c>

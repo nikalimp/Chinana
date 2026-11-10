@@ -42,7 +42,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
           <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{p.answer}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild><a href={site.cta.href}>{p.cta} →</a></Button>
-            <Button asChild variant="outline"><Link href="/grants/csc/">Проверить шанс на грант</Link></Button>
+            <Button asChild variant="outline"><Link href="/wiki/csc/">Проверить шанс на грант</Link></Button>
           </div>
           <div className="cards mt-14 grid-cols-1 text-left sm:grid-cols-2 lg:grid-cols-4">
             {p.facts.map((f) => (

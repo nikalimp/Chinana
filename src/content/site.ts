@@ -82,9 +82,7 @@ export const site = {
 
 export const nav = [
   { href: "/programs/", label: "Программы" },
-  { href: "/grants/csc/", label: "Гранты" },
-  { href: "/exams/csca/", label: "CSCA" },
   { href: "/universities/", label: "Вузы" },
-  { href: "/cost/", label: "Стоимость" },
+  { href: "/wiki/", label: "Wiki" },
   ...(site.features.blog ? [{ href: "/blog/", label: "Блог" }] : []),
 ];

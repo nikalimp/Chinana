@@ -2,7 +2,7 @@ import type { Answer } from "@/content/answer-types";
 
 // Факты — specs/research/csca.md (проверены 2026-11-09). Неподтверждённое (даты 2027, срок баллов, центры в РФ) на сайт не выносим.
 export const csca: Answer = {
-  path: "/exams/csca/",
+  path: "/wiki/csca/",
   crumb: "Экзамен CSCA",
   zh: "学测",
   eyebrow: "China Scholastic Competency Assessment",
@@ -112,8 +112,8 @@ export const csca: Answer = {
     { title: "Chinese Government Scholarship 2027/2028 — Посольство КНР в Индонезии", url: "https://id.china-embassy.gov.cn/eng/sgdt/202610/t20261027_12047753.htm" },
   ],
   related: [
-    { href: "/grants/csc/", label: "Грант CSC" },
-    { href: "/exams/hsk/", label: "Экзамен HSK" },
+    { href: "/wiki/csc/", label: "Грант CSC" },
+    { href: "/wiki/hsk/", label: "Экзамен HSK" },
     { href: "/programs/bachelor/", label: "Бакалавриат" },
   ],
 };

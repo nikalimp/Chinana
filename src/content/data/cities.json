@@ -1,0 +1,658 @@
+[
+ {
+  "slug": "beijing",
+  "nameRu": "Пекин",
+  "nameZh": "北京",
+  "province": "Город центрального подчинения",
+  "population": {
+   "value": 21830000,
+   "note": "Всё население муниципалитета, 2024 год: 21,83 млн; из них 19,26 млн (88,2%) — в городских районах",
+   "url": "https://en.wikipedia.org/wiki/Beijing"
+  },
+  "climate": {
+   "janC": -2.7,
+   "julC": 27.2,
+   "note": "Жаркое влажное лето (муссон), короткая холодная и сухая зима; нормы 1991–2020",
+   "url": "https://en.wikipedia.org/wiki/Beijing"
+  },
+  "metro": {
+   "lines": 28,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Москва",
+    "Санкт-Петербург",
+    "Владивосток",
+    "Хабаровск",
+    "Иркутск",
+    "Новосибирск",
+    "Красноярск",
+    "Екатеринбург",
+    "Якутск"
+   ],
+   "note": "Аэропорт Дасин: Аэрофлот (Москва, Иркутск, Красноярск, Владивосток), China Eastern и China Southern (Москва), Аврора (Хабаровск, Владивосток), S7 (Иркутск, Новосибирск, Владивосток; Хабаровск с 30.10.2026, Якутск с 28.10.2026), Уральские авиалинии (Екатеринбург, Иркутск, Владивосток). Аэропорт Шоуду: Hainan Airlines (Санкт-Петербург, Иркутск, Владивосток), Air China (Иркутск, Владивосток) — помечено [citation needed]. Air China Москва — Пекин указана только в обзоре trip.com (июль 2026). Источник — таблица «Airlines and destinations» в статье Wikipedia об аэропорту (не сайт авиакомпании); перед публикацией сверить с расписанием авиакомпании.",
+   "url": "https://en.wikipedia.org/wiki/Beijing_Daxing_International_Airport"
+  },
+  "ground": {
+   "note": "Прямой поезд Москва — Пекин (через Улан-Батор) отменён в 2020 году; на март 2026 восстановление обсуждается, в 2025 году был пробный рейс. Регулярного сообщения нет.",
+   "url": "https://www.tourdom.ru/news/nachalis-reysy-poezdov-iz-irkutska-v-kitay.html"
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Пекинский говор — основа путунхуа, стандартного китайского языка: удобно учить «эталонное» произношение.",
+    "url": "https://en.wikipedia.org/wiki/Beijing"
+   },
+   {
+    "text": "Больше 90 государственных вузов, здесь Цинхуа и Пекинский университет — лучшие вузы Азии по рейтингу THE.",
+    "url": "https://en.wikipedia.org/wiki/Beijing"
+   },
+   {
+    "text": "В Пекине работает посольство России.",
+    "url": "https://en.wikipedia.org/wiki/List_of_diplomatic_missions_of_Russia"
+   }
+  ]
+ },
+ {
+  "slug": "tianjin",
+  "nameRu": "Тяньцзинь",
+  "nameZh": "天津",
+  "province": "Город центрального подчинения",
+  "population": {
+   "value": 13866009,
+   "note": "Всё население муниципалитета, перепись 2020",
+   "url": "https://en.wikipedia.org/wiki/Tianjin"
+  },
+  "climate": {
+   "janC": -2.8,
+   "julC": 27.2,
+   "note": "Сухая ветреная холодная зима, жаркое влажное лето, весной бывают пыльные бури из Гоби",
+   "url": "https://en.wikipedia.org/wiki/Tianjin"
+  },
+  "metro": {
+   "lines": 13,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Хабаровск"
+   ],
+   "note": "China Express Airlines, Хабаровск — сезонность не указана. Из Москвы прямых пассажирских рейсов в таблице нет; Абакан, Красноярск, Новосибирск — только грузовые рейсы. Источник — таблица «Airlines and destinations» в статье Wikipedia об аэропорту (не сайт авиакомпании); перед публикацией сверить с расписанием авиакомпании.",
+   "url": "https://en.wikipedia.org/wiki/Tianjin_Binhai_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "В 1895–1900 годах Россия получила в Тяньцзине собственную концессию; российский гарнизон выведен в 1918 году.",
+    "url": "https://en.wikipedia.org/wiki/Tianjin"
+   },
+   {
+    "text": "В городе сохранились кварталы бывших иностранных концессий, включая итальянскую.",
+    "url": "https://en.wikipedia.org/wiki/Tianjin"
+   }
+  ]
+ },
+ {
+  "slug": "shanghai",
+  "nameRu": "Шанхай",
+  "nameZh": "上海",
+  "province": "Город центрального подчинения",
+  "population": {
+   "value": 24874500,
+   "note": "Всё население муниципалитета, 2023 год; городская агломерация — 30,05 млн (2026, по вводной статьи)",
+   "url": "https://en.wikipedia.org/wiki/Shanghai"
+  },
+  "climate": {
+   "janC": 5.4,
+   "julC": 29.1,
+   "note": "Влажный субтропический климат: прохладная сырая зима, жаркое влажное лето (станция Сюйцзяхуэй, 1991–2020)",
+   "url": "https://en.wikipedia.org/wiki/Shanghai"
+  },
+  "metro": {
+   "lines": 19,
+   "year": 2025,
+   "url": "https://en.wikipedia.org/wiki/Shanghai"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Москва",
+    "Санкт-Петербург",
+    "Казань",
+    "Хабаровск",
+    "Южно-Сахалинск",
+    "Красноярск",
+    "Владивосток",
+    "Иркутск",
+    "Новосибирск"
+   ],
+   "note": "Пудун: Аэрофлот (Москва), China Eastern (Москва, Санкт-Петербург, Казань), Аврора (Хабаровск, Южно-Сахалинск), Россия (Красноярск, Владивосток), S7 (Иркутск, Новосибирск, Владивосток). Juneyao Air из Санкт-Петербурга — только по trip.com. Источник — таблица «Airlines and destinations» в статье Wikipedia об аэропорту (не сайт авиакомпании); перед публикацией сверить с расписанием авиакомпании.",
+   "url": "https://en.wikipedia.org/wiki/Shanghai_Pudong_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Местный язык — шанхайский (группа у), его не понимает носитель путунхуа; в вузах учат на путунхуа.",
+    "url": "https://en.wikipedia.org/wiki/Shanghai"
+   },
+   {
+    "text": "В Шанхае есть генеральное консульство России.",
+    "url": "https://en.wikipedia.org/wiki/List_of_diplomatic_missions_of_Russia"
+   }
+  ]
+ },
+ {
+  "slug": "nanjing",
+  "nameRu": "Нанкин",
+  "nameZh": "南京",
+  "province": "Цзянсу",
+  "population": {
+   "value": 9341685,
+   "note": "Город (весь округ), перепись 2020; на 2021 год — 9 423 400",
+   "url": "https://en.wikipedia.org/wiki/Nanjing"
+  },
+  "climate": {
+   "janC": 3.1,
+   "julC": 28.4,
+   "note": "Влажный субтропический климат; одна из «трёх печей» Янцзы — очень жаркое лето",
+   "url": "https://en.wikipedia.org/wiki/Nanjing"
+  },
+  "metro": {
+   "lines": 13,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [],
+   "note": "Прямых пассажирских рейсов из России не найдено. В таблице аэропорта есть Suparna Airlines в Москву (Жуковский), но по ссылке источника это регулярный грузовой маршрут — неясно.",
+   "url": "https://en.wikipedia.org/wiki/Nanjing_Lukou_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Одна из четырёх великих древних столиц Китая; столица династии Мин и Китайской Республики (1927–1937, 1946–1949).",
+    "url": "https://en.wikipedia.org/wiki/Nanjing"
+   },
+   {
+    "text": "Летом очень жарко: город входит в «три печи» вдоль Янцзы.",
+    "url": "https://en.wikipedia.org/wiki/Nanjing"
+   }
+  ]
+ },
+ {
+  "slug": "hangzhou",
+  "nameRu": "Ханчжоу",
+  "nameZh": "杭州",
+  "province": "Чжэцзян",
+  "population": {
+   "value": 12522000,
+   "note": "Постоянное население всего города, 2023 год; из них 10,543 млн (84,2%) — городское",
+   "url": "https://en.wikipedia.org/wiki/Hangzhou"
+  },
+  "climate": {
+   "janC": 5.0,
+   "julC": 29.3,
+   "note": "Влажный субтропический климат: долгое очень жаркое влажное лето, прохладная облачная зима",
+   "url": "https://en.wikipedia.org/wiki/Hangzhou"
+  },
+  "metro": {
+   "lines": 13,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Москва"
+   ],
+   "note": "Beijing Capital Airlines, Шереметьево — Сяошань (подтверждено также trip.com, июль 2026). Источник — таблица «Airlines and destinations» в статье Wikipedia об аэропорту (не сайт авиакомпании); перед публикацией сверить с расписанием авиакомпании.",
+   "url": "https://en.wikipedia.org/wiki/Hangzhou_Xiaoshan_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Здесь штаб-квартиры Alibaba, Ant Group, DeepSeek, Geely и NetEase — город называют «Кремниевой долиной Китая».",
+    "url": "https://en.wikipedia.org/wiki/Hangzhou"
+   },
+   {
+    "text": "Местный ханчжоуский диалект (группа у) непонятен носителю путунхуа; говорят на нём 1,2–1,5 млн человек.",
+    "url": "https://en.wikipedia.org/wiki/Hangzhou"
+   }
+  ]
+ },
+ {
+  "slug": "hefei",
+  "nameRu": "Хэфэй",
+  "nameZh": "合肥",
+  "province": "Аньхой",
+  "population": {
+   "value": 5118199,
+   "note": "Городское население; весь город (городской округ) — 9 465 881; данные в карточке статьи помечены 2022 (в тексте перепись 2020 — 9 369 881)",
+   "url": "https://en.wikipedia.org/wiki/Hefei"
+  },
+  "climate": {
+   "janC": 3.1,
+   "julC": 28.6,
+   "note": "Влажный субтропический климат: сырая холодная зима, жаркое влажное лето",
+   "url": "https://en.wikipedia.org/wiki/Hefei"
+  },
+  "metro": {
+   "lines": 6,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [],
+   "note": "В таблице аэропорта Синьцяо рейсов в Россию нет.",
+   "url": "https://en.wikipedia.org/wiki/Hefei_Xinqiao_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Здесь находится USTC — Научно-технический университет Китая, один из сильнейших технических вузов страны.",
+    "url": "https://en.wikipedia.org/wiki/Hefei"
+   },
+   {
+    "text": "12-е место в мире по научным исследованиям в Nature Index 2025; семь национальных лабораторий — больше только в Пекине.",
+    "url": "https://en.wikipedia.org/wiki/Hefei"
+   }
+  ]
+ },
+ {
+  "slug": "wuhan",
+  "nameRu": "Ухань",
+  "nameZh": "武汉",
+  "province": "Хубэй",
+  "population": {
+   "value": 13739000,
+   "note": "Весь город (городской округ), 2022 год; городское население отдельно не указано",
+   "url": "https://en.wikipedia.org/wiki/Wuhan"
+  },
+  "climate": {
+   "janC": 4.1,
+   "julC": 29.3,
+   "note": "Одна из «печей» Янцзы: очень жаркое лето, прохладная зима",
+   "url": "https://en.wikipedia.org/wiki/Wuhan"
+  },
+  "metro": {
+   "lines": 12,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Москва"
+   ],
+   "note": "China Southern Airlines, Шереметьево — Тяньхэ; по ссылкам статьи рейс возобновлён в сентябре 2025 года. Источник — таблица «Airlines and destinations» в статье Wikipedia об аэропорту (не сайт авиакомпании); перед публикацией сверить с расписанием авиакомпании.",
+   "url": "https://en.wikipedia.org/wiki/Wuhan_Tianhe_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "82 вуза (2023) — один из крупнейших студенческих городов Китая; 4-е место в Китае в QS Best Student Cities 2026.",
+    "url": "https://en.wikipedia.org/wiki/Wuhan"
+   },
+   {
+    "text": "В Хуачжунском университете науки и технологий учатся более 2 000 иностранцев из 120 стран.",
+    "url": "https://en.wikipedia.org/wiki/Wuhan"
+   }
+  ]
+ },
+ {
+  "slug": "chengdu",
+  "nameRu": "Чэнду",
+  "nameZh": "成都",
+  "province": "Сычуань",
+  "population": {
+   "value": 16492980,
+   "note": "Городское население, перепись 2020; весь город — 20 937 757",
+   "url": "https://en.wikipedia.org/wiki/Chengdu"
+  },
+  "climate": {
+   "janC": 6.0,
+   "julC": 25.8,
+   "note": "Мягкий влажный субтропический климат с муссонами, дожди летом; данные станции Шуанлю",
+   "url": "https://en.wikipedia.org/wiki/Chengdu"
+  },
+  "metro": {
+   "lines": 17,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Москва",
+    "Санкт-Петербург",
+    "Новосибирск"
+   ],
+   "note": "Аэропорт Тяньфу: Sichuan Airlines (Москва, Санкт-Петербург — помечено [citation needed], но подтверждено trip.com, июль 2026), S7 (Новосибирск). Источник — таблица «Airlines and destinations» в статье Wikipedia об аэропорту (не сайт авиакомпании); перед публикацией сверить с расписанием авиакомпании.",
+   "url": "https://en.wikipedia.org/wiki/Chengdu_Tianfu_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Местный язык — чэндуский говор сычуаньского мандаринского; к нему нужно привыкнуть.",
+    "url": "https://en.wikipedia.org/wiki/Chengdu"
+   },
+   {
+    "text": "Здесь база разведения больших панд; в провинции живёт более 80% диких панд мира.",
+    "url": "https://en.wikipedia.org/wiki/Chengdu"
+   },
+   {
+    "text": "В городе 23 иностранных консульства (2023).",
+    "url": "https://en.wikipedia.org/wiki/Chengdu"
+   }
+  ]
+ },
+ {
+  "slug": "guangzhou",
+  "nameRu": "Гуанчжоу",
+  "nameZh": "广州",
+  "province": "Гуандун",
+  "population": {
+   "value": 16096724,
+   "note": "Городское население, перепись 2020; весь город — 18 676 605",
+   "url": "https://en.wikipedia.org/wiki/Guangzhou"
+  },
+  "climate": {
+   "janC": 13.8,
+   "julC": 28.9,
+   "note": "Влажный субтропический муссонный климат: мягкая зима, долгое жаркое влажное лето",
+   "url": "https://en.wikipedia.org/wiki/Guangzhou"
+  },
+  "metro": {
+   "lines": 19,
+   "year": 2025,
+   "url": "https://en.wikipedia.org/wiki/Guangzhou"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Москва",
+    "Красноярск",
+    "Иркутск",
+    "Новосибирск",
+    "Владивосток"
+   ],
+   "note": "Байюнь: Аэрофлот и China Southern (Москва), Россия (Красноярск), S7 (Иркутск; Владивосток с 27.10.2026; Новосибирск возобновляется 22.12.2026). Источник — таблица «Airlines and destinations» в статье Wikipedia об аэропорту (не сайт авиакомпании); перед публикацией сверить с расписанием авиакомпании.",
+   "url": "https://en.wikipedia.org/wiki/Guangzhou_Baiyun_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Почти все коренные жители говорят на кантонском; это и язык местного радио.",
+    "url": "https://en.wikipedia.org/wiki/Guangzhou"
+   },
+   {
+    "text": "В Гуанчжоу есть генеральное консульство России.",
+    "url": "https://en.wikipedia.org/wiki/List_of_diplomatic_missions_of_Russia"
+   }
+  ]
+ },
+ {
+  "slug": "xiamen",
+  "nameRu": "Сямэнь",
+  "nameZh": "厦门",
+  "province": "Фуцзянь",
+  "population": {
+   "value": 3866555,
+   "note": "Городское население, перепись 2020; весь город — 5 163 970; к концу 2025 — около 5,365 млн",
+   "url": "https://en.wikipedia.org/wiki/Xiamen"
+  },
+  "climate": {
+   "janC": 13.1,
+   "julC": 28.3,
+   "note": "Муссонный влажный субтропический климат: долгое жаркое влажное лето, короткая мягкая сухая зима",
+   "url": "https://en.wikipedia.org/wiki/Xiamen"
+  },
+  "metro": {
+   "lines": 5,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [],
+   "note": "В таблице аэропорта Гаоци рейсов в Россию нет.",
+   "url": "https://en.wikipedia.org/wiki/Xiamen_Gaoqi_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Местный язык — хоккиен (южноминьский), сильно отличается от путунхуа.",
+    "url": "https://en.wikipedia.org/wiki/Xiamen"
+   },
+   {
+    "text": "Остров Гуланъюй внесён в список Всемирного наследия ЮНЕСКО в июле 2017 года.",
+    "url": "https://en.wikipedia.org/wiki/Xiamen"
+   }
+  ]
+ },
+ {
+  "slug": "harbin",
+  "nameRu": "Харбин",
+  "nameZh": "哈尔滨",
+  "province": "Хэйлунцзян",
+  "population": {
+   "value": 10009854,
+   "note": "Весь город, перепись 2020; цифры городского населения в статье расходятся (5,28–6,98 млн)",
+   "url": "https://en.wikipedia.org/wiki/Harbin"
+  },
+  "climate": {
+   "janC": -17.3,
+   "julC": 23.7,
+   "note": "Резко континентальный муссонный климат: сухая морозная зима, тёплое дождливое лето",
+   "url": "https://en.wikipedia.org/wiki/Harbin"
+  },
+  "metro": {
+   "lines": 3,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Владивосток",
+    "Хабаровск",
+    "Благовещенск",
+    "Южно-Сахалинск",
+    "Иркутск",
+    "Красноярск",
+    "Екатеринбург",
+    "Якутск",
+    "Петропавловск-Камчатский"
+   ],
+   "note": "Тайпин: Аэрофлот (Красноярск, Владивосток), Аврора (Хабаровск, Владивосток, Южно-Сахалинск), Chengdu Airlines (Хабаровск, Владивосток), China Southern (Владивосток, сезонно), Hainan (Хабаровск), ИрАэро (Иркутск; Благовещенск сезонно; Петропавловск-Камчатский с 24.10.2026), Уральские (Екатеринбург), Якутия (Якутск). Прямого рейса из Москвы в таблице нет. Источник — таблица «Airlines and destinations» в статье Wikipedia об аэропорту (не сайт авиакомпании); перед публикацией сверить с расписанием авиакомпании.",
+   "url": "https://en.wikipedia.org/wiki/Harbin_Taiping_International_Airport"
+  },
+  "ground": {
+   "note": "Ближайшие наземные переходы — в провинции Хэйлунцзян: мост Благовещенск — Хэйхэ, автобусы с декабря 2024 года (8 рейсов в день, 2 500 ₽); поезд Гродеково — Суйфэньхэ восстановлен в 2024 году. Дальше до Харбина — по Китаю.",
+   "url": "https://t-j.ru/news/blagoveshchensk-to-china/"
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Харбин основан в 1898 году при строительстве Китайско-Восточной железной дороги, которую строили в основном русские инженеры.",
+    "url": "https://en.wikipedia.org/wiki/Harbin"
+   },
+   {
+    "text": "В начале 1920-х в городе жили около 120 000 русских; символ — Софийский собор 1907 года, с 1997 года музей.",
+    "url": "https://en.wikipedia.org/wiki/Harbin"
+   },
+   {
+    "text": "В Харбине есть генеральное консульство России.",
+    "url": "https://en.wikipedia.org/wiki/List_of_diplomatic_missions_of_Russia"
+   },
+   {
+    "text": "Фестиваль ледовых скульптур проходит с 1985 года, официальный старт — 5 января.",
+    "url": "https://en.wikipedia.org/wiki/Harbin"
+   }
+  ]
+ },
+ {
+  "slug": "changchun",
+  "nameRu": "Чанчунь",
+  "nameZh": "长春",
+  "province": "Цзилинь",
+  "population": {
+   "value": 5691024,
+   "note": "Городское население, перепись 2020; весь город — 9 066 906",
+   "url": "https://en.wikipedia.org/wiki/Changchun"
+  },
+  "climate": {
+   "janC": -14.3,
+   "julC": 23.7,
+   "note": "Континентальный муссонный климат: долгая холодная сухая зима, жаркое влажное лето",
+   "url": "https://en.wikipedia.org/wiki/Changchun"
+  },
+  "metro": {
+   "lines": 6,
+   "year": 2026,
+   "url": "https://en.wikipedia.org/wiki/Urban_rail_transit_in_China"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Владивосток"
+   ],
+   "note": "Chengdu Airlines, регулярный рейс Чанчунь — Владивосток с 29 июня 2026 года, 2 раза в неделю (пн, пт) в летнем расписании, около 1 ч 25 мин. Работает ли зимой — не ясно.",
+   "url": "https://1prime.ru/20260630/chanchunja-871158691.html"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Здесь штаб-квартира FAW — одного из «большой четвёрки» госавтоконцернов Китая; завод строят с 1953 года.",
+    "url": "https://en.wikipedia.org/wiki/Changchun"
+   },
+   {
+    "text": "В 1932 году город стал столицей Маньчжоу-го под названием Синьцзин.",
+    "url": "https://en.wikipedia.org/wiki/Changchun"
+   },
+   {
+    "text": "Здесь работает Чанчуньская киностудия, с 1992 года проходит Чанчуньский кинофестиваль.",
+    "url": "https://en.wikipedia.org/wiki/Changchun"
+   }
+  ]
+ },
+ {
+  "slug": "dalian",
+  "nameRu": "Далянь",
+  "nameZh": "大连",
+  "province": "Ляонин",
+  "population": {
+   "value": 5736383,
+   "note": "Городское население, перепись 2020; весь город — 7 450 785",
+   "url": "https://en.wikipedia.org/wiki/Dalian"
+  },
+  "climate": {
+   "janC": -3.3,
+   "julC": 24.0,
+   "note": "Влажный континентальный муссонный климат: тёплое влажное лето, холодная ветреная сухая зима",
+   "url": "https://en.wikipedia.org/wiki/Dalian"
+  },
+  "metro": {
+   "lines": 6,
+   "year": 2023,
+   "url": "https://en.wikipedia.org/wiki/Dalian"
+  },
+  "flightsFromRussia": {
+   "cities": [
+    "Владивосток",
+    "Хабаровск"
+   ],
+   "note": "Чжоушуйцзы: Аэрофлот (Владивосток, сезонно), Hainan Airlines (Владивосток), ИрАэро и Якутия (Хабаровск, сезонные чартеры). trip.com (июль 2026) называет S7 из Владивостока. Источник — таблица «Airlines and destinations» в статье Wikipedia об аэропорту (не сайт авиакомпании); перед публикацией сверить с расписанием авиакомпании.",
+   "url": "https://en.wikipedia.org/wiki/Dalian_Zhoushuizi_International_Airport"
+  },
+  "ground": {
+   "note": "",
+   "url": ""
+  },
+  "costOfLiving": {
+   "note": "",
+   "url": ""
+  },
+  "facts": [
+   {
+    "text": "Город основан русскими в 1898 году как Дальний; рядом — Порт-Артур (Люйшунь), осаждённый в 1904–1905 годах.",
+    "url": "https://en.wikipedia.org/wiki/Dalian"
+   },
+   {
+    "text": "В 1945 году город освободили советские войска, СССР вернул его Китаю в 1950 году; на месте Русского города сейчас Художественный музей Даляня.",
+    "url": "https://en.wikipedia.org/wiki/Dalian"
+   }
+  ]
+ }
+]

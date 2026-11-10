@@ -2,7 +2,7 @@ import type { Answer } from "@/content/answer-types";
 
 // Факты — specs/research/hsk.md (проверены 2026-11-09). Даты 2027 и цены других центров — не подтверждены, на сайт не выносим.
 export const hsk: Answer = {
-  path: "/exams/hsk/",
+  path: "/wiki/hsk/",
   crumb: "Экзамен HSK",
   zh: "汉语",
   eyebrow: "汉语水平考试",
@@ -116,8 +116,8 @@ export const hsk: Answer = {
     { title: "HSK 3.0 mock test platform — Study in Shanghai", url: "https://edu.sh.gov.cn/study_en_hsk/20260107/5292266eca744a959c1db43237fbc185.html" },
   ],
   related: [
-    { href: "/exams/csca/", label: "Экзамен CSCA" },
-    { href: "/grants/csc/", label: "Грант CSC" },
+    { href: "/wiki/csca/", label: "Экзамен CSCA" },
+    { href: "/wiki/csc/", label: "Грант CSC" },
     { href: "/programs/language-year/", label: "Языковой год" },
   ],
 };

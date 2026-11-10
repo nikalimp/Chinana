@@ -33,7 +33,7 @@ export default function Home() {
           <p className="mx-auto mt-7 max-w-[41.2em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{home.answer}</p>
           <div className="mt-9 flex flex-wrap justify-center gap-3">
             <Button asChild><a href={site.cta.href}>{site.cta.label} →</a></Button>
-            <Button asChild variant="outline"><Link href="/grants/csc/">Проверить шанс на грант</Link></Button>
+            <Button asChild variant="outline"><Link href="/wiki/csc/">Проверить шанс на грант</Link></Button>
           </div>
         </Container>
       </section>
@@ -57,7 +57,7 @@ export default function Home() {
           <div className="grid items-start md:grid-cols-2">
             <div className="md:pr-10">
               <p className="max-w-[34.6em] text-inverse-muted">{home.grant.text}</p>
-              <Button asChild variant="inverse" className="mt-7"><Link href="/grants/csc/">Как получить грант →</Link></Button>
+              <Button asChild variant="inverse" className="mt-7"><Link href="/wiki/csc/">Как получить грант →</Link></Button>
             </div>
             <ul className="mt-9 border-t border-inverse-foreground/20 md:mt-0">
               {home.grant.items.map((it, i) => (

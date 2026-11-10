@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { site } from "@/content/site";
 import { universities, uniAnswer, uniFaq, uniPath } from "@/content/universities";
 import { cny, programLabel } from "@/content/university-types";
+import { cityBySlugRu, cityPath } from "@/content/cities";
 import { Container, GridLines, Section, SectionHead } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { UniCard } from "@/components/cards";
@@ -52,7 +53,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
           <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{uniAnswer(u)}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild><a href={site.cta.href}>{cta} →</a></Button>
-            <Button asChild variant="outline"><Link href="/grants/csc/">Как получить грант</Link></Button>
+            <Button asChild variant="outline"><Link href="/wiki/csc/">Как получить грант</Link></Button>
           </div>
           <div className="cards mt-14 grid-cols-2 text-left lg:grid-cols-4">
             {[
@@ -63,7 +64,9 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
             ].map(([l, v]) => (
               <div key={l} className="bg-card p-[22px]">
                 <span className="font-mono text-xs uppercase text-muted-foreground">{l}</span>
-                <b className="mt-2 block text-[22px] leading-tight">{v}</b>
+                <b className="mt-2 block text-[22px] leading-tight">
+                  {l === "Город" && cityBySlugRu(u.city) ? <Link href={cityPath(cityBySlugRu(u.city)!)} className="underline decoration-primary/40 underline-offset-4 hover:text-primary">{v}</Link> : v}
+                </b>
               </div>
             ))}
           </div>
@@ -125,7 +128,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
               ))}
             </tbody>
           </table>
-          <p className="mx-auto mt-6 max-w-[47.9em] text-muted-foreground">Если китайского пока нет, путь обычно такой: языковые курсы в Китае, затем экзамен HSK, затем поступление на степень. Для бакалавриата по гранту правительства Китая нужен ещё экзамен <Link href="/exams/csca/" className="text-primary hover:underline">CSCA</Link>.</p>
+          <p className="mx-auto mt-6 max-w-[47.9em] text-muted-foreground">Если китайского пока нет, путь обычно такой: языковые курсы в Китае, затем экзамен HSK, затем поступление на степень. Для бакалавриата по гранту правительства Китая нужен ещё экзамен <Link href="/wiki/csca/" className="text-primary hover:underline">CSCA</Link>.</p>
         </Container>
       </Section>
 
@@ -138,7 +141,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
                 <li key={g.name} className="flex gap-3 border-b border-grid-line py-2.5"><span aria-hidden="true" className="font-mono text-primary">—</span><span>{g.name} <a href={g.url} rel="noopener" target="_blank" className="font-mono text-[11px] text-primary hover:underline">[источник]</a></span></li>
               ))}
             </ul>
-            <div className="mt-8 flex justify-center"><Button asChild variant="outline"><Link href="/grants/csc/">Всё о гранте CSC →</Link></Button></div>
+            <div className="mt-8 flex justify-center"><Button asChild variant="outline"><Link href="/wiki/csc/">Всё о гранте CSC →</Link></Button></div>
           </Container>
         </Section>
       )}
