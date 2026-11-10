@@ -6,11 +6,10 @@ export function ProgramCard({ p }: { p: Program }) {
   const rows = p.facts.slice(0, 3);
   return (
     <article className="flex min-h-[400px] flex-col gap-3.5 bg-card px-[22px] pb-6 pt-[26px] transition-colors hover:bg-card-hover">
-      <div className="flex items-baseline justify-between">
-        <span className="font-mono text-[13px]">{p.num}</span>
-        <span aria-hidden="true" lang="zh-Hans" className="font-zh text-[26px] font-black text-primary">{p.zh}</span>
+      <div className="flex items-baseline justify-between gap-3">
+        <h3 className="text-[22px] font-bold uppercase leading-tight">{p.title}</h3>
+        <span aria-hidden="true" lang="zh-Hans" className="font-zh text-[26px] font-black leading-none text-primary">{p.zh}</span>
       </div>
-      <h3 className="text-[22px] font-bold uppercase leading-tight">{p.title}</h3>
       <p>{p.short}</p>
       <dl className="grid grid-cols-[auto_1fr] gap-x-3.5 gap-y-1.5 border-t border-grid-line pt-3.5 text-sm">
         {rows.map((r) => (

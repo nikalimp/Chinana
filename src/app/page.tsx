@@ -35,9 +35,6 @@ export default function Home() {
             <Button asChild><a href={site.cta.href}>{site.cta.label} →</a></Button>
             <Button asChild variant="outline"><Link href="/grants/csc/">Проверить шанс на грант</Link></Button>
           </div>
-          <ul aria-label="Кому подходит" className="mt-6 flex flex-wrap justify-center gap-2">
-            {home.tags.map((t) => <li key={t} className="rounded-full border border-foreground bg-background px-3 py-1.5 font-mono text-xs">{t}</li>)}
-          </ul>
         </Container>
       </section>
 
@@ -73,31 +70,21 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section id="terms">
-        <Container>
-          <SectionHead title={home.stepsHead.title} accent={home.stepsHead.accent} text={home.stepsHead.text} />
-          <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-            {steps.map((s, i) => <StepCard key={s.title} n={i + 1} {...s} />)}
-          </div>
-          <div className="grid border border-t-0 border-border bg-secondary sm:grid-cols-2">
-            <div className="px-[22px] py-7">
-              <Eyebrow>{home.terms.eyebrow}</Eyebrow>
-              <h3 className="text-[26px] font-bold uppercase leading-tight">{home.terms.title}</h3>
-            </div>
-            <div className="flex flex-wrap items-center gap-7 border-t border-border px-[22px] py-7 sm:border-l sm:border-t-0">
-              <div className="flex items-center gap-3"><span className="grid size-14 place-items-center border-[1.5px] border-foreground bg-accent font-mono font-medium">50%</span>{home.terms.first}</div>
-              <div className="flex items-center gap-3"><span className="grid size-14 place-items-center border-[1.5px] border-foreground font-mono font-medium">50%</span>{home.terms.second}</div>
-            </div>
+      <Section id="unis">
+        <Container className="max-w-[1440px]">
+          <SectionHead title={home.unisHead.title} accent={home.unisHead.accent} text={home.unisHead.text} />
+          <UniMap />
+          <div className="mt-6 flex justify-center">
+            <Button asChild variant="outline"><Link href="/universities/">Весь каталог →</Link></Button>
           </div>
         </Container>
       </Section>
 
-      <Section id="unis">
+      <Section id="steps">
         <Container>
-          <SectionHead title={home.unisHead.title} text={home.unisHead.text} />
-          <UniMap />
-          <div className="mt-6 flex justify-center">
-            <Button asChild variant="outline"><Link href="/universities/">Весь каталог →</Link></Button>
+          <SectionHead title={home.stepsHead.title} accent={home.stepsHead.accent} text={home.stepsHead.text} />
+          <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {steps.map((s, i) => <StepCard key={s.title} n={i + 1} {...s} />)}
           </div>
         </Container>
       </Section>
