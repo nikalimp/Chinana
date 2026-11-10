@@ -16,7 +16,7 @@ export function WhyChinese() {
         <div className="cards grid-cols-1 md:grid-cols-2">
           {home.why.map((w) => (
             <article key={w.value} className="relative flex min-h-[260px] flex-col overflow-hidden bg-card px-[26px] pb-6 pt-[26px]">
-              <span aria-hidden="true" lang="zh-Hans" className="pointer-events-none absolute -bottom-6 -right-3 font-zh text-[150px] font-black leading-none text-primary opacity-[0.07]">{w.zh}</span>
+              <span aria-hidden="true" lang="zh-Hans" data-zh={w.zh} className="zh-deco pointer-events-none absolute -bottom-6 -right-3 font-zh text-[150px] font-black leading-none text-primary opacity-[0.07]" />
               <b className="block text-[clamp(44px,5vw,64px)] font-bold leading-none text-primary">{w.value}</b>
               <p className="mt-3 max-w-[22em] text-lg font-semibold leading-snug">{w.label}</p>
               <p className="mt-3 max-w-[30em] text-[15px] text-muted-foreground">{w.text}</p>
@@ -37,7 +37,7 @@ export function Goals() {
         <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {home.goals.map((g) => (
             <Link key={g.title} href={g.href} className="group relative flex min-h-[220px] flex-col overflow-hidden bg-card px-[22px] pb-6 pt-[26px] transition-colors hover:bg-card-hover">
-              <span aria-hidden="true" lang="zh-Hans" className="pointer-events-none absolute -bottom-4 -right-2 font-zh text-[120px] font-black leading-none text-primary opacity-[0.08] transition-opacity group-hover:opacity-[0.14]">{g.zh}</span>
+              <span aria-hidden="true" lang="zh-Hans" data-zh={g.zh} className="zh-deco pointer-events-none absolute -bottom-4 -right-2 font-zh text-[120px] font-black leading-none text-primary opacity-[0.08] transition-opacity group-hover:opacity-[0.14]" />
               <span aria-hidden="true" lang="zh-Hans" className="font-zh text-[28px] font-black leading-none text-primary">{g.zh}</span>
               <h3 className="mt-5 text-[22px] font-bold uppercase leading-tight">{g.title}</h3>
               <p className="mt-2 text-[15px] text-muted-foreground">{g.text}</p>
@@ -58,7 +58,7 @@ export function Myths() {
         <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {home.myths.map((m) => (
             <article key={m.myth} className="relative flex flex-col overflow-hidden bg-card px-[22px] pb-6 pt-[26px]">
-              <span aria-hidden="true" lang="zh-Hans" className="pointer-events-none absolute -right-1 top-3 font-zh text-[64px] font-black leading-none text-primary opacity-[0.1]">{m.zh}</span>
+              <span aria-hidden="true" lang="zh-Hans" data-zh={m.zh} className="zh-deco pointer-events-none absolute -right-1 top-3 font-zh text-[64px] font-black leading-none text-primary opacity-[0.1]" />
               <p className="flex items-center gap-2 font-mono text-xs uppercase text-muted-foreground"><X aria-hidden="true" className="size-4 text-primary" />Миф</p>
               <p className="mt-2 text-[17px] font-semibold leading-snug">{m.myth}</p>
               <hr className="my-5 border-t border-dashed border-border" />
@@ -89,7 +89,7 @@ export function HskPath() {
           ))}
         </div>
         <p className="mt-4 text-sm text-muted-foreground">
-          {home.hskNote} <Link href="/wiki/language-courses/" className="text-brand hover:underline">Открыть статью →</Link>
+          {home.hskNote} <Link href="/wiki/language-courses/" className="text-brand underline underline-offset-2">Открыть статью →</Link>
         </p>
       </Container>
     </Section>
