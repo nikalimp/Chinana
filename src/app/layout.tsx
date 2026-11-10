@@ -14,6 +14,8 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { CookieBanner } from "@/components/cookie-banner";
 import { ScrollTop } from "@/components/scroll-top";
+import { LeadDialog } from "@/components/lead-dialog";
+import { programs } from "@/content/programs";
 import { JsonLd } from "@/components/json-ld";
 import { graph, orgSchema, personSchema, websiteSchema } from "@/lib/schema";
 
@@ -51,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <CookieBanner />
         <ScrollTop />
+        {site.features.leadForm && <LeadDialog programs={programs.map((p) => ({ slug: p.slug, title: p.title }))} telegram={site.cta.href} metrikaId={site.metrikaId} />}
       </body>
     </html>
   );

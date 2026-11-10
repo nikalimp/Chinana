@@ -144,7 +144,7 @@ export function WikiArticle({ a }: { a: Answer }) {
 
         <aside className="mt-14 grid gap-4 border border-border bg-secondary p-6 sm:grid-cols-[1fr_auto] sm:items-center">
           <p><b className="block text-lg">Разберём ваш случай</b><span className="text-muted-foreground">Напишите менеджеру — подберём программу, вуз и грант под вас.</span></p>
-          <Button asChild><a href={site.cta.href}>Написать @chinana</a></Button>
+          <Button asChild><a href={site.cta.href} data-lead>Оставить заявку</a></Button>
         </aside>
 
         {a.faq.length > 0 && (

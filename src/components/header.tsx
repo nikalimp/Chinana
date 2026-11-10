@@ -61,7 +61,7 @@ function MobileMenu() {
             </li>
           ))}
         </ul>
-        <Button asChild className="mt-5 w-full"><a href={site.cta.href}>{site.cta.label}</a></Button>
+        <Button asChild className="mt-5 w-full"><a href={site.cta.href} data-lead>{site.cta.label}</a></Button>
       </div>
     </details>
   );
@@ -78,7 +78,7 @@ export function Header() {
           )}
         </nav>
         <div className="flex items-center gap-2">
-          <Button asChild size="sm" className="hidden sm:inline-flex"><a href={site.cta.href}>{site.cta.label}</a></Button>
+          <Button asChild size="sm" className="hidden sm:inline-flex"><a href={site.cta.href} data-lead>{site.cta.label}</a></Button>
           <MobileMenu />
         </div>
       </Container>

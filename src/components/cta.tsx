@@ -11,7 +11,7 @@ export function CtaFinal({ text = home.final.text }: { text?: string }) {
         <h2 className="mx-auto max-w-[9.3em] text-[clamp(34px,6vw,76px)]">{home.final.title}</h2>
         <p className="mx-auto mt-5 max-w-[34.6em] text-primary-foreground/90">{text}</p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <Button asChild variant="yellow"><a href={site.cta.href}>{home.final.cta}</a></Button>
+          <Button asChild variant="yellow"><a href={site.cta.href} data-lead>{home.final.cta}</a></Button>
         </div>
       </Container>
     </Section>

@@ -52,7 +52,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
           <h1 className="mx-auto mt-[18px] max-w-[12em] text-[clamp(34px,5.6vw,76px)]">{u.nameRu}: <em>поступление для россиян</em></h1>
           <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{uniAnswer(u)}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button asChild><a href={site.cta.href}>{cta} →</a></Button>
+            <Button asChild><a href={site.cta.href} data-lead data-lead-context={u.nameRu}>{cta} →</a></Button>
             <Button asChild variant="outline"><Link href="/wiki/csc/">Как получить грант</Link></Button>
           </div>
           <div className="cards mt-14 grid-cols-2 text-left lg:grid-cols-4">
@@ -158,7 +158,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
               </p>
             </div>
             <div className="flex flex-col justify-center gap-3.5 bg-secondary px-[22px] py-7">
-              <Button asChild><a href={site.cta.href}>{cta}</a></Button>
+              <Button asChild><a href={site.cta.href} data-lead data-lead-context={u.nameRu}>{cta}</a></Button>
               <Button asChild variant="outline"><Link href="/programs/">Выбрать программу</Link></Button>
             </div>
           </div>

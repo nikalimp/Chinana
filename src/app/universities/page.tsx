@@ -40,7 +40,7 @@ export default function UniversitiesPage() {
             В каталоге {universities.length} университетов Китая, которые принимают иностранцев. Для каждого — рейтинг, программы, цены в юанях, гранты, требования HSK и общежитие по данным сайта вуза. Языковые курсы стоят от 6500 до 18 000 юаней за семестр, бакалавриат и магистратура — обычно от 20 000 до 50 000 юаней в год. Каталог пополняется каждую неделю.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Button asChild><a href={site.cta.href}>Подобрать вуз →</a></Button>
+            <Button asChild><a href={site.cta.href} data-lead>Подобрать вуз →</a></Button>
             <Button asChild variant="outline"><Link href="/wiki/cost/">Сколько стоит год в Китае</Link></Button>
           </div>
         </Container>
