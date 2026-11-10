@@ -26,6 +26,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   openGraph: { type: "website", locale: site.locale, siteName: site.name, title: site.title, description: site.description, url: site.url, images: ["/og.png"] },
   robots: { index: true, follow: true },
+  verification: { yandex: site.yandexVerification },
 };
 
 // Метрика грузится после загрузки страницы, когда браузер свободен: не мешает первому экрану (TBT в Lighthouse).

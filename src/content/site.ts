@@ -67,6 +67,7 @@ export const site = {
   person: null as null | { name: string; jobTitle: string; description: string; sameAs: string[] },
 
   metrikaId: 114137119,
+  yandexVerification: "eed359671e3ef4b8", // Яндекс Вебмастер, метатег подтверждения прав (Ник, 2026-11-10)
   darkTheme: false, // только светлая тема (spec §9)
 
   // Функции включаются и выключаются флагами, а не удалением кода (стандарт §1.9)
