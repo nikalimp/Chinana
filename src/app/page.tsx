@@ -8,6 +8,7 @@ import { ProgramCard, StepCard } from "@/components/cards";
 import { FaqList } from "@/components/faq";
 import { CtaFinal } from "@/components/cta";
 import { UniMap } from "@/components/uni-map";
+import { Goals, HomeBlog, HskPath, Myths, WhyChinese } from "@/components/home-sections";
 import { JsonLd } from "@/components/json-ld";
 import { faqSchema, graph } from "@/lib/schema";
 
@@ -47,6 +48,10 @@ export default function Home() {
         </Container>
       </Section>
 
+      <WhyChinese />
+
+      <Goals />
+
       <Section tone="inverse" id="grant">
         <Container>
           <div className="mx-auto mb-12 max-w-[900px] text-center">
@@ -80,6 +85,10 @@ export default function Home() {
         </Container>
       </Section>
 
+      <Myths />
+
+      <HskPath />
+
       <Section id="steps">
         <Container>
           <SectionHead title={home.stepsHead.title} accent={home.stepsHead.accent} text={home.stepsHead.text} />
@@ -88,6 +97,8 @@ export default function Home() {
           </div>
         </Container>
       </Section>
+
+      <HomeBlog />
 
       <Section id="faq">
         <Container>

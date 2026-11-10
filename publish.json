@@ -1,0 +1,17 @@
+{
+  "project": "Chinana",
+  "repo": "nikalimp/Chinana",
+  "site_dir": ".",
+  "url": "https://chinana.ru",
+  "adapter": "ssh-ftp",
+  "mode": "auto",
+  "content_dir": "content",
+  "factory": "content/factory/content.config.json",
+  "schedule": { "daily": "11:11", "weekly": "fri 11:11", "tz": "Asia/Bangkok", "days": "1-5" },
+  "version": 1,
+  "notes": "Статья раз в неделю (по дате в плане). SSH из Actions на REG.RU закрыт — выкладка FTP. Репозитории Chinana и deploy-kit публичные с 2026-11-10.",
+  "out_dir": "out",
+  "app_path": "",
+  "rsync_exclude": "",
+  "manual_script": "scripts/deploy-site.sh"
+}

@@ -1,0 +1,119 @@
+{
+  "factory_version": 2,
+  "project": "Chinana",
+  "site": "https://chinana.ru",
+  "root": "../..",
+  "stack": "nextjs-github",
+  "language": "ru",
+  "timezone": "Asia/Bangkok",
+  "cadence": "4",
+  "approval": false,
+  "author": "Chinana",
+  "voice_mode": "we",
+  "paths": {
+    "plan": "content/factory/plan.md",
+    "strategy": "content/factory/strategy.md",
+    "voice": [
+      "content/factory/voice.md"
+    ],
+    "facts": "content/factory/facts.md",
+    "brand": "content/factory/brand.json",
+    "reports": "content/factory/reports/{date}-weekly.md",
+    "journal": "",
+    "article": "content/blog/{slug}.md",
+    "drafts": "content/factory/drafts/{slug}.md",
+    "media_spec": "content/media/{slug}.json",
+    "media_out": "public/blog/{slug}",
+    "photos": "",
+    "secrets": "content/factory/.env",
+    "channels_registry": "content/media/channels.json"
+  },
+  "article": {
+    "url": "https://chinana.ru/blog/{slug}/",
+    "image_url": "/blog/{slug}/",
+    "cover_url": "/blog/{slug}/cover.jpg",
+    "frontmatter_required": [
+      "title",
+      "description",
+      "date",
+      "cover",
+      "coverAlt",
+      "rubric"
+    ],
+    "frontmatter_optional": [
+      "seoTitle",
+      "updated"
+    ],
+    "photo_field": "",
+    "cover_rule": "Обложка — /blog/{slug}/cover.jpg, типографская (без фото — решение spec), рисует media.mjs по спецификации content/media/{slug}.json."
+  },
+  "links": {
+    "blog_prefix": "/blog/",
+    "internal": [
+      "/blog/",
+      "/wiki/",
+      "/universities/"
+    ],
+    "services": {
+      "list": [
+        "language-year",
+        "foundation",
+        "bachelor",
+        "master"
+      ],
+      "prefix": "/programs/"
+    },
+    "service_extra": [
+      "/wiki/csc/",
+      "/wiki/cities/"
+    ],
+    "catalogs": [
+      "/universities/",
+      "/wiki/"
+    ]
+  },
+  "rules": {
+    "meta_asterisk": false,
+    "forbidden": [
+      "100%",
+      "гарантируем поступление",
+      "поступим"
+    ],
+    "emoji": false,
+    "first_person": false,
+    "we_voice": true
+  },
+  "publish": {
+    "how": "Push из облака: статья content/blog/{slug}.md и спецификация content/media/{slug}.json — коммитом прямо в main nikalimp/Chinana; Actions (deploy-kit site.yml): media.mjs → сборка → выкладка FTP на REG.RU",
+    "verify": "https://chinana.ru/blog/{slug}/",
+    "wait_minutes": 15
+  },
+  "channels": {
+    "runner": "ci",
+    "telegram": "",
+    "telegram_public": "",
+    "max": null,
+    "enabled": false
+  },
+  "notify": "telegram_bot",
+  "analytics": {
+    "metrika": "114137119",
+    "webmaster": "chinana.ru",
+    "gsc": "chinana.ru",
+    "geo_pool": "content/factory/strategy.md"
+  },
+  "schedule": {
+    "daily": "общие задачи контент-завода (Пн–Пт 11:11 Asia/Bangkok); у Chinana статья раз в неделю — по дате в плане",
+    "weekly": "Пт 11:11 Asia/Bangkok — общий отчёт"
+  },
+  "tasks": {
+    "daily": "Контент-завод — публикация",
+    "weekly": "Контент-завод — отчёт недели"
+  },
+  "tilda": {
+    "projectid": "",
+    "feeduid": "",
+    "parts": {},
+    "fields": {}
+  }
+}

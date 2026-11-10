@@ -19,7 +19,8 @@ export default async ({ ROOT, OUT, fail, ok }) => {
   const css = fs.readFileSync(path.join(ROOT, "src/app/zh-font.css"), "utf8");
   const covered = new Set([...(css.match(/chars: (.*) \*\//)?.[1] ?? "")]);
   const used = new Set();
-  for (const f of walk(OUT, [".html"])) for (const c of fs.readFileSync(f, "utf8")) if (isCjk(c)) used.add(c);
+  // Статьи блога (out/blog/) не считаем: текст статей набран Onest, иероглифы в нём рисует системный шрифт — подмножество нужно только для font-zh
+  for (const f of walk(OUT, [".html"]).filter((f) => !f.includes(`${path.sep}blog${path.sep}`))) for (const c of fs.readFileSync(f, "utf8").replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, "")) if (isCjk(c)) used.add(c); // только видимый текст, без alt и разметки
   const missing = [...used].filter((c) => !covered.has(c));
   if (missing.length) fail(`Иероглифов нет в шрифте: ${missing.join("")} — запусти python3 scripts/cjk-font.py`);
   else ok(`Китайский шрифт: все ${used.size} иероглифов сайта в подмножестве`);
