@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { universities, uniPath } from "@/content/universities";
+import { universities, uniPath, uniPhoto } from "@/content/universities";
 import { cny } from "@/content/university-types";
 import { Container, GridLines, Section, SectionHead } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { UniCard } from "@/components/cards";
+import { PhotoCredit } from "@/components/photo-credit";
 import { FaqList } from "@/components/faq";
 import { CtaFinal } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
@@ -50,8 +51,16 @@ export default function UniversitiesPage() {
         <Container>
           <SectionHead eyebrow={`${universities.length} вузов, ${cities.length} городов`} title="Каталог" accent="университетов" />
           <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {universities.map((u) => <UniCard key={u.slug} zh={u.zhShort} name={u.nameRu} city={u.city} partner={u.partner} href={uniPath(u)} />)}
+            {universities.map((u) => <UniCard key={u.slug} zh={u.zhShort} name={u.nameRu} city={u.city} partner={u.partner} href={uniPath(u)} photo={uniPhoto(u.slug)?.src} />)}
           </div>
+          {universities.some((u) => uniPhoto(u.slug)) && (
+            <details className="mx-auto mt-10 max-w-[47.9em] text-sm text-muted-foreground">
+              <summary className="cursor-pointer font-mono text-xs uppercase">Фото вузов: авторы и лицензии</summary>
+              <ul className="mt-3 space-y-1.5">
+                {universities.map((u) => { const ph = uniPhoto(u.slug); return ph && <li key={u.slug}>{u.nameRu}: <PhotoCredit p={ph} /></li>; })}
+              </ul>
+            </details>
+          )}
         </Container>
       </Section>
 

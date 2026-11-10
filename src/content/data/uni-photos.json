@@ -1,0 +1,128 @@
+{
+ "nanjing": {
+  "src": "/universities/nanjing/cover.jpg",
+  "author": "Caitriana Nicholson",
+  "license": "CC BY-SA 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Nanjing_University_%E5%8D%97%E4%BA%AC%E5%A4%A7%E5%AD%A6_(5811383105).jpg"
+ },
+ "tsinghua": {
+  "src": "/universities/tsinghua/cover.jpg",
+  "author": "葉又嘉",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%E8%8D%B7%E5%A1%98%E6%9C%88%E8%89%B2%E4%BA%AD.jpg"
+ },
+ "peking": {
+  "src": "/universities/peking/cover.jpg",
+  "author": "galaygobi",
+  "license": "CC BY 2.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:PekingUniversityPic6.jpg"
+ },
+ "fudan": {
+  "src": "/universities/fudan/cover.jpg",
+  "author": "Prcmise",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Fudan_University_Jiangwan_Campus.jpg"
+ },
+ "sjtu": {
+  "src": "/universities/sjtu/cover.jpg",
+  "author": "Peter Potrowl",
+  "license": "CC BY 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Shanghai_Jiao_Tong_University_1.jpg"
+ },
+ "zhejiang": {
+  "src": "/universities/zhejiang/cover.jpg",
+  "author": "Zhangzhugang",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Hangzhou_Zhijiang_Daxue_20120518-25.jpg"
+ },
+ "wuhan": {
+  "src": "/universities/wuhan/cover.jpg",
+  "author": "Howchou",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Whu_old_library_1.JPG"
+ },
+ "hit": {
+  "src": "/universities/hit/cover.jpg",
+  "author": "董辰兴",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:%E5%93%88%E5%B0%94%E6%BB%A8%E5%B7%A5%E4%B8%9A%E5%A4%A7%E5%AD%A6%E8%A5%BF%E5%8C%97%E9%97%A8%E7%9C%8B%E4%B8%BB%E6%A5%BC.jpg"
+ },
+ "blcu": {
+  "src": "/universities/blcu/cover.jpg",
+  "author": "N509FZ",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:East_gate_of_BLCU_(20230111154917).jpg"
+ },
+ "heilongjiang": {
+  "src": "/universities/heilongjiang/cover.jpg",
+  "author": "Slb nsk",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Heilongjiang_University.jpg"
+ },
+ "dlut": {
+  "src": "/universities/dlut/cover.jpg",
+  "author": "王景涛（Wang Jingtao）",
+  "license": "CC BY 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Bochuan_Library-DLUT.jpg"
+ },
+ "sysu": {
+  "src": "/universities/sysu/cover.jpg",
+  "author": "沈澄心",
+  "license": "CC0",
+  "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+  "source": "https://commons.wikimedia.org/wiki/File:SYSU_Guangzhou_South_Campus_202109-202110_074.jpg"
+ },
+ "ustc": {
+  "src": "/universities/ustc/cover.jpg",
+  "author": "Ryanli",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:Gate_of_USTC.JPG"
+ },
+ "tongji": {
+  "src": "/universities/tongji/cover.jpg",
+  "author": "Fayhoo",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Tongjidaxue_Tushuguan.JPG"
+ },
+ "bnu": {
+  "src": "/universities/bnu/cover.jpg",
+  "author": "Flsxx",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+  "source": "https://commons.wikimedia.org/wiki/File:BNU_Gate.jpg"
+ },
+ "nankai": {
+  "src": "/universities/nankai/cover.jpg",
+  "author": "Amazingloong",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Main_Building_of_Nankai_University_2015-08-04.jpg"
+ },
+ "xiamen": {
+  "src": "/universities/xiamen/cover.jpg",
+  "author": "Ratvirgin",
+  "license": "CC BY-SA 3.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Panoramatic_view_of_xiamen_university_at_sunset.jpg"
+ },
+ "jilin": {
+  "src": "/universities/jilin/cover.jpg",
+  "author": "N509FZ",
+  "license": "CC BY-SA 4.0",
+  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Jilin_University_Nanhu_Campus_(20220826164940).jpg"
+ }
+}
