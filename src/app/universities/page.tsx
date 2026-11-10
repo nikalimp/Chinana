@@ -41,7 +41,7 @@ export default function UniversitiesPage() {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Button asChild><a href={site.cta.href}>Подобрать вуз →</a></Button>
-            <Button asChild variant="outline"><Link href="/cost/">Сколько стоит год в Китае</Link></Button>
+            <Button asChild variant="outline"><Link href="/wiki/cost/">Сколько стоит год в Китае</Link></Button>
           </div>
         </Container>
       </section>

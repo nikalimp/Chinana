@@ -2,8 +2,9 @@ import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
 import { programs } from "@/content/programs";
 import { getPosts } from "@/lib/posts";
-import { answers } from "@/content/answers";
+import { wikiArticles as answers } from "@/content/wiki";
 import { universities, unisChecked } from "@/content/universities";
+import { cities, citiesChecked, cityPath } from "@/content/cities";
 
 export const dynamic = "force-static";
 
@@ -17,7 +18,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${site.url}/`, priority: 1 },
     { url: `${site.url}/programs/`, priority: 0.9 },
     ...programs.map((p) => ({ url: `${site.url}/programs/${p.slug}/`, priority: 0.8 })),
+    { url: `${site.url}/wiki/`, priority: 0.9 },
     ...answers.map((a) => ({ url: `${site.url}${a.path}`, lastModified: a.updated, priority: 0.8 })),
+    { url: `${site.url}/wiki/cities/`, lastModified: citiesChecked, priority: 0.7 },
+    ...cities.map((c) => ({ url: `${site.url}${cityPath(c)}`, lastModified: citiesChecked, priority: 0.6 })),
     { url: `${site.url}/universities/`, lastModified: unisChecked, priority: 0.9 },
     ...universities.map((u) => ({ url: `${site.url}/universities/${u.slug}/`, lastModified: unisChecked, priority: 0.7 })),
     { url: `${site.url}/contacts/`, priority: 0.6 },

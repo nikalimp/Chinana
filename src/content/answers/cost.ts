@@ -38,8 +38,8 @@ const langYear = programs.find((p) => p.slug === "language-year")!;
 const uniSources = [...new Set(universities.flatMap((u) => [u.programs.find((p) => p.type === "language")?.url, u.dorm?.url]).filter((s): s is string => !!s))];
 
 export const cost: Answer = {
-  path: "/cost/",
-  crumb: "Стоимость",
+  path: "/wiki/cost/",
+  crumb: "Стоимость учёбы",
   zh: "费用",
   eyebrow: "Расходы на учёбу в Китае",
   h1: "Сколько стоит",
@@ -120,7 +120,7 @@ export const cost: Answer = {
   ],
   related: [
     { href: "/universities/", label: "Каталог вузов" },
-    { href: "/grants/csc/", label: "Грант CSC" },
+    { href: "/wiki/csc/", label: "Грант CSC" },
     { href: "/programs/language-year/", label: "Языковой год" },
   ],
 };

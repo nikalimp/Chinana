@@ -21,7 +21,7 @@ export type AnswerSection = {
 };
 
 export type Answer = {
-  path: string; // "/grants/csc/"
+  path: string; // "/wiki/csc/"
   crumb: string; // короткое имя для крошек
   zh: string; // иероглифы фоном первого экрана
   eyebrow: string;

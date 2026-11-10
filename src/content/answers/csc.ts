@@ -2,7 +2,7 @@ import type { Answer } from "@/content/answer-types";
 
 // Факты — specs/research/csc.md (проверены 2026-11-09). Номер src = позиция в sources[] (с единицы).
 export const csc: Answer = {
-  path: "/grants/csc/",
+  path: "/wiki/csc/",
   crumb: "Грант CSC",
   zh: "奖学金",
   eyebrow: "Стипендия правительства КНР",
@@ -160,8 +160,8 @@ export const csc: Answer = {
     { title: "CSCA — Shanghai International Services Portal", url: "https://english.shanghai.gov.cn/en-Individuals-Education-CSCA/20260813/9565875c1c214744971b07e9236da16f.html" },
   ],
   related: [
-    { href: "/exams/csca/", label: "Экзамен CSCA" },
-    { href: "/exams/hsk/", label: "Экзамен HSK" },
+    { href: "/wiki/csca/", label: "Экзамен CSCA" },
+    { href: "/wiki/hsk/", label: "Экзамен HSK" },
     { href: "/programs/master/", label: "Магистратура" },
   ],
 };
