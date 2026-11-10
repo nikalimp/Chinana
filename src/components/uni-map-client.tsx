@@ -107,7 +107,7 @@ export function UniMapClient({ path, viewBox, cities, unis }: { path: string; vi
                 <circle cx={xy[0]} cy={xy[1]} r={n > 1 ? 18 : 13} className="fill-primary/15" />
                 <circle cx={xy[0]} cy={xy[1]} r={active ? 13 : 8} className={active ? "fill-primary" : "fill-brand"} style={{ transition: "r .15s" }} />
                 <text x={xy[0] + l.dx} y={xy[1] + l.dy} textAnchor={l.anchor} className={`hidden font-mono text-[17px] sm:block ${active ? "fill-primary font-bold" : "fill-foreground font-medium"}`}>
-                  {c}{n > 1 ? ` · ${n}` : ""}
+                  {c}{n > 1 && <tspan className="fill-muted-foreground"> {n}</tspan>}
                 </text>
               </g>
             );

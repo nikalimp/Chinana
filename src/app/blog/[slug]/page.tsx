@@ -36,11 +36,11 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
       <JsonLd data={graph(articleSchema(p))} />
       <Section className="pt-12">
         <Container className="max-w-3xl">
-          <p className="mb-4 font-mono text-xs uppercase tracking-wide text-primary">Блог{p.rubric ? ` · ${p.rubric}` : ""}</p>
+          <p className="mb-4 font-mono text-xs uppercase tracking-wide text-primary">Блог{p.rubric ? ` / ${p.rubric}` : ""}</p>
           <h1 className="text-[clamp(30px,4.4vw,52px)] leading-tight">{p.title}</h1>
           <p className="mt-4 text-sm text-muted-foreground">
-            {site.person ? site.person.name : site.name} · <time dateTime={p.date}>{formatDate(p.date)}</time>
-            {p.updated && p.updated !== p.date && <> · обновлено <time dateTime={p.updated}>{formatDate(p.updated)}</time></>}
+            {site.person ? site.person.name : site.name}, <time dateTime={p.date}>{formatDate(p.date)}</time>
+            {p.updated && p.updated !== p.date && <>, обновлено <time dateTime={p.updated}>{formatDate(p.updated)}</time></>}
           </p>
           {p.cover && (
             // eslint-disable-next-line @next/next/no-img-element

@@ -123,3 +123,15 @@
 /* Декоративный иероглиф: текст из data-zh в ::before — это украшение, не контент (контраст для него не нужен) */
 .zh-deco::before { content: attr(data-zh); }
 .zh-bg { position: absolute; pointer-events: none; user-select: none; font-family: var(--font-zh); font-weight: 900; line-height: 1; white-space: nowrap; }
+
+/* Мифы: слова мифа разлетаются и тают, проступает реальность (hover, фокус, нажатие) */
+.myth-word { display: inline-block; white-space: pre; transition: transform .6s cubic-bezier(.2,.7,.2,1) var(--delay), opacity .5s ease var(--delay), filter .6s ease var(--delay); }
+.myth-front > p:first-child, .myth-zh { transition: opacity .3s ease; }
+.myth-back { opacity: 0; transform: translateY(8px); transition: opacity .45s ease .2s, transform .45s ease .2s; pointer-events: none; }
+.myth:hover .myth-word, .myth:focus-within .myth-word { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)); opacity: 0; filter: blur(6px); }
+.myth:hover .myth-front > p:first-child, .myth:focus-within .myth-front > p:first-child { opacity: 0; }
+.myth:hover .myth-zh, .myth:focus-within .myth-zh { opacity: .14; }
+.myth:hover .myth-back, .myth:focus-within .myth-back { opacity: 1; transform: none; pointer-events: auto; }
+@media (prefers-reduced-motion: reduce) {
+  .myth-word, .myth-back { transition: opacity .2s ease; transform: none !important; filter: none !important; }
+}

@@ -48,7 +48,7 @@ export default function UniversitiesPage() {
 
       <Section>
         <Container>
-          <SectionHead eyebrow={`${universities.length} вузов · ${cities.length} городов`} title="Каталог" accent="университетов" />
+          <SectionHead eyebrow={`${universities.length} вузов, ${cities.length} городов`} title="Каталог" accent="университетов" />
           <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {universities.map((u) => <UniCard key={u.slug} zh={u.zhShort} name={u.nameRu} city={u.city} partner={u.partner} href={uniPath(u)} />)}
           </div>

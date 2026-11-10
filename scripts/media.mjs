@@ -98,7 +98,7 @@ function avatar() {
 function signature() {
   const logo = bpath(B.logo);
   if (logo && fs.existsSync(logo) && !AUTHOR) return `<div class="sign"><img class="logo" src="${dataUri(logo, imgMime(logo))}"><span>${esc(SITE_LABEL)}</span></div>`;
-  return `<div class="sign">${avatar() ? `<img src="${avatar()}">` : ""}<span>${AUTHOR ? `<b>${esc(AUTHOR)}</b> · ` : ""}${esc(SITE_LABEL)}</span></div>`;
+  return `<div class="sign">${avatar() ? `<img src="${avatar()}">` : ""}<span>${AUTHOR ? `<b>${esc(AUTHOR)}</b>, ` : ""}${esc(SITE_LABEL)}</span></div>`;
 }
 
 function browserFrame(src, url = "") {
@@ -240,7 +240,7 @@ function graphicBody(g) {
 const graphicHtml = (g) => `<!doctype html><html><head><meta charset="utf-8"><style>${BASE_CSS()}${G_CSS}</style></head><body>
 <div class="head">${g.kicker ? `<div class="mono">${esc(g.kicker)}</div>` : ""}<h2>${nb(g.title)}</h2>${g.subtitle ? `<p class="sub">${nb(g.subtitle)}</p>` : ""}</div>
 <div class="body">${graphicBody(g)}</div>
-<div class="foot"><span>${g.source ? nb(g.source) : ""}</span><span><b>${esc(NAME)}</b>${SITE_LABEL && SITE_LABEL !== NAME ? ` · ${esc(SITE_LABEL)}` : ""}</span></div></body></html>`;
+<div class="foot"><span>${g.source ? nb(g.source) : ""}</span><span><b>${esc(NAME)}</b>${SITE_LABEL && SITE_LABEL !== NAME ? `, ${esc(SITE_LABEL)}` : ""}</span></div></body></html>`;
 
 // ---------- рендер ----------
 async function launch() {

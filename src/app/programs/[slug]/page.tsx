@@ -37,7 +37,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
         <GridLines />
         <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 text-[clamp(220px,32vw,440px)] text-primary opacity-[0.06]">{p.zh}</div>
         <Container>
-          <p className="font-mono text-xs uppercase tracking-wide text-primary">Программа {p.num} · {p.zh}</p>
+          <p className="font-mono text-xs uppercase tracking-wide text-primary">Программа {p.num} {p.zh}</p>
           <h1 className="mx-auto mt-[18px] max-w-[9.3em] text-[clamp(38px,6.4vw,84px)]">{p.h1} <em>{p.h1Accent}</em></h1>
           <p className="mx-auto mt-6 max-w-[42.6em] text-[clamp(17px,1.6vw,20px)] text-muted-foreground">{p.answer}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
@@ -133,7 +133,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
           <SectionHead title="Другие программы" />
           <div className="cards grid-cols-1 md:grid-cols-3">
             {others.map((o) => (
-              <Link key={o.slug} href={`/programs/${o.slug}/`} className="block bg-card px-[22px] py-[26px] transition-colors hover:bg-card-hover">
+              <Link key={o.slug} href={`/programs/${o.slug}/`} className="block bg-card px-[22px] py-[26px]">
                 <span className="font-mono text-[13px]">{o.num}</span>
                 <h3 className="mb-1.5 mt-2.5 text-[22px] font-bold uppercase">{o.title}</h3>
                 <p className="text-[15px] text-muted-foreground">{o.short}</p>

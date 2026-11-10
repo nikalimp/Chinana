@@ -3,7 +3,7 @@ import Link from "next/link";
 import { site } from "@/content/site";
 import { getPosts } from "@/lib/posts";
 import { Container, Section, SectionHead } from "@/components/container";
-import { PostCard } from "@/components/post-card";
+import { PostList } from "@/components/post-card";
 import { JsonLd } from "@/components/json-ld";
 import { graph } from "@/lib/schema";
 
@@ -38,12 +38,10 @@ export default function Blog() {
             <p>
               Нашли ошибку или устаревшую цифру? Напишите нам — проверим по источнику и исправим статью, а дату обновления поставим в начале текста.
             </p>
-            <p className="font-mono text-xs uppercase text-muted-foreground">Рубрики: праздники · обычаи и этикет · язык · еда · города</p>
+            <p className="font-mono text-xs uppercase text-muted-foreground">Рубрики: праздники, обычаи и этикет, язык, еда, города</p>
           </div>
           {posts.length === 0 && <p className="text-center text-muted-foreground">Статьи скоро появятся.</p>}
-          <div className="cards grid-cols-1 md:grid-cols-2">
-            {posts.map((p) => <PostCard key={p.slug} p={p} />)}
-          </div>
+          <PostList posts={posts} />
         </Container>
       </Section>
     </>

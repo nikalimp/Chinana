@@ -36,7 +36,7 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
     <WikiShell current={cityPath(c)}>
       <JsonLd data={graph(schema)} />
       <article className="max-w-[46em]">
-        <p className="font-mono text-xs uppercase tracking-wide text-primary">Wiki · Города · <span lang="zh-Hans" className="font-zh font-black">{c.nameZh}</span></p>
+        <p className="font-mono text-xs uppercase tracking-wide text-primary">Wiki / Города / <span lang="zh-Hans" className="font-zh font-black">{c.nameZh}</span></p>
         <h1 className="mt-4 text-[clamp(32px,4.6vw,60px)]">{c.nameRu}: <em>учёба и жизнь</em></h1>
         <p className="mt-6 text-[clamp(17px,1.5vw,19px)]">{cityAnswer(c)}</p>
         <p className="mt-3 font-mono text-xs text-muted-foreground">Данные проверены {new Date(citiesChecked).toLocaleDateString("ru-RU", { day: "numeric", month: "long", year: "numeric" })}</p>

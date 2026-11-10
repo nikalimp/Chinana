@@ -1,9 +1,10 @@
+import type React from "react";
 import Link from "next/link";
 import { Check, X, ArrowRight } from "lucide-react";
 import { home } from "@/content/home";
 import { Container, Section, SectionHead } from "@/components/container";
 import { Button } from "@/components/ui/button";
-import { PostCard } from "@/components/post-card";
+import { PostList } from "@/components/post-card";
 import { getPosts } from "@/lib/posts";
 
 // Секции главной v0.6: цели, мифы, путь к HSK. Без фото — иероглифы и иконки.
@@ -36,7 +37,7 @@ export function Goals() {
         <SectionHead eyebrow={home.goalsHead.eyebrow} title={home.goalsHead.title} accent={home.goalsHead.accent} text={home.goalsHead.text} />
         <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {home.goals.map((g) => (
-            <Link key={g.title} href={g.href} className="group relative flex min-h-[220px] flex-col overflow-hidden bg-card px-[22px] pb-6 pt-[26px] transition-colors hover:bg-card-hover">
+            <Link key={g.title} href={g.href} className="group relative flex min-h-[220px] flex-col overflow-hidden bg-card px-[22px] pb-6 pt-[26px]">
               <span aria-hidden="true" lang="zh-Hans" data-zh={g.zh} className="zh-deco pointer-events-none absolute -bottom-4 -right-2 font-zh text-[120px] font-black leading-none text-primary opacity-[0.08] transition-opacity group-hover:opacity-[0.14]" />
               <span aria-hidden="true" lang="zh-Hans" className="font-zh text-[28px] font-black leading-none text-primary">{g.zh}</span>
               <h3 className="mt-5 text-[22px] font-bold uppercase leading-tight">{g.title}</h3>
@@ -50,21 +51,30 @@ export function Goals() {
   );
 }
 
+// Миф крупно; по наведению, фокусу или нажатию слова мифа разлетаются и тают, проступает реальность.
+// Смещения слов детерминированные (по индексу) — разметка одинаковая на сервере и в браузере.
+const drift = (i: number) => ({ "--dx": `${((i * 37) % 9) * 6 - 24}px`, "--dy": `${-14 - ((i * 53) % 7) * 6}px`, "--rot": `${((i * 29) % 11) - 5}deg`, "--delay": `${(i % 5) * 35}ms` }) as React.CSSProperties;
+
 export function Myths() {
   return (
     <Section id="myths">
       <Container>
-        <SectionHead title={home.mythsHead.title} accent={home.mythsHead.accent} />
+        <SectionHead title={home.mythsHead.title} accent={home.mythsHead.accent} text={home.mythsHead.text} />
         <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {home.myths.map((m) => (
-            <article key={m.myth} className="relative flex flex-col overflow-hidden bg-card px-[22px] pb-6 pt-[26px]">
-              <span aria-hidden="true" lang="zh-Hans" data-zh={m.zh} className="zh-deco pointer-events-none absolute -right-1 top-3 font-zh text-[64px] font-black leading-none text-primary opacity-[0.1]" />
-              <p className="flex items-center gap-2 font-mono text-xs uppercase text-muted-foreground"><X aria-hidden="true" className="size-4 text-primary" />Миф</p>
-              <p className="mt-2 text-[17px] font-semibold leading-snug">{m.myth}</p>
-              <hr className="my-5 border-t border-dashed border-border" />
-              <p className="flex items-center gap-2 font-mono text-xs uppercase text-muted-foreground"><Check aria-hidden="true" className="size-4 text-primary" />Реальность</p>
-              <p className="mt-2 text-[15px]">{m.fact}</p>
-              <Link href={m.href} className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-brand hover:underline">{m.link}<ArrowRight aria-hidden="true" className="size-3.5" /></Link>
+            <article key={m.myth} tabIndex={0} className="myth group relative grid min-h-[300px] overflow-hidden bg-card outline-none focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-primary">
+              <span aria-hidden="true" lang="zh-Hans" data-zh={m.zh} className="zh-deco myth-zh pointer-events-none absolute -bottom-4 -right-2 font-zh text-[120px] font-black leading-none text-primary opacity-[0.08]" />
+              <div className="myth-front col-start-1 row-start-1 flex flex-col px-[22px] pb-6 pt-[26px]">
+                <p className="flex items-center gap-2 font-mono text-xs uppercase text-muted-foreground"><X aria-hidden="true" className="size-4 text-primary" />Миф</p>
+                <p className="mt-auto text-[clamp(24px,2.2vw,30px)] font-bold uppercase leading-[1.1]">
+                  {m.myth.split(" ").map((w, i) => <span key={i} className="myth-word" style={drift(i)}>{w}</span>).flatMap((el, i) => (i ? [" ", el] : [el]))}
+                </p>
+              </div>
+              <div className="myth-back col-start-1 row-start-1 flex flex-col px-[22px] pb-6 pt-[26px]">
+                <p className="flex items-center gap-2 font-mono text-xs uppercase text-muted-foreground"><Check aria-hidden="true" className="size-4 text-primary" />Реальность</p>
+                <p className="mt-3 text-[17px] leading-snug">{m.fact}</p>
+                <Link href={m.href} className="mt-auto inline-flex items-center gap-1.5 pt-5 text-sm font-semibold text-brand hover:underline">{m.link}<ArrowRight aria-hidden="true" className="size-3.5" /></Link>
+              </div>
             </article>
           ))}
         </div>
@@ -81,8 +91,7 @@ export function HskPath() {
         <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {home.hsk.map((h) => (
             <div key={h.level + h.time} className="flex min-h-[220px] flex-col bg-card px-[22px] pb-6 pt-[26px]">
-              <span className="font-mono text-xs uppercase text-muted-foreground">汉语水平考试</span>
-              <b className="mt-8 block text-[clamp(34px,3.6vw,46px)] font-bold leading-none text-primary">{h.level}</b>
+              <b className="block text-[clamp(34px,3.6vw,46px)] font-bold leading-none text-primary">{h.level}</b>
               <span className="mt-3 inline-flex self-start rounded-full bg-accent px-3 py-1 font-mono text-xs font-medium text-accent-foreground">{h.time}</span>
               <p className="mt-3 text-[15px] text-muted-foreground">{h.text}</p>
             </div>
@@ -104,9 +113,7 @@ export function HomeBlog() {
     <Section id="blog">
       <Container>
         <SectionHead title={home.blogHead.title} accent={home.blogHead.accent} text={home.blogHead.text} />
-        <div className="cards grid-cols-1 md:grid-cols-2">
-          {posts.map((p) => <PostCard key={p.slug} p={p} />)}
-        </div>
+        <PostList posts={posts} />
         <div className="mt-6 flex justify-center"><Button asChild variant="outline"><Link href="/blog/">Все статьи →</Link></Button></div>
       </Container>
     </Section>

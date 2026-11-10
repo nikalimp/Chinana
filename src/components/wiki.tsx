@@ -12,7 +12,7 @@ import { answerSchema, faqSchema, graph } from "@/lib/schema";
 export function WikiNav({ current }: { current?: string }) {
   const list = (
     <nav aria-label="Разделы Wiki" className="text-[15px]">
-      <Link href="/wiki/" className={`mb-4 block font-mono text-xs uppercase ${current === "/wiki/" ? "text-primary" : "text-muted-foreground hover:text-primary"}`}>Wiki · все разделы</Link>
+      <Link href="/wiki/" className={`mb-4 block font-mono text-xs uppercase ${current === "/wiki/" ? "text-primary" : "text-muted-foreground hover:text-primary"}`}>Все разделы Wiki</Link>
       {wikiSections.map((s) => (
         <div key={s.id} className="mb-5">
           <p className="mb-1.5 flex items-baseline gap-2 font-semibold">
@@ -35,8 +35,8 @@ export function WikiNav({ current }: { current?: string }) {
         <summary className="cursor-pointer px-4 py-3 font-mono text-xs uppercase">Все статьи Wiki</summary>
         <div className="border-t border-border px-4 py-4">{list}</div>
       </details>
-      <aside className="hidden lg:col-start-2 lg:row-start-1 lg:block">
-        <div className="sticky top-[92px] max-h-[calc(100vh-110px)] overflow-y-auto border-l border-grid-line pl-6">{list}</div>
+      <aside className="hidden lg:col-span-2 lg:col-start-11 lg:row-start-1 lg:block">
+        <div className="sticky top-[92px] max-h-[calc(100vh-110px)] overflow-y-auto pl-4">{list}</div>
       </aside>
     </>
   );
@@ -44,12 +44,12 @@ export function WikiNav({ current }: { current?: string }) {
 
 export function WikiShell({ current, children }: { current?: string; children: React.ReactNode }) {
   return (
-    <section className="relative overflow-hidden pb-[clamp(64px,9vw,120px)] pt-[clamp(32px,5vw,64px)]">
+    <section className="relative overflow-clip pb-[clamp(64px,9vw,120px)] pt-[clamp(32px,5vw,64px)]">
       <GridLines />
       <Container>
-        <div className="grid gap-x-12 lg:grid-cols-[1fr_240px]">
+        <div className="grid lg:grid-cols-12">
           <WikiNav current={current} />
-          <div className="min-w-0 lg:col-start-1 lg:row-start-1">{children}</div>
+          <div className="min-w-0 lg:col-span-10 lg:col-start-1 lg:row-start-1 lg:pr-[clamp(24px,3vw,48px)]">{children}</div>
         </div>
       </Container>
     </section>
@@ -75,10 +75,10 @@ export function WikiArticle({ a }: { a: Answer }) {
     <WikiShell current={a.path}>
       <JsonLd data={graph(answerSchema(a), a.faq.length > 0 && faqSchema(a.faq))} />
       <article className="max-w-[46em]">
-        <p className="font-mono text-xs uppercase tracking-wide text-primary">Wiki · {sec.title}</p>
+        <p className="font-mono text-xs uppercase tracking-wide text-primary">Wiki / {sec.title}</p>
         <h1 className="mt-4 text-[clamp(32px,4.6vw,60px)]">{a.h1} <em>{a.h1Accent}</em></h1>
         <p className="mt-6 text-[clamp(17px,1.5vw,19px)]">{a.answer}</p>
-        <p className="mt-3 font-mono text-xs text-muted-foreground">Факты проверены {dateRu(a.updated)} · источники внизу страницы</p>
+        <p className="mt-3 font-mono text-xs text-muted-foreground">Факты проверены {dateRu(a.updated)}, источники внизу страницы</p>
 
         {a.facts.length > 0 && (
           <div className="cards mt-8 grid-cols-1 sm:grid-cols-2">
