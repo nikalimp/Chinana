@@ -72,7 +72,7 @@ export function UniMapClient({ path, viewBox, cities, unis }: { path: string; vi
   const filtered = !!(type || lang || csc);
 
   return (
-    <div className="cards grid-cols-1 lg:grid-cols-[2fr_1fr]">
+    <div className="cards grid-cols-1 lg:grid-cols-2">
       <div className="relative bg-card p-[clamp(12px,2.5vw,28px)]">
         <svg viewBox={viewBox} role="img" aria-label={`Карта Китая: ${match.length} вузов в ${byCity.size} городах`} className="h-auto w-full">
           <path d={path} className="fill-secondary/60 stroke-foreground" strokeWidth={1.5} strokeLinejoin="round" vectorEffect="non-scaling-stroke" />
@@ -107,7 +107,6 @@ export function UniMapClient({ path, viewBox, cities, unis }: { path: string; vi
             );
           })}
         </svg>
-        <p className="mt-2 text-right font-mono text-[11px] text-muted-foreground">Контур — Natural Earth</p>
       </div>
 
       <div className="flex flex-col bg-card px-[22px] py-[22px]">
