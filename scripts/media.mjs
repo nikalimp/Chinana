@@ -39,7 +39,8 @@ const only = args.find((a, i) => !a.startsWith("--") && !valued.has(args[i - 1])
 const offline = process.env.MEDIA_OFFLINE === "1";
 
 // ---------- бренд ----------
-const BRAND_FILE = opt("--brand", process.env.MEDIA_BRAND || "");
+// Без --brand и MEDIA_BRAND берём content/factory/brand.json проекта: иначе обложка выйдет в нейтральном стиле по умолчанию
+const BRAND_FILE = opt("--brand", process.env.MEDIA_BRAND || (fs.existsSync("content/factory/brand.json") ? "content/factory/brand.json" : ""));
 const B = BRAND_FILE ? JSON.parse(fs.readFileSync(BRAND_FILE, "utf8")) : {};
 const bpath = (p) => (p ? path.resolve(path.dirname(path.resolve(BRAND_FILE || ".")), p) : "");
 const C = { bg: "oklch(1 0 0)", fg: "oklch(0.205 0 0)", card: "oklch(0.99 0 0)", muted: "oklch(0.97 0 0)", mfg: "oklch(0.52 0 0)",
@@ -51,7 +52,7 @@ const RADIUS = B.radius ?? 14;
 
 const esc = (s = "") => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 // Висячие предлоги и союзы — к следующему слову, как типограф на сайте
-const nb = (s = "") => esc(s).replace(/(^|[\s(«])([а-яёА-ЯЁa-zA-Z]{1,3}|без|для|при|под|над|про|что|как|или|через)\s+/g, "$1$2 ").replace(/\s+—/g, " —");
+const nb = (s = "") => esc(s).replace(/(^|[\s(«])([а-яёА-ЯЁa-zA-Z]{1,3}|\d{1,2}|без|для|при|под|над|про|что|как|или|через)\s+/g, "$1$2 ").replace(/\s+—/g, " —");
 const dataUri = (file, mime) => `data:${mime};base64,${fs.readFileSync(file).toString("base64")}`;
 
 // Шрифт: brand.font = { family, source: "fontsource:inter" } (пакет @fontsource-variable/<имя> в node_modules проекта
@@ -81,7 +82,7 @@ const BASE_CSS = () => `${fontFaces()}
 html,body{background:var(--bg);color:var(--fg);font-family:"${FAMILY}",system-ui,sans-serif;-webkit-font-smoothing:antialiased;
 font-feature-settings:"cv11","ss01";text-wrap:pretty}
 .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;text-transform:uppercase;letter-spacing:.08em}
-.pill{display:inline-flex;align-items:center;gap:10px;border-radius:999px;background:var(--brand-bg);color:var(--brand);padding:8px 16px;font-size:17px;font-weight:600}
+.pill{display:inline-flex;align-items:center;gap:10px;border-radius:calc(var(--r) * 999);background:var(--brand-bg);color:var(--brand);padding:8px 16px;font-size:17px;font-weight:600}
 .dot{width:8px;height:8px;border-radius:50%;background:var(--brand)}
 .grid-bg{${B.pattern === "none" ? "" : "background-image:radial-gradient(color-mix(in oklch,var(--fg) 18%,transparent) 1.2px,transparent 1.2px);background-size:28px 28px"}}
 .sign{display:flex;align-items:center;gap:14px;font-size:20px;color:var(--mfg)}
@@ -106,7 +107,7 @@ function browserFrame(src, url = "") {
   return `<div class="frame"><div class="bar"><i></i><i></i><i></i><span>${esc(host)}</span></div>
   ${src ? `<img src="${src}">` : `<div class="ph">скриншот появится при сборке</div>`}</div>`;
 }
-const FRAME_CSS = `.frame{border-radius:16px;border:1px solid var(--border);background:var(--bg);overflow:hidden;
+const FRAME_CSS = `.frame{border-radius:var(--r);border:1px solid var(--border);background:var(--bg);overflow:hidden;
 box-shadow:0 30px 60px -20px rgb(0 0 0/.25),0 0 0 1px rgb(0 0 0/.02)}
 .frame .bar{height:40px;display:flex;align-items:center;gap:8px;padding:0 16px;background:var(--muted);border-bottom:1px solid var(--border)}
 .frame .bar i{width:11px;height:11px;border-radius:50%;background:oklch(0.86 0 0)}
@@ -169,7 +170,7 @@ function coverHtml(c, slug) {
   .logos{right:56px;top:50%;transform:translateY(-50%);width:470px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
   .tile{aspect-ratio:1.25;border:1px solid var(--border);border-radius:var(--r);background:var(--bg);display:grid;place-items:center;padding:22px;box-shadow:0 8px 24px -12px rgb(0 0 0/.15)}
   .tile img{max-width:100%;max-height:64px;object-fit:contain}
-  .accent{right:56px;top:56px;bottom:56px;width:470px;border-radius:24px;background:var(--brand);display:grid;place-items:center;color:var(--on-brand);overflow:hidden}
+  .accent{right:56px;top:56px;bottom:56px;width:470px;border-radius:calc(var(--r) * 1.7);background:var(--brand);display:grid;place-items:center;color:var(--on-brand);overflow:hidden}
   .accent .big{font-size:150px;font-weight:700;letter-spacing:-.06em;line-height:.9;text-align:center;padding:20px}
   .fade{position:absolute;inset:0;background:linear-gradient(90deg,var(--bg) 0 46%,transparent 62%);z-index:1}
   </style></head><body class="grid-bg">${c.layout === "shot" ? '<div class="fade"></div>' : ""}${right}
