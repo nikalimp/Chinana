@@ -80,11 +80,27 @@ if ($to) {
   $mailOk = @mail($to, $subject, $body, $headers, '-f' . $from);
 }
 
-// Уведомление в Telegram — без персональных данных
+// Уведомление в Telegram — без персональных данных.
+// curl, если есть (allow_url_fopen на хостинге бывает выключен), иначе file_get_contents. Итог — в ответе (без данных заявки)
+// и в $dir/.notify.log: так недельная проверка администратора сайтов видит, дошло ли уведомление.
+$tg = 'нет настроек';
 if (!empty($cfg['tg_token']) && !empty($cfg['tg_chat'])) {
-  $ctx = stream_context_create(['http' => ['method' => 'POST', 'timeout' => 5, 'header' => 'Content-Type: application/json',
-    'content' => json_encode(['chat_id' => $cfg['tg_chat'], 'text' => "Новая заявка №$id на chinana.ru — проверьте почту" . ($mailOk ? '' : ' (письмо не ушло, заявка сохранена на сервере)') . '.'], JSON_UNESCAPED_UNICODE)]]);
-  @file_get_contents('https://api.telegram.org/bot' . $cfg['tg_token'] . '/sendMessage', false, $ctx);
+  $url = 'https://api.telegram.org/bot' . $cfg['tg_token'] . '/sendMessage';
+  $payload = json_encode(['chat_id' => $cfg['tg_chat'], 'text' => "Новая заявка №$id на chinana.ru — проверьте почту" . ($mailOk ? '' : ' (письмо не ушло, заявка сохранена на сервере)') . '.'], JSON_UNESCAPED_UNICODE);
+  if (function_exists('curl_init')) {
+    $ch = curl_init($url);
+    curl_setopt_array($ch, [CURLOPT_POST => true, CURLOPT_POSTFIELDS => $payload, CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+      CURLOPT_RETURNTRANSFER => true, CURLOPT_TIMEOUT => 8, CURLOPT_CONNECTTIMEOUT => 5]);
+    $res = curl_exec($ch); $code = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE); $err = curl_error($ch); curl_close($ch);
+  } else {
+    $ctx = stream_context_create(['http' => ['method' => 'POST', 'timeout' => 8, 'ignore_errors' => true, 'header' => 'Content-Type: application/json', 'content' => $payload]]);
+    $res = @file_get_contents($url, false, $ctx); $err = $res === false ? 'fopen: ' . (error_get_last()['message'] ?? 'нет ответа') : '';
+    $code = isset($http_response_header[0]) && preg_match('/\s(\d{3})\s/', $http_response_header[0], $m) ? (int)$m[1] : 0;
+  }
+  $desc = is_string($res) ? (json_decode($res, true)['description'] ?? '') : '';
+  $tg = $code === 200 ? 'ok' : trim("HTTP $code $desc $err");
+  $tg = str_replace($cfg['tg_token'], '***', $tg);  // в тексте ошибки fopen бывает адрес с токеном
 }
+@file_put_contents($dir . '/.notify.log', date('c') . " #$id mail=" . ($to ? ($mailOk ? 'ok' : 'fail') : 'нет адреса') . " tg=$tg\n", FILE_APPEND | LOCK_EX);
 
-reply(200, ['ok' => true, 'id' => $id]);
+reply(200, ['ok' => true, 'id' => $id, 'notify' => ['mail' => $to ? $mailOk : null, 'telegram' => $tg]]);
