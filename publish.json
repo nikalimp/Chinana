@@ -12,6 +12,6 @@
   "notes": "Статья раз в неделю (по дате в плане). SSH из Actions на REG.RU закрыт — выкладка FTP. Репозитории Chinana и deploy-kit публичные с 2026-11-10.",
   "out_dir": "out",
   "app_path": "",
-  "rsync_exclude": "",
+  "rsync_exclude": "api/config.php",
   "manual_script": "scripts/deploy-site.sh"
 }
