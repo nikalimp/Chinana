@@ -1,6 +1,6 @@
 {
  "site": "https://chinana.ru/",
- "generated": "2026-11-14T05:42:37.282Z",
+ "generated": "2026-11-14T07:07:31.180Z",
  "period": {
   "current": [
    "2026-10-15",
@@ -67,8 +67,8 @@
  },
  "coverage": {
   "Страница просканирована, но пока не проиндексирована": 1,
-  "URL неизвестен Google": 56,
-  "Страница отправлена и проиндексирована": 3
+  "URL неизвестен Google": 53,
+  "Страница отправлена и проиндексирована": 6
  },
  "inspections": [
   {
@@ -232,11 +232,15 @@
   {
    "url": "https://chinana.ru/universities/peking/",
    "hasImpressions": false,
-   "verdict": "NEUTRAL",
-   "coverageState": "URL неизвестен Google",
-   "indexingState": "INDEXING_STATE_UNSPECIFIED",
-   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T06:02:59Z",
+   "googleCanonical": "https://chinana.ru/universities/peking/",
+   "userCanonical": "https://chinana.ru/universities/peking/",
+   "crawledAs": "MOBILE",
    "richResults": []
   },
   {
@@ -282,11 +286,15 @@
   {
    "url": "https://chinana.ru/universities/sjtu/",
    "hasImpressions": false,
-   "verdict": "NEUTRAL",
-   "coverageState": "URL неизвестен Google",
-   "indexingState": "INDEXING_STATE_UNSPECIFIED",
-   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T06:38:11Z",
+   "googleCanonical": "https://chinana.ru/universities/sjtu/",
+   "userCanonical": "https://chinana.ru/universities/sjtu/",
+   "crawledAs": "MOBILE",
    "richResults": []
   },
   {
@@ -550,11 +558,15 @@
   {
    "url": "https://chinana.ru/universities/xiamen/",
    "hasImpressions": false,
-   "verdict": "NEUTRAL",
-   "coverageState": "URL неизвестен Google",
-   "indexingState": "INDEXING_STATE_UNSPECIFIED",
-   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
-   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T06:03:01Z",
+   "googleCanonical": "https://chinana.ru/universities/xiamen/",
+   "userCanonical": "https://chinana.ru/universities/xiamen/",
+   "crawledAs": "MOBILE",
    "richResults": []
   },
   {

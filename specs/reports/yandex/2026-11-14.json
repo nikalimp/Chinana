@@ -1,12 +1,17 @@
 {
  "host": "chinana.ru",
- "generated": "2026-11-14T05:42:39.641Z",
+ "generated": "2026-11-14T07:07:35.110Z",
  "period": [
   "2026-10-17",
   "2026-11-13"
  ],
  "webmaster": {
   "host": "https://chinana.ru/",
+  "sitemapAdded": {
+   "url": "https://chinana.ru/sitemap.xml",
+   "status": 504,
+   "body": ""
+  },
   "verified": true,
   "candidates": [
    "https://chinana.ru/ verified=true"
@@ -15,13 +20,13 @@
    "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/summary: {\"host_id\":null,\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
   },
   "queries": {
-   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/search-queries/popular: {\"host_id\":null,\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/search-queries/popular: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
   },
   "history": {
    "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/search-queries/all/history: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
   },
   "indexing": {
-   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/indexing/history: {\"host_id\":null,\"error_code\":\"HOST_NOT_LOADED\",\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\"}"
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/indexing/history: {\"host_id\":null,\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
   },
   "inSearch": {
    "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/search-urls/in-search/history: {\"host_id\":null,\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
