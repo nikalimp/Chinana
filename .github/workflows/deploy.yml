@@ -34,7 +34,7 @@ jobs:
       out_dir: out                # Vite: dist
       app_path: ""                # приложение в подпапке сайта: "test/app/"
       rsync_exclude: "api/config.php"   # настройки формы заявок лежат только на сервере
-      server_config: "api/config.php"   # пишет deploy-kit из секрета SERVER_CONFIG (email_to, email_from, tg_token, tg_chat, salt)
+      server_config: "api/config.php"   # пишет deploy-kit из секретов LEAD_EMAIL_TO, LEAD_EMAIL_FROM, LEAD_TG_TOKEN, LEAD_TG_CHAT, LEAD_SALT
       url: https://chinana.ru
       # media_brand: путь к brand.json от site_dir. По умолчанию content/factory/brand.json;
       # если завод ещё не переведён в content/factory/ — фактический путь (ECO-PRO: content/media/brand.json)
