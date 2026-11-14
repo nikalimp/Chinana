@@ -14,7 +14,7 @@ DIR="${SITE_DIR:-/var/www/$SSH_USER/data/www/chinana.ru/}"
 KEY="$HOME/.ssh/chinana_deploy"                           # ключ деплоя проекта (создал setup-site.sh)
 APP="$(cd "$(dirname "$0")/.." && pwd)"                   # папка приложения (монорепо: …/apps/site)
 OUT="${1:-}"
-EXCLUDE=(--exclude '.well-known/' --exclude 'cgi-bin/' --exclude '.ftp-deploy-sync-state.json')   # + подпапки других приложений: --exclude 'test/'
+EXCLUDE=(--exclude '.well-known/' --exclude 'cgi-bin/' --exclude '.ftp-deploy-sync-state.json' --exclude 'api/config.php')   # + подпапки других приложений: --exclude 'test/'
 
 if [ -z "$OUT" ]; then
   cd "$APP"; [ -d node_modules ] || npm ci
