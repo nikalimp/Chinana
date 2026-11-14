@@ -1,0 +1,691 @@
+{
+ "site": "https://chinana.ru/",
+ "generated": "2026-11-14T05:42:37.282Z",
+ "period": {
+  "current": [
+   "2026-10-15",
+   "2026-11-11"
+  ],
+  "previous": [
+   "2026-09-17",
+   "2026-10-14"
+  ]
+ },
+ "totals": {
+  "current": null,
+  "previous": null
+ },
+ "daily": [],
+ "pages": [],
+ "pages90": [],
+ "pagesLost": [],
+ "queries": [],
+ "pageQueries": [],
+ "devices": [],
+ "countries": [],
+ "searchAppearance": [],
+ "sitemaps": [],
+ "sitemapUrls": 60,
+ "pagesWithImpressions": 0,
+ "bySection": {
+  "/": {
+   "urls": 1,
+   "withImpressions": 0,
+   "clicks": 0,
+   "impressions": 0
+  },
+  "/programs/": {
+   "urls": 5,
+   "withImpressions": 0,
+   "clicks": 0,
+   "impressions": 0
+  },
+  "/wiki/": {
+   "urls": 30,
+   "withImpressions": 0,
+   "clicks": 0,
+   "impressions": 0
+  },
+  "/universities/": {
+   "urls": 21,
+   "withImpressions": 0,
+   "clicks": 0,
+   "impressions": 0
+  },
+  "/contacts/": {
+   "urls": 1,
+   "withImpressions": 0,
+   "clicks": 0,
+   "impressions": 0
+  },
+  "/blog/": {
+   "urls": 2,
+   "withImpressions": 0,
+   "clicks": 0,
+   "impressions": 0
+  }
+ },
+ "coverage": {
+  "Страница просканирована, но пока не проиндексирована": 1,
+  "URL неизвестен Google": 56,
+  "Страница отправлена и проиндексирована": 3
+ },
+ "inspections": [
+  {
+   "url": "https://chinana.ru/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "Страница просканирована, но пока не проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-13T09:03:52Z",
+   "googleCanonical": "https://chinana.ru/",
+   "userCanonical": "https://chinana.ru/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/contacts/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/blog/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/language-year/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/csc/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/nanjing/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T04:19:38Z",
+   "googleCanonical": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "userCanonical": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/foundation/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/csca/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/tsinghua/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/bachelor/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/hsk/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/peking/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/master/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/student-visa/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/fudan/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/documents/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/sjtu/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/residence-permit/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/zhejiang/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/academic-year/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/wuhan/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/language-courses/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/hit/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/language-to-degree/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T04:06:02Z",
+   "googleCanonical": "https://chinana.ru/wiki/language-to-degree/",
+   "userCanonical": "https://chinana.ru/wiki/language-to-degree/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/blcu/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/diploma-recognition/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/heilongjiang/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cost/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/jilin/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/budget/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/dlut/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/payments/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/sysu/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/internet/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/ustc/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T04:23:02Z",
+   "googleCanonical": "https://chinana.ru/universities/ustc/",
+   "userCanonical": "https://chinana.ru/universities/ustc/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/rules-for-foreigners/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/tongji/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/bnu/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/beijing/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/nankai/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/tianjin/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/xiamen/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/shanghai/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/sichuan/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/nanjing/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/shisu/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/hangzhou/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/hefei/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/wuhan/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/chengdu/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/guangzhou/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/xiamen/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/harbin/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/changchun/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/dalian/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "URL неизвестен Google",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "richResults": []
+  }
+ ]
+}
