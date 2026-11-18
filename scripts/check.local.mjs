@@ -16,12 +16,18 @@ function walk(dir, ext) {
 
 export default async ({ ROOT, OUT, fail, ok }) => {
   // Иероглифы на страницах должны быть в подмножестве шрифта (scripts/cjk-font.py), иначе браузер покажет системный шрифт
-  const css = fs.readFileSync(path.join(ROOT, "src/app/zh-font.css"), "utf8");
-  const covered = new Set([...(css.match(/chars: (.*) \*\//)?.[1] ?? "")]);
-  const used = new Set();
-  // Статьи блога (out/blog/) не считаем: текст статей набран Onest, иероглифы в нём рисует системный шрифт — подмножество нужно только для font-zh
-  for (const f of walk(OUT, [".html"]).filter((f) => !f.includes(`${path.sep}blog${path.sep}`))) for (const c of fs.readFileSync(f, "utf8").replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, "")) if (isCjk(c)) used.add(c); // только видимый текст, без alt и разметки
-  const missing = [...used].filter((c) => !covered.has(c));
-  if (missing.length) fail(`Иероглифов нет в шрифте: ${missing.join("")} — запусти python3 scripts/cjk-font.py`);
-  else ok(`Китайский шрифт: все ${used.size} иероглифов сайта в подмножестве`);
+  const chars = (file) => new Set([...(fs.readFileSync(path.join(ROOT, file), "utf8").match(/chars: (.*) \*\//)?.[1] ?? "")]);
+  const covered = chars("src/app/zh-font.css");
+  const libCovered = chars("src/app/library/zh-lib.css"); // Библиотека — свой шрифт (scripts/cjk-font.py)
+  const sep = path.sep;
+  let used = 0;
+  const missing = new Set();
+  // Статьи блога и новости не считаем: их текст набран Onest, иероглифы в нём рисует системный шрифт — подмножество нужно только для font-zh
+  for (const f of walk(OUT, [".html"]).filter((f) => !f.includes(`${sep}blog${sep}`) && !f.includes(`${sep}news${sep}`))) {
+    const lib = f.includes(`${sep}library${sep}`);
+    for (const c of fs.readFileSync(f, "utf8").replace(/<script[\s\S]*?<\/script>/g, "").replace(/<[^>]+>/g, "")) // только видимый текст, без alt и разметки
+      if (isCjk(c)) { used++; if (!covered.has(c) && !(lib && libCovered.has(c))) missing.add(c); }
+  }
+  if (missing.size) fail(`Иероглифов нет в шрифте: ${[...missing].join("")} — запусти python3 scripts/cjk-font.py`);
+  else ok(`Китайский шрифт: все иероглифы сайта в подмножестве (${covered.size} в общем, ${libCovered.size} в библиотеке)`);
 };

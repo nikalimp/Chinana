@@ -8,7 +8,7 @@ import { FaqList } from "@/components/faq";
 import { JsonLd } from "@/components/json-ld";
 import { answerSchema, faqSchema, graph } from "@/lib/schema";
 
-// Оглавление Wiki: на десктопе — колонка слева, на телефоне — раскрывающийся блок над статьёй (без JavaScript).
+// Оглавление Wiki: на десктопе — колонка справа (3 из 12 колонок), на телефоне — раскрывающийся блок над статьёй (без JavaScript).
 export function WikiNav({ current }: { current?: string }) {
   const list = (
     <nav aria-label="Разделы Wiki" className="text-[15px]">
@@ -35,8 +35,8 @@ export function WikiNav({ current }: { current?: string }) {
         <summary className="cursor-pointer px-4 py-3 font-mono text-xs uppercase">Все статьи Wiki</summary>
         <div className="border-t border-border px-4 py-4">{list}</div>
       </details>
-      <aside className="hidden lg:col-span-2 lg:col-start-11 lg:row-start-1 lg:block">
-        <div className="sticky top-[92px] max-h-[calc(100vh-110px)] overflow-y-auto pl-4">{list}</div>
+      <aside className="hidden lg:col-span-3 lg:col-start-10 lg:row-start-1 lg:block">
+        <div className="sticky top-[92px] max-h-[calc(100vh-110px)] overflow-y-auto">{list}</div>
       </aside>
     </>
   );
@@ -47,9 +47,10 @@ export function WikiShell({ current, children }: { current?: string; children: R
     <section className="relative overflow-clip pb-[clamp(64px,9vw,120px)] pt-[clamp(32px,5vw,64px)]">
       <GridLines />
       <Container>
+        {/* Статья — колонки 1–8, колонка 9 — поле, оглавление — 10–12: края по направляющим (решение Ника 2026-11-18) */}
         <div className="grid lg:grid-cols-12">
           <WikiNav current={current} />
-          <div className="min-w-0 lg:col-span-10 lg:col-start-1 lg:row-start-1 lg:pr-[clamp(24px,3vw,48px)]">{children}</div>
+          <div className="min-w-0 lg:col-span-8 lg:col-start-1 lg:row-start-1">{children}</div>
         </div>
       </Container>
     </section>
@@ -74,7 +75,7 @@ export function WikiArticle({ a }: { a: Answer }) {
   return (
     <WikiShell current={a.path}>
       <JsonLd data={graph(answerSchema(a), a.faq.length > 0 && faqSchema(a.faq))} />
-      <article className="max-w-[46em]">
+      <article>
         <p className="font-mono text-xs uppercase tracking-wide text-primary">Wiki / {sec.title}</p>
         <h1 className="mt-4 text-[clamp(32px,4.6vw,60px)]">{a.h1} <em>{a.h1Accent}</em></h1>
         <p className="mt-6 text-[clamp(17px,1.5vw,19px)]">{a.answer}</p>

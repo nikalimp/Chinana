@@ -54,7 +54,7 @@ export default function UniversitiesPage() {
             {universities.map((u) => <UniCard key={u.slug} zh={u.zhShort} name={u.nameRu} city={u.city} partner={u.partner} href={uniPath(u)} photo={uniPhoto(u.slug)?.src} />)}
           </div>
           {universities.some((u) => uniPhoto(u.slug)) && (
-            <details className="mx-auto mt-10 max-w-[47.9em] text-sm text-muted-foreground">
+            <details className="w-cols-8 mt-10 text-sm text-muted-foreground">
               <summary className="cursor-pointer font-mono text-xs uppercase">Фото вузов: авторы и лицензии</summary>
               <ul className="mt-3 space-y-1.5">
                 {universities.map((u) => { const ph = uniPhoto(u.slug); return ph && <li key={u.slug}>{u.nameRu}: <PhotoCredit p={ph} /></li>; })}

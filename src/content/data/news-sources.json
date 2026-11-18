@@ -1,0 +1,23 @@
+{
+  "_comment": "Источники новостей вузов для scripts/news/run.mjs: страница-список новостей (лучше — отдела для иностранных студентов). Добавили вуз в каталог — добавьте сюда 1–2 страницы. Проверка: node scripts/news/run.mjs --probe",
+  "nanjing": ["https://hwxy.nju.edu.cn/"],
+  "tsinghua": ["https://is.tsinghua.edu.cn/"],
+  "peking": ["https://www.isd.pku.edu.cn/", "https://news.pku.edu.cn/"],
+  "fudan": ["https://iso.fudan.edu.cn/", "https://iso.fudan.edu.cn/isoenglish/"],
+  "sjtu": ["https://en.sjtu.edu.cn/"],
+  "zhejiang": ["https://iczu.zju.edu.cn/"],
+  "wuhan": ["https://news.whu.edu.cn/"],
+  "hit": ["https://studyathit.hit.edu.cn/"],
+  "blcu": ["https://admission.blcu.edu.cn/"],
+  "heilongjiang": ["https://hi.hlju.edu.cn/"],
+  "jilin": ["https://cie.jlu.edu.cn/"],
+  "dlut": ["https://sie.dlut.edu.cn/"],
+  "sysu": ["https://news.sysu.edu.cn/"],
+  "ustc": ["https://ic.ustc.edu.cn/"],
+  "tongji": ["https://study.tongji.edu.cn/"],
+  "bnu": ["https://admission-is.bnu.edu.cn/"],
+  "nankai": ["https://ensie.nankai.edu.cn/"],
+  "xiamen": ["https://oec.xmu.edu.cn/"],
+  "sichuan": ["https://global.scu.edu.cn/"],
+  "shisu": ["https://www.oisa.shisu.edu.cn/"]
+}

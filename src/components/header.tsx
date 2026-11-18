@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { nav, site } from "@/content/site";
 import { programs } from "@/content/programs";
 import { universities, uniPath } from "@/content/universities";
+import { libraryCollections } from "@/content/library";
 import { ChevronDown } from "lucide-react";
 import { Container } from "./container";
 import { Button } from "./ui/button";
@@ -27,6 +28,10 @@ const menus: Record<string, { items: MenuItem[]; all: string; wide?: boolean }> 
     items: universities.map((u) => ({ href: uniPath(u), title: u.nameRu, sub: u.city, zh: u.zhShort })),
     all: `Весь каталог: ${universities.length} вузов →`,
     wide: true,
+  },
+  "/library/": {
+    items: libraryCollections.map((c) => ({ href: c.href, title: c.title, sub: `${c.count} знаков`, zh: c.zh })),
+    all: "Вся библиотека →",
   },
 };
 
@@ -75,7 +80,7 @@ function MobileMenu() {
           {nav.map((n) => (
             <li key={n.href} className="border-b border-grid-line">
               <a href={n.href} className="block py-3.5 text-lg font-medium">{n.label}</a>
-              {n.href === "/programs/" && (
+              {(n.href === "/programs/" || n.href === "/library/") && (
                 <ul className="-mt-1 pb-3 pl-4">
                   {menus[n.href].items.map((i) => <li key={i.href}><a href={i.href} className="block py-1.5 text-muted-foreground">{i.title}</a></li>)}
                 </ul>

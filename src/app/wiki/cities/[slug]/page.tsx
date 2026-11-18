@@ -35,7 +35,7 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
   return (
     <WikiShell current={cityPath(c)}>
       <JsonLd data={graph(schema)} />
-      <article className="max-w-[46em]">
+      <article>
         <p className="font-mono text-xs uppercase tracking-wide text-primary">Wiki / Города / <span lang="zh-Hans" className="font-zh font-black">{c.nameZh}</span></p>
         <h1 className="mt-4 text-[clamp(32px,4.6vw,60px)]">{c.nameRu}: <em>учёба и жизнь</em></h1>
         <p className="mt-6 text-[clamp(17px,1.5vw,19px)]">{cityAnswer(c)}</p>

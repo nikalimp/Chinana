@@ -14,8 +14,8 @@ export default function Privacy() {
   const email = site.legal.privacyEmail || site.contacts.email || "TODO(клиент): почта для запросов по ПДн";
   return (
     <Section className="pt-12">
-      <Container className="max-w-3xl">
-        <h1 className="text-3xl font-semibold tracking-tight">Политика обработки персональных данных</h1>
+      <Container><div className="w-cols-8">
+        <h1 className="text-3xl font-medium tracking-tight">Политика обработки персональных данных</h1>
         <div className="prose-site mt-8">
           <h2>1. Кто обрабатывает данные</h2>
           <p>Оператор персональных данных — {site.legalName}, {site.legal.status}, ИНН {site.legal.inn} (далее — Оператор). Политика действует для сайта {site.url} и составлена по Федеральному закону № 152-ФЗ «О персональных данных».</p>
@@ -40,7 +40,7 @@ export default function Privacy() {
           <h2>8. Изменения</h2>
           <p>Оператор может обновлять политику. Действующая версия всегда опубликована на этой странице.</p>
         </div>
-      </Container>
+      </div></Container>
     </Section>
   );
 }

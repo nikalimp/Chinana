@@ -25,19 +25,29 @@ def is_cjk(c: str) -> bool:
     return 0x2E80 <= o <= 0x9FFF or 0xF900 <= o <= 0xFAFF or 0x3000 <= o <= 0x303F or 0xFF00 <= o <= 0xFFEF
 
 
-def site_chars() -> set[str]:
+# Библиотека (ключи иероглифов и др.) — отдельный шрифт: сотни знаков не должны утяжелять остальные страницы
+LIB_FILES = ("src/content/library/radicals.ts",)
+LIB_DIRS = ("src/app/library/",)
+
+
+def is_lib(f: str) -> bool:
+    r = os.path.relpath(f, ROOT)
+    return r in LIB_FILES or any(r.startswith(d) for d in LIB_DIRS)
+
+
+def site_chars(lib: bool = False) -> set[str]:
     chars = set()
     for pat in ("src/**/*.ts", "src/**/*.tsx", "src/**/*.json", "src/**/*.css"):
         for f in glob.glob(os.path.join(ROOT, pat), recursive=True):
-            if f.endswith("zh-font.css"):
+            if f.endswith("zh-font.css") or f.endswith("zh-lib.css") or is_lib(f) != lib:
                 continue
             chars |= {c for c in open(f, encoding="utf8").read() if is_cjk(c)}
     return chars
 
 
-def slices():
-    """[(файл куска, множество кодов)] из 900.css пакета @fontsource."""
-    css = open(os.path.join(SRC, "900.css"), encoding="utf8").read()
+def slices(weight: int = 900):
+    """[(файл куска, множество кодов)] из <weight>.css пакета @fontsource."""
+    css = open(os.path.join(SRC, f"{weight}.css"), encoding="utf8").read()
     out = []
     for block in re.findall(r"@font-face\s*{([^}]*)}", css):
         url = re.search(r"url\(\./files/([^)]+?\.woff2)\)", block)
@@ -53,13 +63,12 @@ def slices():
     return out
 
 
-def main():
-    chars = site_chars()
-    os.makedirs(OUT_DIR, exist_ok=True)
-    for f in glob.glob(os.path.join(OUT_DIR, "*.woff2")):
+def build(chars: set[str], out_dir: str, css_out: str, family: str, weight: int, url: str, extra_css: str = ""):
+    os.makedirs(out_dir, exist_ok=True)
+    for f in glob.glob(os.path.join(out_dir, "*.woff2")):
         os.remove(f)
     faces, covered = [], set()
-    for i, (fname, codes) in enumerate(slices()):
+    for i, (fname, codes) in enumerate(slices(weight)):
         need = sorted(ord(c) for c in chars if ord(c) in codes and ord(c) not in covered)
         if not need:
             continue
@@ -76,12 +85,12 @@ def main():
         buf = io.BytesIO()
         font.flavor = "woff2"
         font.save(buf)
-        open(os.path.join(OUT_DIR, name), "wb").write(buf.getvalue())
+        open(os.path.join(out_dir, name), "wb").write(buf.getvalue())
         covered |= set(need)
         rng = ",".join(f"U+{c:X}" for c in need)
         faces.append(
-            f"@font-face{{font-family:'Noto Serif SC Subset';font-style:normal;font-weight:900;font-display:swap;"
-            f"src:url(/fonts/zh/{name}) format('woff2');unicode-range:{rng}}}"
+            f"@font-face{{font-family:'{family}';font-style:normal;font-weight:{weight};font-display:swap;"
+            f"src:url({url}{name}) format('woff2');unicode-range:{rng}}}"
         )
     missing = sorted(chars - {chr(c) for c in covered})
     header = (
@@ -89,11 +98,20 @@ def main():
         f"Иероглифов: {len(covered)}, файлов: {len(faces)}. */\n"
         f"/* chars: {''.join(sorted(chr(c) for c in covered))} */\n"
     )
-    open(CSS_OUT, "w", encoding="utf8").write(header + "\n".join(faces) + "\n")
-    total = sum(os.path.getsize(f) for f in glob.glob(os.path.join(OUT_DIR, "*.woff2")))
-    print(f"Иероглифов: {len(covered)}, файлов: {len(faces)}, вес: {total / 1024:.1f} КБ")
+    open(css_out, "w", encoding="utf8").write(header + "\n".join(faces) + "\n" + extra_css)
+    total = sum(os.path.getsize(f) for f in glob.glob(os.path.join(out_dir, "*.woff2")))
+    print(f"{family}: иероглифов {len(covered)}, файлов {len(faces)}, вес {total / 1024:.1f} КБ")
     if missing:
         print("Нет в шрифте:", "".join(missing))
+
+
+def main():
+    build(site_chars(), OUT_DIR, CSS_OUT, "Noto Serif SC Subset", 900, "/fonts/zh/")
+    build(
+        site_chars(lib=True), os.path.join(ROOT, "public/fonts/zh-lib"), os.path.join(ROOT, "src/app/library/zh-lib.css"),
+        "Noto Serif SC Library", 500, "/fonts/zh-lib/",
+        ".font-zh-lib{font-family:'Noto Serif SC Library','Noto Serif SC Subset',serif;font-weight:500}\n",
+    )
 
 
 if __name__ == "__main__":

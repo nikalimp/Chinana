@@ -4,7 +4,7 @@ import { formatDate, type Post } from "@/lib/posts";
 // Карточка статьи: обложка слева, дата, рубрика, заголовок, «Читать →». Обложку рисует media.mjs при выкладке.
 export function PostCard({ p }: { p: Post }) {
   return (
-    <Link href={`/blog/${p.slug}/`} className="group grid bg-card sm:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]">
+    <Link href={`/blog/${p.slug}/`} className="group grid bg-card sm:grid-cols-[minmax(0,3fr)_minmax(0,5fr)]">
       <div className="relative aspect-[16/9] overflow-hidden bg-secondary">
         {p.cover && (
           // eslint-disable-next-line @next/next/no-img-element

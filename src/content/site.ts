@@ -73,7 +73,8 @@ export const site = {
   // Функции включаются и выключаются флагами, а не удалением кода (стандарт §1.9)
   features: {
     blog: true, // контент-завод: «Китай изнутри», статья раз в неделю (2026-11-10)
-    news: false, // P1: новости вузов (design-news-factory.md)
+    news: true, // новости вузов: сбор и перевод на Маке каждый день в 12:34 (design-news-factory.md, решение Ника 2026-11-18)
+    library: true, // Библиотека: ключи иероглифов (решение Ника 2026-11-18)
     calculator: false, // P1
     leadForm: true, // попап заявки → /api/lead.php на хостинге в РФ, почта + уведомление в Telegram без данных (решение Ника 2026-11-10)
     stats: false, // цифры доверия — ждём факты партнёра
@@ -85,5 +86,7 @@ export const nav = [
   { href: "/programs/", label: "Программы" },
   { href: "/universities/", label: "Вузы" },
   { href: "/wiki/", label: "Wiki" },
+  ...(site.features.library ? [{ href: "/library/", label: "Библиотека" }] : []),
+  ...(site.features.news ? [{ href: "/news/", label: "Новости" }] : []),
   ...(site.features.blog ? [{ href: "/blog/", label: "Блог" }] : []),
 ];

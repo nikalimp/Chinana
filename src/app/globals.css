@@ -68,7 +68,7 @@
   /* scroll-behavior: smooth не ставим глобально: переход на другую страницу — сразу наверх, без анимации (стандарт §6, решение Ника 2026-11-10) */
   body { @apply bg-background text-foreground font-sans; font-size: 17px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
   ::selection { background: var(--accent); color: var(--foreground); }
-  h1, h2 { text-transform: uppercase; font-weight: 700; letter-spacing: -0.01em; line-height: 1.02; }
+  h1, h2 { text-transform: uppercase; font-weight: 500; letter-spacing: -0.01em; line-height: 1.02; }
   em { font-family: var(--font-serif); font-style: italic; font-weight: 400; }
   :focus-visible { outline: 3px solid var(--ring); outline-offset: 3px; }
 }
@@ -134,4 +134,11 @@
 .myth:hover .myth-back, .myth:focus-within .myth-back { opacity: 1; transform: none; pointer-events: auto; }
 @media (prefers-reduced-motion: reduce) {
   .myth-word, .myth-back { transition: opacity .2s ease; transform: none !important; filter: none !important; }
+}
+
+/* Ширина по направляющим: 8 или 10 из 12 колонок по центру; до 768 px — вся ширина контейнера (4 колонки).
+   Блоки с видимыми краями (списки с линиями, таблицы, текст статей) ставим только по этим классам, не max-w-[..em] */
+@media (min-width: 768px) {
+  .w-cols-8 { width: calc(100% * 8 / 12); margin-inline: auto; }
+  .w-cols-10 { width: calc(100% * 10 / 12); margin-inline: auto; }
 }

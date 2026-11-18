@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
 import { programs } from "@/content/programs";
 import { getPosts } from "@/lib/posts";
+import { getNews } from "@/lib/news";
 import { wikiArticles as answers } from "@/content/wiki";
 import { universities, unisChecked } from "@/content/universities";
 import { cities, citiesChecked, cityPath } from "@/content/cities";
@@ -14,6 +15,7 @@ export const dynamic = "force-static";
 //   сайт пересобирается при каждом push, и «всё обновилось сегодня» приучает Google игнорировать lastmod.
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getPosts();
+  const news = getNews();
   return [
     { url: `${site.url}/`, priority: 1 },
     { url: `${site.url}/programs/`, priority: 0.9 },
@@ -24,6 +26,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...cities.map((c) => ({ url: `${site.url}${cityPath(c)}`, lastModified: citiesChecked, priority: 0.6 })),
     { url: `${site.url}/universities/`, lastModified: unisChecked, priority: 0.9 },
     ...universities.map((u) => ({ url: `${site.url}/universities/${u.slug}/`, lastModified: unisChecked, priority: 0.7 })),
+    ...(site.features.library ? [{ url: `${site.url}/library/`, priority: 0.7 }, { url: `${site.url}/library/radicals/`, priority: 0.7 }] : []),
+    ...(site.features.news && news.length ? [{ url: `${site.url}/news/`, lastModified: news[0].date, priority: 0.7 }] : []),
+    ...news.map((n) => ({ url: `${site.url}/news/${n.slug}/`, lastModified: n.date, priority: 0.5 })),
     { url: `${site.url}/contacts/`, priority: 0.6 },
     ...(site.features.blog && posts.length ? [{ url: `${site.url}/blog/`, lastModified: posts.map((p) => p.updated ?? p.date).sort().at(-1), priority: 0.7 }] : []),
     ...(site.features.blog ? posts : []).map((p) => ({ url: `${site.url}/blog/${p.slug}/`, lastModified: p.updated ?? p.date, priority: 0.7 })),

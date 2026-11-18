@@ -7,7 +7,7 @@ export function ProgramCard({ p }: { p: Program }) {
   return (
     <article className="flex min-h-[400px] flex-col gap-3.5 bg-card px-[22px] pb-6 pt-[26px]">
       <div className="flex items-baseline justify-between gap-3">
-        <h3 className="text-[22px] font-bold uppercase leading-tight">{p.title}</h3>
+        <h3 className="text-[22px] font-medium uppercase leading-tight">{p.title}</h3>
         <span aria-hidden="true" lang="zh-Hans" className="font-zh text-[26px] font-black leading-none text-primary">{p.zh}</span>
       </div>
       <p>{p.short}</p>

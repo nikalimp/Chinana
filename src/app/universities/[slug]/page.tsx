@@ -12,7 +12,9 @@ import { UniCard } from "@/components/cards";
 import { FaqList } from "@/components/faq";
 import { CtaFinal } from "@/components/cta";
 import { JsonLd } from "@/components/json-ld";
-import { faqSchema, graph, uniSchema } from "@/lib/schema";
+import { faqSchema, graph, itemList, uniSchema } from "@/lib/schema";
+import { newsOf } from "@/lib/news";
+import { NewsList } from "@/components/news";
 
 export const dynamicParams = false;
 export function generateStaticParams() {
@@ -40,11 +42,12 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
   const others = universities.filter((x) => x.slug !== u.slug && x.city === u.city).concat(universities.filter((x) => x.slug !== u.slug && x.city !== u.city)).slice(0, 3);
   const sources = [...new Set([...u.sources, ...u.programs.map((p) => p.url), ...u.facts.map((f) => f.url)])].filter(Boolean);
   const photo = uniPhoto(u.slug);
+  const news = newsOf(u.slug).slice(0, 5);
   const cta = u.partner ? `Поступить в ${u.nameRu}` : "Бесплатная консультация";
 
   return (
     <>
-      <JsonLd data={graph(uniSchema(u), faqSchema(faq))} />
+      <JsonLd data={graph(uniSchema(u), faqSchema(faq), news.length > 0 && itemList(news.map((n) => ({ name: n.title, path: `/news/${n.slug}/` }))))} />
 
       <section className="relative overflow-hidden pb-[clamp(64px,9vw,120px)] pt-[clamp(40px,6vw,80px)] text-center">
         <GridLines />
@@ -88,7 +91,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
         <Section>
           <Container>
             <SectionHead eyebrow="О вузе" title="Чем известен" accent={u.nameRu} />
-            <ul className="mx-auto max-w-[47.9em] text-[17px]">
+            <ul className="w-cols-8 text-[17px]">
               {u.facts.map((f) => (
                 <li key={f.text} className="flex gap-3 border-b border-grid-line py-2.5"><span aria-hidden="true" className="font-mono text-primary">—</span><span>{f.text} <a href={f.url} rel="noopener" target="_blank" className="font-mono text-[11px] text-primary hover:underline">[источник]</a></span></li>
               ))}
@@ -124,7 +127,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
       <Section>
         <Container>
           <SectionHead eyebrow="Требования и жильё" title="Что нужно" accent="для поступления" />
-          <table className="mx-auto w-full max-w-[900px] border-collapse text-base">
+          <table className="w-full w-cols-8 border-collapse text-base">
             <tbody>
               {[
                 ["HSK, бакалавриат", u.hskMin?.bachelor, u.hskMin?.url],
@@ -139,7 +142,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
               ))}
             </tbody>
           </table>
-          <p className="mx-auto mt-6 max-w-[47.9em] text-muted-foreground">Если китайского пока нет, путь обычно такой: языковые курсы в Китае, затем экзамен HSK, затем поступление на степень. Для бакалавриата по гранту правительства Китая нужен ещё экзамен <Link href="/wiki/csca/" className="text-primary hover:underline">CSCA</Link>.</p>
+          <p className="w-cols-8 mt-6 text-muted-foreground">Если китайского пока нет, путь обычно такой: языковые курсы в Китае, затем экзамен HSK, затем поступление на степень. Для бакалавриата по гранту правительства Китая нужен ещё экзамен <Link href="/wiki/csca/" className="text-primary hover:underline">CSCA</Link>.</p>
         </Container>
       </Section>
 
@@ -147,7 +150,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
         <Section>
           <Container>
             <SectionHead eyebrow="Гранты" title="Гранты" accent="для иностранцев" text="Полный грант правительства Китая покрывает обучение, общежитие и страховку и платит стипендию." />
-            <ul className="mx-auto max-w-[47.9em] text-[17px]">
+            <ul className="w-cols-8 text-[17px]">
               {u.grants.map((g) => (
                 <li key={g.name} className="flex gap-3 border-b border-grid-line py-2.5"><span aria-hidden="true" className="font-mono text-primary">—</span><span>{g.name} <a href={g.url} rel="noopener" target="_blank" className="font-mono text-[11px] text-primary hover:underline">[источник]</a></span></li>
               ))}
@@ -176,6 +179,18 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
         </Container>
       </Section>
 
+      {news.length > 0 && (
+        <Section id="news">
+          <Container>
+            <SectionHead eyebrow="Новости вуза" title="Новости" accent={u.nameRu} text="Пересказ новостей с сайта вуза на русском — со ссылкой на оригинал. Обновляется каждый день." />
+            <div className="w-cols-8">
+              <NewsList items={news} showUni={false} />
+              <div className="mt-6 flex justify-center"><Button asChild variant="outline"><Link href={`/news/?uni=${u.slug}`}>Все новости вуза →</Link></Button></div>
+            </div>
+          </Container>
+        </Section>
+      )}
+
       <Section>
         <Container>
           <SectionHead eyebrow="Частые вопросы" title={u.nameRu} accent="вопросы и ответы" />
@@ -189,7 +204,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
           <div className="cards grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {others.map((o) => <UniCard key={o.slug} zh={o.zhShort} name={o.nameRu} city={o.city} partner={o.partner} href={uniPath(o)} photo={uniPhoto(o.slug)?.src} />)}
           </div>
-          <details className="mx-auto mt-12 max-w-[47.9em] text-sm text-muted-foreground">
+          <details className="w-cols-8 mt-12 text-sm text-muted-foreground">
             <summary className="cursor-pointer font-mono text-xs uppercase">Источники ({sources.length})</summary>
             <ol className="mt-3 space-y-1.5">
               {sources.map((s) => <li key={s}><a href={s} rel="noopener" target="_blank" className="break-all hover:text-primary">{s}</a></li>)}
