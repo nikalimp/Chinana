@@ -6,7 +6,7 @@
   "stack": "nextjs-github",
   "language": "ru",
   "timezone": "Asia/Bangkok",
-  "cadence": "30",
+  "cadence": "20",
   "approval": false,
   "author": "Chinana",
   "voice_mode": "we",
@@ -103,13 +103,13 @@
     "geo_pool": "content/factory/strategy.md"
   },
   "schedule": {
-    "daily": "каждый день 09:00 Asia/Bangkok — задача bb «Chinana — статья дня» на Маке Ника пишет и публикует статью; запасной путь — очередь Actions (deploy.yml, ежедневно 11:11)",
-    "weekly": "Пт 11:11 Asia/Bangkok — общий отчёт",
+    "daily": "Пн–Пт 11:11 Asia/Bangkok — очередь GitHub Actions (deploy.yml → deploy-kit queue.yml) выпускает статью ready с датой ≤ сегодня",
+    "weekly": "Сб 12:34 Asia/Bangkok — общая задача bb «Администратор сайтов»: отчёт, план и статьи следующей недели (5 штук) в ready",
     "news": "каждый день 12:34 Asia/Bangkok — задача bb «Chinana — новости вузов» (scripts/news/daily.sh)"
   },
   "tasks": {
-    "daily": "Chinana — статья дня (bb)",
-    "weekly": "Контент-завод — отчёт недели",
+    "daily": "очередь Actions (deploy.yml)",
+    "weekly": "Администратор сайтов (bb)",
     "news": "Chinana — новости вузов (bb)"
   },
   "tilda": {

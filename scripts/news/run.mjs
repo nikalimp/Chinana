@@ -13,9 +13,10 @@ import os from "node:os";
 import path from "node:path";
 import crypto from "node:crypto";
 import { spawn } from "node:child_process";
+import { fileURLToPath } from "node:url";
 import { extractLinks, extractText, fetchHtml } from "./extract.mjs";
 
-const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../..");
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../.."); // fileURLToPath: путь может содержать пробелы
 const args = new Set(process.argv.slice(2));
 const DRY = args.has("--dry");
 const PROBE = args.has("--probe");
