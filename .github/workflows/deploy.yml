@@ -11,7 +11,7 @@ on:
     branches: [main]
     paths-ignore: ["specs/**", "*.md", "content/factory/**"]
   schedule:
-    - cron: "11 4 * * *"   # очередь контент-завода: каждый день 11:11 по Бангкоку (запасной путь; основной — задача bb «Chinana — статья дня» в 09:00)
+    - cron: "11 4 * * 1-5"   # очередь контент-завода: Пн–Пт 11:11 по Бангкоку; статьи пишет «Администратор сайтов» в субботу
   workflow_dispatch: {}
 concurrency: { group: deploy, cancel-in-progress: false }
 jobs:
