@@ -35,7 +35,8 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
     <>
       <JsonLd data={graph(articleSchema(p))} />
       <Section className="pt-12">
-        <Container className="max-w-3xl">
+        {/* Статья — 8 из 12 колонок по центру, края по направляющим (решение Ника 2026-11-18) */}
+        <Container><div className="w-cols-8">
           <p className="mb-4 font-mono text-xs uppercase tracking-wide text-primary">Блог{p.rubric ? ` / ${p.rubric}` : ""}</p>
           <h1 className="text-[clamp(30px,4.4vw,52px)] leading-tight">{p.title}</h1>
           <p className="mt-4 text-sm text-muted-foreground">
@@ -49,7 +50,7 @@ export default async function PostPage({ params }: { params: Promise<{ slug: str
           <article className="prose-site mt-10">
             <Markdown remarkPlugins={[remarkGfm]}>{p.body}</Markdown>
           </article>
-        </Container>
+        </div></Container>
       </Section>
       <Cta />
     </>

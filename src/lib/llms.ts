@@ -3,6 +3,8 @@ import { site } from "@/content/site";
 import { programs, formatRub } from "@/content/programs";
 import { home } from "@/content/home";
 import { getPosts } from "./posts";
+import { getNews } from "./news";
+import { radicals } from "@/content/library/radicals";
 import { wikiArticles as answers } from "@/content/wiki";
 import { universities, uniAnswer } from "@/content/universities";
 import { cities, cityAnswer, cityPath } from "@/content/cities";
@@ -45,7 +47,7 @@ ${cities.map((c) => `- [${c.nameRu}](${site.url}${cityPath(c)})`).join("\n")}
 ## Вузы Китая
 - [Каталог университетов](${site.url}/universities/): ${universities.length} вузов с ценами, грантами и требованиями HSK
 ${universities.map((u) => `- [${u.nameRu} (${u.nameZh})](${site.url}/universities/${u.slug}/)`).join("\n")}
-${posts.length ? `\n## Статьи\n${posts.map((p) => `- [${p.title}](${site.url}/blog/${p.slug}/): ${p.description}`).join("\n")}\n` : ""}
+${site.features.library ? `\n## Библиотека\n- [214 ключей китайских иероглифов](${site.url}/library/radicals/): значение на русском, пиньинь, число черт и примеры — ${radicals.length} ключей словаря Канси\n` : ""}${getNews().length ? `\n## Новости вузов\n- [Лента новостей вузов Китая на русском](${site.url}/news/)\n${getNews().slice(0, 20).map((n) => `- [${n.title}](${site.url}/news/${n.slug}/): ${n.description}`).join("\n")}\n` : ""}${posts.length ? `\n## Статьи\n${posts.map((p) => `- [${p.title}](${site.url}/blog/${p.slug}/): ${p.description}`).join("\n")}\n` : ""}
 ## О сервисе
 - ${site.tagline}
 - [Контакты](${site.url}/contacts/)

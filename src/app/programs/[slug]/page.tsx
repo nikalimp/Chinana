@@ -136,7 +136,7 @@ export default async function ProgramPage({ params }: { params: Promise<{ slug: 
             {others.map((o) => (
               <Link key={o.slug} href={`/programs/${o.slug}/`} className="block bg-card px-[22px] py-[26px]">
                 <span className="font-mono text-[13px]">{o.num}</span>
-                <h3 className="mb-1.5 mt-2.5 text-[22px] font-bold uppercase">{o.title}</h3>
+                <h3 className="mb-1.5 mt-2.5 text-[22px] font-medium uppercase">{o.title}</h3>
                 <p className="text-[15px] text-muted-foreground">{o.short}</p>
               </Link>
             ))}

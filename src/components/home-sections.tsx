@@ -40,7 +40,7 @@ export function Goals() {
             <Link key={g.title} href={g.href} className="group relative flex min-h-[220px] flex-col overflow-hidden bg-card px-[22px] pb-6 pt-[26px]">
               <span aria-hidden="true" lang="zh-Hans" data-zh={g.zh} className="zh-deco pointer-events-none absolute -bottom-4 -right-2 font-zh text-[120px] font-black leading-none text-primary opacity-[0.08] transition-opacity group-hover:opacity-[0.14]" />
               <span aria-hidden="true" lang="zh-Hans" className="font-zh text-[28px] font-black leading-none text-primary">{g.zh}</span>
-              <h3 className="mt-5 text-[22px] font-bold uppercase leading-tight">{g.title}</h3>
+              <h3 className="mt-5 text-[22px] font-medium uppercase leading-tight">{g.title}</h3>
               <p className="mt-2 text-[15px] text-muted-foreground">{g.text}</p>
               <span className="mt-auto pt-5 font-semibold text-brand group-hover:underline">Подробнее →</span>
             </Link>
@@ -66,7 +66,7 @@ export function Myths() {
               <span aria-hidden="true" lang="zh-Hans" data-zh={m.zh} className="zh-deco myth-zh pointer-events-none absolute -bottom-4 -right-2 font-zh text-[120px] font-black leading-none text-primary opacity-[0.08]" />
               <div className="myth-front col-start-1 row-start-1 flex flex-col px-[22px] pb-6 pt-[26px]">
                 <p className="flex items-center gap-2 font-mono text-xs uppercase text-muted-foreground"><X aria-hidden="true" className="size-4 text-primary" />Миф</p>
-                <p className="mt-auto text-[clamp(24px,2.2vw,30px)] font-bold uppercase leading-[1.1]">
+                <p className="mt-auto text-[clamp(24px,2.2vw,30px)] font-medium uppercase leading-[1.1]">
                   {m.myth.split(" ").map((w, i) => <span key={i} className="myth-word" style={drift(i)}>{w}</span>).flatMap((el, i) => (i ? [" ", el] : [el]))}
                 </p>
               </div>

@@ -16,8 +16,8 @@ export default function Consent() {
   const email = site.legal.privacyEmail || site.contacts.email || "TODO(клиент): почта для запросов по ПДн";
   return (
     <Section className="pt-12">
-      <Container className="max-w-3xl">
-        <h1 className="text-3xl font-semibold tracking-tight">Согласие на обработку персональных данных</h1>
+      <Container><div className="w-cols-8">
+        <h1 className="text-3xl font-medium tracking-tight">Согласие на обработку персональных данных</h1>
         <div className="prose-site mt-8">
           <p>Отправляя форму на сайте {site.url}, я свободно, своей волей и в своём интересе даю согласие {site.legalName} (ИНН {site.legal.inn}) на обработку моих персональных данных на условиях ниже.</p>
           <h2>Какие данные</h2>
@@ -30,7 +30,7 @@ export default function Consent() {
           <p>Согласие действует до достижения цели обработки или до его отзыва. Отозвать согласие можно письмом на {email}.</p>
           <p>Порядок обработки описан в <a href="/privacy-policy/">политике обработки персональных данных</a>.</p>
         </div>
-      </Container>
+      </div></Container>
     </Section>
   );
 }

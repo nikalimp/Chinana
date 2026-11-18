@@ -3,7 +3,7 @@ import type { Faq } from "@/content/programs";
 // FAQ на <details>: ответ в HTML, раскрытие без JavaScript. Ширина — 8 из 12 колонок по центру.
 export function FaqList({ items }: { items: Faq[] }) {
   return (
-    <div className="mx-auto md:max-w-[calc(100%*8/12)]">
+    <div className="w-cols-8">
       {items.map((f, i) => (
         <details key={f.q} open={i === 0} className="group border-t border-border last:border-b">
           <summary className="flex cursor-pointer list-none justify-between gap-5 py-5 [&::-webkit-details-marker]:hidden">
