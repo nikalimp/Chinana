@@ -155,7 +155,10 @@ function save(item, n) {
   const date = todayIso;
   const id = crypto.createHash("sha1").update(item.url).digest("hex").slice(0, 6);
   const slug = `${date}-${item.uni}-${id}`;
-  const published = /^\d{4}-\d{2}-\d{2}$/.test(n.published || "") ? n.published : item.date || "";
+  // Дата публикации: от ИИ, иначе со страницы-списка, иначе из адреса (/2026/1112/). Дата из будущего — это дата события, не публикации
+  const urlDate = item.url.match(/\/(20\d{2})[/-]?(\d{2})[/-]?(\d{2})\//);
+  const ok = (d) => /^\d{4}-\d{2}-\d{2}$/.test(d || "") && daysAgo(d) >= 0;
+  const published = [n.published, item.date, urlDate && `${urlDate[1]}-${urlDate[2]}-${urlDate[3]}`].find(ok) || "";
   const md = `---
 title: ${yaml(n.title)}
 description: ${yaml(n.description)}
