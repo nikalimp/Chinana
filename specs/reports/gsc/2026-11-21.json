@@ -1,0 +1,2999 @@
+{
+ "site": "https://chinana.ru/",
+ "generated": "2026-11-21T12:26:18.143Z",
+ "period": {
+  "current": [
+   "2026-10-22",
+   "2026-11-18"
+  ],
+  "previous": [
+   "2026-09-24",
+   "2026-10-21"
+  ]
+ },
+ "totals": {
+  "current": {
+   "clicks": 3,
+   "impressions": 1101,
+   "ctr": 0.27,
+   "position": 12.2
+  },
+  "previous": null
+ },
+ "daily": [
+  {
+   "date": "2026-11-11",
+   "clicks": 0,
+   "impressions": 0,
+   "ctr": 0,
+   "position": 0
+  },
+  {
+   "date": "2026-11-12",
+   "clicks": 0,
+   "impressions": 0,
+   "ctr": 0,
+   "position": 0
+  },
+  {
+   "date": "2026-11-13",
+   "clicks": 0,
+   "impressions": 0,
+   "ctr": 0,
+   "position": 0
+  },
+  {
+   "date": "2026-11-14",
+   "clicks": 0,
+   "impressions": 17,
+   "ctr": 0,
+   "position": 8.1
+  },
+  {
+   "date": "2026-11-15",
+   "clicks": 0,
+   "impressions": 253,
+   "ctr": 0,
+   "position": 10.4
+  },
+  {
+   "date": "2026-11-16",
+   "clicks": 3,
+   "impressions": 494,
+   "ctr": 0.61,
+   "position": 10.7
+  },
+  {
+   "date": "2026-11-17",
+   "clicks": 0,
+   "impressions": 168,
+   "ctr": 0,
+   "position": 21.3
+  },
+  {
+   "date": "2026-11-18",
+   "clicks": 0,
+   "impressions": 169,
+   "ctr": 0,
+   "position": 10.4
+  }
+ ],
+ "pages": [
+  {
+   "key": "https://chinana.ru/wiki/academic-year/",
+   "clicks": 2,
+   "impressions": 100,
+   "ctr": 2,
+   "position": 9.2,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/tongji/",
+   "clicks": 1,
+   "impressions": 3,
+   "ctr": 33.33,
+   "position": 6,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "clicks": 0,
+   "impressions": 887,
+   "ctr": 0,
+   "position": 10.3,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/contacts/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/programs/foundation/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 4,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/programs/language-year/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 9.7,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/programs/master/",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 89.5,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 82,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/bnu/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 4,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/fudan/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 63,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/heilongjiang/",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 6,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/hit/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 8.3,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/jilin/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 20,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/nanjing/",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 61,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/peking/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 7,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/sichuan/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 4,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/sysu/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 8,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/tsinghua/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 7,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/ustc/",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 17,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/wuhan/",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 5.8,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/universities/xiamen/",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 21,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/budget/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 8.3,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/cities/",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 7.6,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/cities/changchun/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/cities/hangzhou/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 22,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/cities/nanjing/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/cities/wuhan/",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 26.5,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/cost/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 34.3,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/csc/",
+   "clicks": 0,
+   "impressions": 6,
+   "ctr": 0,
+   "position": 6,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/csca/",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 46.3,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/diploma-recognition/",
+   "clicks": 0,
+   "impressions": 21,
+   "ctr": 0,
+   "position": 12.7,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/documents/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 8,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/hsk/",
+   "clicks": 0,
+   "impressions": 18,
+   "ctr": 0,
+   "position": 48.3,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/language-courses/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 60,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/payments/",
+   "clicks": 0,
+   "impressions": 10,
+   "ctr": 0,
+   "position": 69,
+   "prev": null
+  },
+  {
+   "key": "https://chinana.ru/wiki/student-visa/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 29.7,
+   "prev": null
+  }
+ ],
+ "pages90": [
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "clicks": 2,
+   "impressions": 100,
+   "ctr": 2,
+   "position": 9.2
+  },
+  {
+   "page": "https://chinana.ru/universities/tongji/",
+   "clicks": 1,
+   "impressions": 3,
+   "ctr": 33.33,
+   "position": 6
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "clicks": 0,
+   "impressions": 887,
+   "ctr": 0,
+   "position": 10.3
+  },
+  {
+   "page": "https://chinana.ru/contacts/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9
+  },
+  {
+   "page": "https://chinana.ru/programs/foundation/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 4
+  },
+  {
+   "page": "https://chinana.ru/programs/language-year/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 9.7
+  },
+  {
+   "page": "https://chinana.ru/programs/master/",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 89.5
+  },
+  {
+   "page": "https://chinana.ru/universities/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 82
+  },
+  {
+   "page": "https://chinana.ru/universities/bnu/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 4
+  },
+  {
+   "page": "https://chinana.ru/universities/fudan/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 63
+  },
+  {
+   "page": "https://chinana.ru/universities/heilongjiang/",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 6
+  },
+  {
+   "page": "https://chinana.ru/universities/hit/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 8.3
+  },
+  {
+   "page": "https://chinana.ru/universities/jilin/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 20
+  },
+  {
+   "page": "https://chinana.ru/universities/nanjing/",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 61
+  },
+  {
+   "page": "https://chinana.ru/universities/peking/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 7
+  },
+  {
+   "page": "https://chinana.ru/universities/sichuan/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 4
+  },
+  {
+   "page": "https://chinana.ru/universities/sysu/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 8
+  },
+  {
+   "page": "https://chinana.ru/universities/tsinghua/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 7
+  },
+  {
+   "page": "https://chinana.ru/universities/ustc/",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 17
+  },
+  {
+   "page": "https://chinana.ru/universities/wuhan/",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 5.8
+  },
+  {
+   "page": "https://chinana.ru/universities/xiamen/",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 21
+  },
+  {
+   "page": "https://chinana.ru/wiki/budget/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 8.3
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 7.6
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/changchun/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/hangzhou/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 22
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/nanjing/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/wuhan/",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 26.5
+  },
+  {
+   "page": "https://chinana.ru/wiki/cost/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 34.3
+  },
+  {
+   "page": "https://chinana.ru/wiki/csc/",
+   "clicks": 0,
+   "impressions": 6,
+   "ctr": 0,
+   "position": 6
+  },
+  {
+   "page": "https://chinana.ru/wiki/csca/",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 46.3
+  },
+  {
+   "page": "https://chinana.ru/wiki/diploma-recognition/",
+   "clicks": 0,
+   "impressions": 21,
+   "ctr": 0,
+   "position": 12.7
+  },
+  {
+   "page": "https://chinana.ru/wiki/documents/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 8
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "clicks": 0,
+   "impressions": 18,
+   "ctr": 0,
+   "position": 48.3
+  },
+  {
+   "page": "https://chinana.ru/wiki/language-courses/",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 60
+  },
+  {
+   "page": "https://chinana.ru/wiki/payments/",
+   "clicks": 0,
+   "impressions": 10,
+   "ctr": 0,
+   "position": 69
+  },
+  {
+   "page": "https://chinana.ru/wiki/student-visa/",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 29.7
+  }
+ ],
+ "pagesLost": [],
+ "queries": [
+  {
+   "key": "2027 new year",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 7,
+   "prev": null
+  },
+  {
+   "key": "china 2027 new year",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 83,
+   "prev": null
+  },
+  {
+   "key": "chinanax",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9,
+   "prev": null
+  },
+  {
+   "key": "cny 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10,
+   "prev": null
+  },
+  {
+   "key": "csca китайский",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 59,
+   "prev": null
+  },
+  {
+   "key": "csca экзамен китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 56,
+   "prev": null
+  },
+  {
+   "key": "g.csc",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9,
+   "prev": null
+  },
+  {
+   "key": "hsk 1 сколько баллов",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 40,
+   "prev": null
+  },
+  {
+   "key": "hsk 2 какой уровень языка",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48,
+   "prev": null
+  },
+  {
+   "key": "hsk 2 проходной балл",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 53,
+   "prev": null
+  },
+  {
+   "key": "hsk 3 баллы",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 32,
+   "prev": null
+  },
+  {
+   "key": "hsk 3 какой уровень языка",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48,
+   "prev": null
+  },
+  {
+   "key": "hsk 3 проходной балл",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 43,
+   "prev": null
+  },
+  {
+   "key": "hsk 3 что это",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 61,
+   "prev": null
+  },
+  {
+   "key": "new year 2027",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 7.3,
+   "prev": null
+  },
+  {
+   "key": "rbnfqcrbq yjdsq ujl 2027",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 10.4,
+   "prev": null
+  },
+  {
+   "key": "дата китайского нового года 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 6,
+   "prev": null
+  },
+  {
+   "key": "дешевые университеты китая",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 82,
+   "prev": null
+  },
+  {
+   "key": "как расплачиваться в китае",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 40,
+   "prev": null
+  },
+  {
+   "key": "карта для оплаты wechat pay",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 48,
+   "prev": null
+  },
+  {
+   "key": "китай праздники 2027",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 9,
+   "prev": null
+  },
+  {
+   "key": "китайские праздники 2027",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 7.7,
+   "prev": null
+  },
+  {
+   "key": "китайские праздники 2027 год",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10,
+   "prev": null
+  },
+  {
+   "key": "китайские праздники в 2027 году",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 9.3,
+   "prev": null
+  },
+  {
+   "key": "китайский диплом в россии",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 13.3,
+   "prev": null
+  },
+  {
+   "key": "китайский диплом где котируется",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 56,
+   "prev": null
+  },
+  {
+   "key": "китайский нг 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 6,
+   "prev": null
+  },
+  {
+   "key": "китайский новы год 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11,
+   "prev": null
+  },
+  {
+   "key": "китайский новый год 2027",
+   "clicks": 0,
+   "impressions": 770,
+   "ctr": 0,
+   "position": 10.3,
+   "prev": null
+  },
+  {
+   "key": "китайский новый год 2027 выходные",
+   "clicks": 0,
+   "impressions": 13,
+   "ctr": 0,
+   "position": 9.5,
+   "prev": null
+  },
+  {
+   "key": "китайский новый год 2027 выходные дни",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11,
+   "prev": null
+  },
+  {
+   "key": "китайский новый год 2027 даты",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 12,
+   "prev": null
+  },
+  {
+   "key": "китайский новый год в 2027 году",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 10.2,
+   "prev": null
+  },
+  {
+   "key": "китайский новый год в 2027 году когда",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 12,
+   "prev": null
+  },
+  {
+   "key": "китайский новый гол 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10,
+   "prev": null
+  },
+  {
+   "key": "когда будет китайский новый год в 2027 году",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11,
+   "prev": null
+  },
+  {
+   "key": "когда в китае начинается учебный год",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 10.4,
+   "prev": null
+  },
+  {
+   "key": "когда в китае начинается учебный год в университете",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 8.5,
+   "prev": null
+  },
+  {
+   "key": "когда заканчивается учебный год в китае",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 14.8,
+   "prev": null
+  },
+  {
+   "key": "когда каникулы в китае в университете",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 8.3,
+   "prev": null
+  },
+  {
+   "key": "когда китайский новый год 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 7,
+   "prev": null
+  },
+  {
+   "key": "когда китайский новый год в 2027 году",
+   "clicks": 0,
+   "impressions": 13,
+   "ctr": 0,
+   "position": 11.1,
+   "prev": null
+  },
+  {
+   "key": "когда китайский новый год в 2027 году?",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 10.5,
+   "prev": null
+  },
+  {
+   "key": "когда наступит китайский новый год 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11,
+   "prev": null
+  },
+  {
+   "key": "когда начинается учеба в китае в университете",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 25,
+   "prev": null
+  },
+  {
+   "key": "когда начинается учебный год в китае",
+   "clicks": 0,
+   "impressions": 9,
+   "ctr": 0,
+   "position": 8.1,
+   "prev": null
+  },
+  {
+   "key": "когда начинается учебный год в китае в университете",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 8,
+   "prev": null
+  },
+  {
+   "key": "когда новый год в китае 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 29,
+   "prev": null
+  },
+  {
+   "key": "котируется ли китайский диплом в россии",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 36,
+   "prev": null
+  },
+  {
+   "key": "лунный новый год 2027",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 11,
+   "prev": null
+  },
+  {
+   "key": "магистратура в китае для русских",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 79,
+   "prev": null
+  },
+  {
+   "key": "магистратура китай гранты",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 100,
+   "prev": null
+  },
+  {
+   "key": "международный экзамен по китайскому языку",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 42,
+   "prev": null
+  },
+  {
+   "key": "можно ли сдать hsk в россии",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 45,
+   "prev": null
+  },
+  {
+   "key": "нанкин климат",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10,
+   "prev": null
+  },
+  {
+   "key": "нанкинский университет китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 77,
+   "prev": null
+  },
+  {
+   "key": "нанкинский университет факультеты",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 79,
+   "prev": null
+  },
+  {
+   "key": "научно-технический университет китая",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 29,
+   "prev": null
+  },
+  {
+   "key": "начало учебного года в китае",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 13.8,
+   "prev": null
+  },
+  {
+   "key": "оформление студенческой визы в китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48,
+   "prev": null
+  },
+  {
+   "key": "платежная система китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 100,
+   "prev": null
+  },
+  {
+   "key": "платежные системы в китае",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 96.5,
+   "prev": null
+  },
+  {
+   "key": "праздники китай 2027",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 3,
+   "prev": null
+  },
+  {
+   "key": "привязать российскую карту к wechat pay",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 54,
+   "prev": null
+  },
+  {
+   "key": "сделать студенческую визу в китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9,
+   "prev": null
+  },
+  {
+   "key": "сколько hsk",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 53,
+   "prev": null
+  },
+  {
+   "key": "сколько баллов в hsk 3",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 39,
+   "prev": null
+  },
+  {
+   "key": "сколько длится учебный год в китае",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 22.2,
+   "prev": null
+  },
+  {
+   "key": "сколько стоит учеба в китае",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 94,
+   "prev": null
+  },
+  {
+   "key": "сколько уровней hsk",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 98,
+   "prev": null
+  },
+  {
+   "key": "сколько уровней hsk в китайском",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 43,
+   "prev": null
+  },
+  {
+   "key": "сколько уровней hsk в китайском языке",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 41,
+   "prev": null
+  },
+  {
+   "key": "сколько уровней в китайском языке",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 41,
+   "prev": null
+  },
+  {
+   "key": "уровни знания китайского языка hsk",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 49,
+   "prev": null
+  },
+  {
+   "key": "уровни китайского языка hsk",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 47,
+   "prev": null
+  },
+  {
+   "key": "ухань университет",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 49,
+   "prev": null
+  },
+  {
+   "key": "уханьский университет факультеты",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 44,
+   "prev": null
+  },
+  {
+   "key": "учебный год в китае",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 11.8,
+   "prev": null
+  },
+  {
+   "key": "учебный год в китае когда начинается",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 17.2,
+   "prev": null
+  },
+  {
+   "key": "фуданьский университет",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 86,
+   "prev": null
+  },
+  {
+   "key": "фуданьский университет в шанхае",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 99,
+   "prev": null
+  },
+  {
+   "key": "ханчжоу население",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 22,
+   "prev": null
+  },
+  {
+   "key": "чанчуньский университет",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48,
+   "prev": null
+  },
+  {
+   "key": "чем платить в китае",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 81,
+   "prev": null
+  },
+  {
+   "key": "что такое csca в китае",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 65,
+   "prev": null
+  }
+ ],
+ "pageQueries": [
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "2027 new year",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 7
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "china 2027 new year",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 83
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "cny 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "new year 2027",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 7.3
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "rbnfqcrbq yjdsq ujl 2027",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 10.4
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "дата китайского нового года 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 6
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китай праздники 2027",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 9
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайские праздники 2027",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 7.7
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайские праздники 2027 год",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайские праздники в 2027 году",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 9.3
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайский нг 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 6
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайский новы год 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайский новый год 2027",
+   "clicks": 0,
+   "impressions": 770,
+   "ctr": 0,
+   "position": 10.3
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайский новый год 2027 выходные",
+   "clicks": 0,
+   "impressions": 13,
+   "ctr": 0,
+   "position": 9.5
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайский новый год 2027 выходные дни",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайский новый год 2027 даты",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 12
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайский новый год в 2027 году",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 10.2
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайский новый год в 2027 году когда",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 12
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "китайский новый гол 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "когда будет китайский новый год в 2027 году",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "когда китайский новый год 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 7
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "когда китайский новый год в 2027 году",
+   "clicks": 0,
+   "impressions": 13,
+   "ctr": 0,
+   "position": 11.1
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "когда китайский новый год в 2027 году?",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 10.5
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "когда наступит китайский новый год 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "когда новый год в китае 2027",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 29
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "лунный новый год 2027",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 11
+  },
+  {
+   "page": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "query": "праздники китай 2027",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 3
+  },
+  {
+   "page": "https://chinana.ru/contacts/",
+   "query": "chinanax",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9
+  },
+  {
+   "page": "https://chinana.ru/programs/master/",
+   "query": "магистратура в китае для русских",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 79
+  },
+  {
+   "page": "https://chinana.ru/programs/master/",
+   "query": "магистратура китай гранты",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 100
+  },
+  {
+   "page": "https://chinana.ru/universities/",
+   "query": "дешевые университеты китая",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 82
+  },
+  {
+   "page": "https://chinana.ru/universities/fudan/",
+   "query": "фуданьский университет",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 86
+  },
+  {
+   "page": "https://chinana.ru/universities/fudan/",
+   "query": "фуданьский университет в шанхае",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 99
+  },
+  {
+   "page": "https://chinana.ru/universities/nanjing/",
+   "query": "нанкинский университет китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 77
+  },
+  {
+   "page": "https://chinana.ru/universities/nanjing/",
+   "query": "нанкинский университет факультеты",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 79
+  },
+  {
+   "page": "https://chinana.ru/universities/ustc/",
+   "query": "научно-технический университет китая",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 29
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "когда в китае начинается учебный год",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 10.4
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "когда в китае начинается учебный год в университете",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 8.5
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "когда заканчивается учебный год в китае",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 14.8
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "когда каникулы в китае в университете",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 8.3
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "когда начинается учеба в китае в университете",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 25
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "когда начинается учебный год в китае",
+   "clicks": 0,
+   "impressions": 9,
+   "ctr": 0,
+   "position": 8.1
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "когда начинается учебный год в китае в университете",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 8
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "начало учебного года в китае",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 13.8
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "сколько длится учебный год в китае",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 22.2
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "учебный год в китае",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 11.8
+  },
+  {
+   "page": "https://chinana.ru/wiki/academic-year/",
+   "query": "учебный год в китае когда начинается",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 17.2
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/changchun/",
+   "query": "чанчуньский университет",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/hangzhou/",
+   "query": "ханчжоу население",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 22
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/nanjing/",
+   "query": "нанкин климат",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/wuhan/",
+   "query": "ухань университет",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 49
+  },
+  {
+   "page": "https://chinana.ru/wiki/cities/wuhan/",
+   "query": "уханьский университет факультеты",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 44
+  },
+  {
+   "page": "https://chinana.ru/wiki/cost/",
+   "query": "сколько стоит учеба в китае",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 94
+  },
+  {
+   "page": "https://chinana.ru/wiki/csc/",
+   "query": "g.csc",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9
+  },
+  {
+   "page": "https://chinana.ru/wiki/csca/",
+   "query": "csca китайский",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 59
+  },
+  {
+   "page": "https://chinana.ru/wiki/csca/",
+   "query": "csca экзамен китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 56
+  },
+  {
+   "page": "https://chinana.ru/wiki/csca/",
+   "query": "что такое csca в китае",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 65
+  },
+  {
+   "page": "https://chinana.ru/wiki/diploma-recognition/",
+   "query": "китайский диплом в россии",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 13.3
+  },
+  {
+   "page": "https://chinana.ru/wiki/diploma-recognition/",
+   "query": "китайский диплом где котируется",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 56
+  },
+  {
+   "page": "https://chinana.ru/wiki/diploma-recognition/",
+   "query": "котируется ли китайский диплом в россии",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 36
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "hsk 1 сколько баллов",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 40
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "hsk 2 какой уровень языка",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "hsk 2 проходной балл",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 53
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "hsk 3 баллы",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 32
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "hsk 3 какой уровень языка",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "hsk 3 проходной балл",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 43
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "hsk 3 что это",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 61
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "международный экзамен по китайскому языку",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 42
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "можно ли сдать hsk в россии",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 45
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "сколько hsk",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 53
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "сколько баллов в hsk 3",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 39
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "сколько уровней hsk",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 98
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "сколько уровней hsk в китайском",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 43
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "сколько уровней hsk в китайском языке",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 41
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "сколько уровней в китайском языке",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 41
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "уровни знания китайского языка hsk",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 49
+  },
+  {
+   "page": "https://chinana.ru/wiki/hsk/",
+   "query": "уровни китайского языка hsk",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 47
+  },
+  {
+   "page": "https://chinana.ru/wiki/language-courses/",
+   "query": "hsk 2 проходной балл",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 60
+  },
+  {
+   "page": "https://chinana.ru/wiki/payments/",
+   "query": "как расплачиваться в китае",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 40
+  },
+  {
+   "page": "https://chinana.ru/wiki/payments/",
+   "query": "карта для оплаты wechat pay",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 48
+  },
+  {
+   "page": "https://chinana.ru/wiki/payments/",
+   "query": "платежная система китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 100
+  },
+  {
+   "page": "https://chinana.ru/wiki/payments/",
+   "query": "платежные системы в китае",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 96.5
+  },
+  {
+   "page": "https://chinana.ru/wiki/payments/",
+   "query": "привязать российскую карту к wechat pay",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 54
+  },
+  {
+   "page": "https://chinana.ru/wiki/payments/",
+   "query": "чем платить в китае",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 81
+  },
+  {
+   "page": "https://chinana.ru/wiki/student-visa/",
+   "query": "оформление студенческой визы в китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 48
+  },
+  {
+   "page": "https://chinana.ru/wiki/student-visa/",
+   "query": "сделать студенческую визу в китай",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 9
+  }
+ ],
+ "devices": [
+  {
+   "device": "MOBILE",
+   "clicks": 2,
+   "impressions": 442,
+   "ctr": 0.45,
+   "position": 10.5
+  },
+  {
+   "device": "DESKTOP",
+   "clicks": 1,
+   "impressions": 658,
+   "ctr": 0.15,
+   "position": 13.3
+  },
+  {
+   "device": "TABLET",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10
+  }
+ ],
+ "countries": [
+  {
+   "country": "rus",
+   "clicks": 2,
+   "impressions": 527,
+   "ctr": 0.38,
+   "position": 14.3
+  },
+  {
+   "country": "mkd",
+   "clicks": 1,
+   "impressions": 1,
+   "ctr": 100,
+   "position": 8
+  },
+  {
+   "country": "arm",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 10
+  },
+  {
+   "country": "ata",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 12
+  },
+  {
+   "country": "aus",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 8
+  },
+  {
+   "country": "aut",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 8.5
+  },
+  {
+   "country": "aze",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 11
+  },
+  {
+   "country": "bgr",
+   "clicks": 0,
+   "impressions": 5,
+   "ctr": 0,
+   "position": 9.4
+  },
+  {
+   "country": "blr",
+   "clicks": 0,
+   "impressions": 166,
+   "ctr": 0,
+   "position": 10.8
+  },
+  {
+   "country": "bra",
+   "clicks": 0,
+   "impressions": 1,
+   "ctr": 0,
+   "position": 12
+  },
+  {
+   "country": "can",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 8.8
+  },
+  {
+   "country": "che",
+   "clicks": 0,
+   "impressions": 2,
+   "ctr": 0,
+   "position": 6.5
+  },
+  {
+   "country": "chn",
+   "clicks": 0,
+   "impressions": 9,
+   "ctr": 0,
+   "position": 8
+  },
+  {
+   "country": "cyp",
+   "clicks": 0,
+   "impressions": 4,
+   "ctr": 0,
+   "position": 9.3
+  },
+  {
+   "country": "cze",
+   "clicks": 0,
+   "impressions": 3,
+   "ctr": 0,
+   "position": 9.7
+  }
+ ],
+ "searchAppearance": [],
+ "sitemaps": [
+  {
+   "path": "https://chinana.ru/sitemap.xml",
+   "lastSubmitted": "2026-11-20T12:51:43.794Z",
+   "lastDownloaded": "2026-11-20T12:51:53.201Z",
+   "isPending": false,
+   "errors": "0",
+   "warnings": "0",
+   "contents": [
+    {
+     "type": "web",
+     "submitted": "69",
+     "indexed": "0"
+    }
+   ]
+  }
+ ],
+ "sitemapUrls": 69,
+ "pagesWithImpressions": 36,
+ "bySection": {
+  "/": {
+   "urls": 1,
+   "withImpressions": 0,
+   "clicks": 0,
+   "impressions": 0
+  },
+  "/programs/": {
+   "urls": 5,
+   "withImpressions": 3,
+   "clicks": 0,
+   "impressions": 6
+  },
+  "/wiki/": {
+   "urls": 30,
+   "withImpressions": 16,
+   "clicks": 2,
+   "impressions": 184
+  },
+  "/universities/": {
+   "urls": 21,
+   "withImpressions": 15,
+   "clicks": 1,
+   "impressions": 30
+  },
+  "/library/": {
+   "urls": 2,
+   "withImpressions": 0,
+   "clicks": 0,
+   "impressions": 0
+  },
+  "/news/": {
+   "urls": 6,
+   "withImpressions": 0,
+   "clicks": 0,
+   "impressions": 0
+  },
+  "/contacts/": {
+   "urls": 1,
+   "withImpressions": 1,
+   "clicks": 0,
+   "impressions": 1
+  },
+  "/blog/": {
+   "urls": 3,
+   "withImpressions": 1,
+   "clicks": 0,
+   "impressions": 887
+  }
+ },
+ "coverage": {
+  "Страница отправлена и проиндексирована": 56,
+  "Обнаружена, не проиндексирована": 1
+ },
+ "inspections": [
+  {
+   "url": "https://chinana.ru/wiki/academic-year/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:16:19Z",
+   "googleCanonical": "https://chinana.ru/wiki/academic-year/",
+   "userCanonical": "https://chinana.ru/wiki/academic-year/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/tongji/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:37:25Z",
+   "googleCanonical": "https://chinana.ru/universities/tongji/",
+   "userCanonical": "https://chinana.ru/universities/tongji/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T04:19:38Z",
+   "googleCanonical": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "userCanonical": "https://chinana.ru/blog/chinese-new-year-2027/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/contacts/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T17:18:53Z",
+   "googleCanonical": "https://chinana.ru/contacts/",
+   "userCanonical": "https://chinana.ru/contacts/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/foundation/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T12:48:06Z",
+   "googleCanonical": "https://chinana.ru/programs/foundation/",
+   "userCanonical": "https://chinana.ru/programs/foundation/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/language-year/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:31:12Z",
+   "googleCanonical": "https://chinana.ru/programs/language-year/",
+   "userCanonical": "https://chinana.ru/programs/language-year/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/master/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:09:57Z",
+   "googleCanonical": "https://chinana.ru/programs/master/",
+   "userCanonical": "https://chinana.ru/programs/master/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:12:02Z",
+   "googleCanonical": "https://chinana.ru/universities/",
+   "userCanonical": "https://chinana.ru/universities/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/bnu/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:03:29Z",
+   "googleCanonical": "https://chinana.ru/universities/bnu/",
+   "userCanonical": "https://chinana.ru/universities/bnu/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/fudan/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:22:42Z",
+   "googleCanonical": "https://chinana.ru/universities/fudan/",
+   "userCanonical": "https://chinana.ru/universities/fudan/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/heilongjiang/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T21:02:54Z",
+   "googleCanonical": "https://chinana.ru/universities/heilongjiang/",
+   "userCanonical": "https://chinana.ru/universities/heilongjiang/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/hit/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T17:48:55Z",
+   "googleCanonical": "https://chinana.ru/universities/hit/",
+   "userCanonical": "https://chinana.ru/universities/hit/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/jilin/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:07:43Z",
+   "googleCanonical": "https://chinana.ru/universities/jilin/",
+   "userCanonical": "https://chinana.ru/universities/jilin/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/nanjing/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T15:20:21Z",
+   "googleCanonical": "https://chinana.ru/universities/nanjing/",
+   "userCanonical": "https://chinana.ru/universities/nanjing/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/peking/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T06:02:59Z",
+   "googleCanonical": "https://chinana.ru/universities/peking/",
+   "userCanonical": "https://chinana.ru/universities/peking/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/sichuan/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:26:57Z",
+   "googleCanonical": "https://chinana.ru/universities/sichuan/",
+   "userCanonical": "https://chinana.ru/universities/sichuan/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/sysu/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:24:48Z",
+   "googleCanonical": "https://chinana.ru/universities/sysu/",
+   "userCanonical": "https://chinana.ru/universities/sysu/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/tsinghua/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T23:29:31Z",
+   "googleCanonical": "https://chinana.ru/universities/tsinghua/",
+   "userCanonical": "https://chinana.ru/universities/tsinghua/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/ustc/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T04:23:02Z",
+   "googleCanonical": "https://chinana.ru/universities/ustc/",
+   "userCanonical": "https://chinana.ru/universities/ustc/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/wuhan/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:18:27Z",
+   "googleCanonical": "https://chinana.ru/universities/wuhan/",
+   "userCanonical": "https://chinana.ru/universities/wuhan/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/xiamen/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T06:03:01Z",
+   "googleCanonical": "https://chinana.ru/universities/xiamen/",
+   "userCanonical": "https://chinana.ru/universities/xiamen/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/budget/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T16:15:13Z",
+   "googleCanonical": "https://chinana.ru/wiki/budget/",
+   "userCanonical": "https://chinana.ru/wiki/budget/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T07:19:34Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/",
+   "userCanonical": "https://chinana.ru/wiki/cities/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/changchun/",
+   "hasImpressions": true,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T06:49:32Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/changchun/",
+   "userCanonical": "https://chinana.ru/wiki/cities/changchun/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-20T20:35:37Z",
+   "googleCanonical": "https://chinana.ru/",
+   "userCanonical": "https://chinana.ru/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T07:48:55Z",
+   "googleCanonical": "https://chinana.ru/programs/",
+   "userCanonical": "https://chinana.ru/programs/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T23:49:30Z",
+   "googleCanonical": "https://chinana.ru/wiki/",
+   "userCanonical": "https://chinana.ru/wiki/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/sjtu/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-19T05:32:54Z",
+   "googleCanonical": "https://chinana.ru/universities/sjtu/",
+   "userCanonical": "https://chinana.ru/universities/sjtu/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/library/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-18T21:47:40Z",
+   "googleCanonical": "https://chinana.ru/library/",
+   "userCanonical": "https://chinana.ru/library/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/news/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-18T20:43:46Z",
+   "googleCanonical": "https://chinana.ru/news/",
+   "userCanonical": "https://chinana.ru/news/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/blog/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T23:38:47Z",
+   "googleCanonical": "https://chinana.ru/blog/",
+   "userCanonical": "https://chinana.ru/blog/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/programs/bachelor/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:39:38Z",
+   "googleCanonical": "https://chinana.ru/programs/bachelor/",
+   "userCanonical": "https://chinana.ru/programs/bachelor/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/residence-permit/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T15:58:11Z",
+   "googleCanonical": "https://chinana.ru/wiki/residence-permit/",
+   "userCanonical": "https://chinana.ru/wiki/residence-permit/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/zhejiang/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:54:25Z",
+   "googleCanonical": "https://chinana.ru/universities/zhejiang/",
+   "userCanonical": "https://chinana.ru/universities/zhejiang/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/library/radicals/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-19T12:20:40Z",
+   "googleCanonical": "https://chinana.ru/library/radicals/",
+   "userCanonical": "https://chinana.ru/library/radicals/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/news/2026-11-18-bnu-96656c/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-19T14:50:22Z",
+   "googleCanonical": "https://chinana.ru/news/2026-11-18-bnu-96656c/",
+   "userCanonical": "https://chinana.ru/news/2026-11-18-bnu-96656c/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/blog/chopsticks/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-18T20:46:53Z",
+   "googleCanonical": "https://chinana.ru/blog/chopsticks/",
+   "userCanonical": "https://chinana.ru/blog/chopsticks/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/language-to-degree/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T04:06:02Z",
+   "googleCanonical": "https://chinana.ru/wiki/language-to-degree/",
+   "userCanonical": "https://chinana.ru/wiki/language-to-degree/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/blcu/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-19T08:10:12Z",
+   "googleCanonical": "https://chinana.ru/universities/blcu/",
+   "userCanonical": "https://chinana.ru/universities/blcu/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/news/2026-11-18-wuhan-6ba707/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-19T14:20:19Z",
+   "googleCanonical": "https://chinana.ru/news/2026-11-18-wuhan-6ba707/",
+   "userCanonical": "https://chinana.ru/news/2026-11-18-wuhan-6ba707/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/internet/",
+   "hasImpressions": false,
+   "verdict": "NEUTRAL",
+   "coverageState": "Обнаружена, не проиндексирована",
+   "indexingState": "INDEXING_STATE_UNSPECIFIED",
+   "robotsTxtState": "ROBOTS_TXT_STATE_UNSPECIFIED",
+   "pageFetchState": "PAGE_FETCH_STATE_UNSPECIFIED",
+   "crawledAs": "CRAWLING_USER_AGENT_UNSPECIFIED",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/dlut/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:14:14Z",
+   "googleCanonical": "https://chinana.ru/universities/dlut/",
+   "userCanonical": "https://chinana.ru/universities/dlut/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/news/2026-11-18-zhejiang-ffff26/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-19T14:31:27Z",
+   "googleCanonical": "https://chinana.ru/news/2026-11-18-zhejiang-ffff26/",
+   "userCanonical": "https://chinana.ru/news/2026-11-18-zhejiang-ffff26/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/rules-for-foreigners/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T14:49:25Z",
+   "googleCanonical": "https://chinana.ru/wiki/rules-for-foreigners/",
+   "userCanonical": "https://chinana.ru/wiki/rules-for-foreigners/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/nankai/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:45:55Z",
+   "googleCanonical": "https://chinana.ru/universities/nankai/",
+   "userCanonical": "https://chinana.ru/universities/nankai/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/news/2026-11-18-bnu-539a02/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-19T14:08:53Z",
+   "googleCanonical": "https://chinana.ru/news/2026-11-18-bnu-539a02/",
+   "userCanonical": "https://chinana.ru/news/2026-11-18-bnu-539a02/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/beijing/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T23:49:44Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/beijing/",
+   "userCanonical": "https://chinana.ru/wiki/cities/beijing/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/universities/shisu/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T20:29:03Z",
+   "googleCanonical": "https://chinana.ru/universities/shisu/",
+   "userCanonical": "https://chinana.ru/universities/shisu/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/news/2026-11-18-sysu-e08c1e/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-19T15:02:07Z",
+   "googleCanonical": "https://chinana.ru/news/2026-11-18-sysu-e08c1e/",
+   "userCanonical": "https://chinana.ru/news/2026-11-18-sysu-e08c1e/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/tianjin/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T01:10:38Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/tianjin/",
+   "userCanonical": "https://chinana.ru/wiki/cities/tianjin/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/shanghai/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T07:05:50Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/shanghai/",
+   "userCanonical": "https://chinana.ru/wiki/cities/shanghai/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/hefei/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T08:44:08Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/hefei/",
+   "userCanonical": "https://chinana.ru/wiki/cities/hefei/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/chengdu/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T00:49:33Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/chengdu/",
+   "userCanonical": "https://chinana.ru/wiki/cities/chengdu/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/guangzhou/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-14T21:19:52Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/guangzhou/",
+   "userCanonical": "https://chinana.ru/wiki/cities/guangzhou/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/xiamen/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T07:59:40Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/xiamen/",
+   "userCanonical": "https://chinana.ru/wiki/cities/xiamen/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/harbin/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-17T01:53:22Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/harbin/",
+   "userCanonical": "https://chinana.ru/wiki/cities/harbin/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  },
+  {
+   "url": "https://chinana.ru/wiki/cities/dalian/",
+   "hasImpressions": false,
+   "verdict": "PASS",
+   "coverageState": "Страница отправлена и проиндексирована",
+   "indexingState": "INDEXING_ALLOWED",
+   "robotsTxtState": "ALLOWED",
+   "pageFetchState": "SUCCESSFUL",
+   "lastCrawlTime": "2026-11-15T08:14:30Z",
+   "googleCanonical": "https://chinana.ru/wiki/cities/dalian/",
+   "userCanonical": "https://chinana.ru/wiki/cities/dalian/",
+   "crawledAs": "MOBILE",
+   "richResults": []
+  }
+ ]
+}
