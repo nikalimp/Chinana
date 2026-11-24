@@ -9,8 +9,8 @@ export const unisChecked = "2026-11-09";
 
 export const uniPath = (u: Uni) => `/universities/${u.slug}/`;
 
-// Фото вуза с Wikimedia Commons (scripts/uni-photos.py): обложка 1200×675 и атрибуция по лицензии.
-export type UniPhoto = { src: string; author: string; license: string; licenseUrl: string; source: string };
+// Иллюстрации кампусов вузов в стиле Укиё-э (1200×675); поля author/license/source опциональны (для старых фото).
+export type UniPhoto = { src: string; style?: "ukiyoe"; author?: string; license?: string; licenseUrl?: string; source?: string };
 import photos from "@/content/data/uni-photos.json";
 export const uniPhoto = (slug: string): UniPhoto | undefined => (photos as Record<string, UniPhoto>)[slug];
 
