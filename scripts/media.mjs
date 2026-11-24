@@ -315,7 +315,7 @@ async function main() {
       await renderHtml(browser, graphicHtml(g), path.join(dir, `${g.name}.png`));
       console.log(`  ✓ ${g.name}.png`);
     }
-    if (spec.cover) {
+    if (spec.cover && spec.cover.layout !== "illustration") {
       await renderHtml(browser, coverHtml({ ...spec.cover, _shots: spec.shots }, slug), path.join(dir, "cover.jpg"), { w: 1200, h: 630, type: "jpeg" });
       console.log("  ✓ cover.jpg");
     }

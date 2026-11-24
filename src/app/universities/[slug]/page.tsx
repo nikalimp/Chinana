@@ -66,7 +66,7 @@ export default async function UniPage({ params }: { params: Promise<{ slug: stri
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={photo.src} alt={`${u.nameRu}, кампус`} width={1200} height={675} fetchPriority="high" className="absolute inset-0 size-full object-cover" />
               </div>
-              <figcaption className="border-t border-border bg-card px-[22px] py-2.5"><PhotoCredit p={photo} /></figcaption>
+              {photo.author && <figcaption className="border-t border-border bg-card px-[22px] py-2.5"><PhotoCredit p={photo} /></figcaption>}
             </figure>
           )}
           <div className={`cards grid-cols-2 text-left lg:grid-cols-4 ${photo ? "" : "mt-14"}`}>

@@ -24,8 +24,22 @@ export default function Home() {
       <JsonLd data={graph(faqSchema(home.faq))} />
 
       <section className="relative overflow-hidden pb-[clamp(64px,9vw,120px)] pt-[clamp(56px,8vw,104px)] text-center">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/hero-ukiyoe.jpg"
+          alt=""
+          aria-hidden="true"
+          width={1600}
+          height={900}
+          fetchPriority="high"
+          className="pointer-events-none absolute inset-0 size-full select-none object-cover object-bottom opacity-80"
+        />
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{ background: "radial-gradient(ellipse 68% 64% at 50% 44%, oklch(98.1% 0.018 81.3 / 88%) 0%, oklch(98.1% 0.018 81.3 / 52%) 56%, transparent 100%), linear-gradient(180deg, oklch(98.1% 0.018 81.3 / 55%) 0%, transparent 18%, transparent 82%, oklch(98.1% 0.018 81.3) 100%)" }}
+        />
         <GridLines />
-        <div aria-hidden="true" lang="zh-Hans" className="zh-bg left-1/2 top-[46%] -translate-x-1/2 -translate-y-1/2 text-[clamp(220px,34vw,470px)] text-primary opacity-[0.06]">去中国</div>
         <Container>
           <Eyebrow>{home.eyebrow}</Eyebrow>
           <h1 className="mx-auto mt-5 max-w-[8em] text-[clamp(40px,7.4vw,96px)]">

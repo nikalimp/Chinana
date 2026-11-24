@@ -45,7 +45,7 @@
       "updated"
     ],
     "photo_field": "",
-    "cover_rule": "Обложка — /blog/{slug}/cover.jpg, типографская (без фото — решение spec), рисует media.mjs по спецификации content/media/{slug}.json."
+    "cover_rule": "Обложка — /blog/{slug}/cover.jpg, чистая иллюстрация 16:9 в стиле Укиё-э без текста поверх (палитра бренда #FFF8EC/#EADBC2/#1F1410/#C8102E/#8E1220/#FFC72C + приглушённые индиго #2D4A63 и хвойный #4A6B5D; см. brand.json и specs/03-design.md). В content/media/{slug}.json ставим layout: 'illustration', чтобы media.mjs не перезаписывал готовую обложку."
   },
   "links": {
     "blog_prefix": "/blog/",
