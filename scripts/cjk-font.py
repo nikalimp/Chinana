@@ -42,6 +42,13 @@ def site_chars(lib: bool = False) -> set[str]:
             if f.endswith("zh-font.css") or f.endswith("zh-lib.css") or is_lib(f) != lib:
                 continue
             chars |= {c for c in open(f, encoding="utf8").read() if is_cjk(c)}
+    if not lib:
+        # Заголовки и анонсы новостей и статей попадают на главную и страницы вузов
+        for pat in ("content/news/*.md", "content/blog/*.md"):
+            for f in glob.glob(os.path.join(ROOT, pat)):
+                for line in open(f, encoding="utf8"):
+                    if line.startswith(("title:", "summary:", "excerpt:")):
+                        chars |= {c for c in line if is_cjk(c)}
     return chars
 
 
