@@ -6,8 +6,8 @@
 //   node scripts/news/run.mjs --probe    только проверить источники: сколько ссылок и дат нашлось
 //   node scripts/news/run.mjs --dry      отобрать и показать, но не писать файлы
 //
-// ИИ — самый дешёвый из доступных (функция ai ниже): по умолчанию Claude Haiku через CLI `claude` по подписке Ника (без доплат);
-// если в content/factory/.env есть DEEPSEEK_API_KEY или OPENROUTER_API_KEY — можно переключить NEWS_AI=deepseek | openrouter.
+// ИИ (функция ai ниже): по умолчанию Gemini 4 Neon (Medium) через CLI `agy`;
+// можно переключить NEWS_AI=claude | deepseek | openrouter (ключи — в content/factory/.env).
 import fs from "node:fs";
 import os from "node:os";
 import path from "node:path";
@@ -47,6 +47,7 @@ const sources = JSON.parse(fs.readFileSync(path.join(ROOT, "src/content/data/new
 delete sources._comment;
 
 // --- ИИ ---
+const AGY = process.env.AGY_BIN || [path.join(os.homedir(), ".gemini/bin/agy"), "/usr/local/bin/agy", "/opt/homebrew/bin/agy"].find((p) => fs.existsSync(p)) || "agy";
 const CLAUDE = process.env.CLAUDE_BIN || [path.join(os.homedir(), ".local/bin/claude"), "/usr/local/bin/claude", "/opt/homebrew/bin/claude"].find((p) => fs.existsSync(p)) || "claude";
 
 function run(cmd, argv, input, timeoutMs = 240000) {
@@ -74,10 +75,11 @@ async function chatApi(url, key, model, prompt) {
 }
 
 async function ai(prompt) {
-  const mode = process.env.NEWS_AI || "claude";
+  const mode = process.env.NEWS_AI || "agy";
   if (mode === "deepseek") return chatApi("https://api.deepseek.com/chat/completions", process.env.DEEPSEEK_API_KEY, process.env.NEWS_AI_MODEL || "deepseek-chat", prompt);
   if (mode === "openrouter") return chatApi("https://openrouter.ai/api/v1/chat/completions", process.env.OPENROUTER_API_KEY, process.env.NEWS_AI_MODEL || "deepseek/deepseek-chat-v3-0324:free", prompt);
-  return run(CLAUDE, ["-p", "--model", process.env.NEWS_AI_MODEL || "haiku", "--output-format", "text"], prompt);
+  if (mode === "claude") return run(CLAUDE, ["-p", "--model", process.env.NEWS_AI_MODEL || "haiku", "--output-format", "text"], prompt);
+  return run(AGY, ["--model", process.env.NEWS_AI_MODEL || "gemini-4-neon-medium", "--output-format", "text", "--disable-slash-commands", "-p", prompt], "");
 }
 
 function parseJson(s) {
