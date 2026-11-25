@@ -33,10 +33,7 @@
  },
  "blcu": {
   "src": "/universities/blcu/cover.jpg",
-  "author": "N509FZ",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:East_gate_of_BLCU_(20230111154917).jpg"
+  "style": "ukiyoe"
  },
  "heilongjiang": {
   "src": "/universities/heilongjiang/cover.jpg",
@@ -44,10 +41,7 @@
  },
  "dlut": {
   "src": "/universities/dlut/cover.jpg",
-  "author": "王景涛（Wang Jingtao）",
-  "license": "CC BY 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Bochuan_Library-DLUT.jpg"
+  "style": "ukiyoe"
  },
  "sysu": {
   "src": "/universities/sysu/cover.jpg",
@@ -59,37 +53,30 @@
  },
  "tongji": {
   "src": "/universities/tongji/cover.jpg",
-  "author": "Fayhoo",
-  "license": "CC BY-SA 3.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Tongjidaxue_Tushuguan.JPG"
+  "style": "ukiyoe"
  },
  "bnu": {
   "src": "/universities/bnu/cover.jpg",
-  "author": "Flsxx",
-  "license": "CC BY-SA 3.0",
-  "licenseUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
-  "source": "https://commons.wikimedia.org/wiki/File:BNU_Gate.jpg"
+  "style": "ukiyoe"
  },
  "nankai": {
   "src": "/universities/nankai/cover.jpg",
-  "author": "Amazingloong",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Main_Building_of_Nankai_University_2015-08-04.jpg"
+  "style": "ukiyoe"
  },
  "xiamen": {
   "src": "/universities/xiamen/cover.jpg",
-  "author": "Ratvirgin",
-  "license": "CC BY-SA 3.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Panoramatic_view_of_xiamen_university_at_sunset.jpg"
+  "style": "ukiyoe"
  },
  "jilin": {
   "src": "/universities/jilin/cover.jpg",
-  "author": "N509FZ",
-  "license": "CC BY-SA 4.0",
-  "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-  "source": "https://commons.wikimedia.org/wiki/File:Jilin_University_Nanhu_Campus_(20220826164940).jpg"
+  "style": "ukiyoe"
+ },
+ "sichuan": {
+  "src": "/universities/sichuan/cover.jpg",
+  "style": "ukiyoe"
+ },
+ "shisu": {
+  "src": "/universities/shisu/cover.jpg",
+  "style": "ukiyoe"
  }
 }
