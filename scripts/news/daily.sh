@@ -3,11 +3,25 @@
 # Работает в отдельной копии репозитория, чтобы не трогать рабочую папку: свежий main → run.mjs → коммит → push.
 # Push в main запускает Deploy в GitHub Actions: сборка и выкладка на chinana.ru.
 set -euo pipefail
-export PATH="$HOME/.local/bin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:$PATH"
+export PATH="$HOME/.gemini/bin:$HOME/.local/bin:/usr/local/bin:/opt/homebrew/bin:/usr/bin:/bin:$PATH"
 
 SRC="$(cd "$(dirname "$0")/../.." && pwd)"         # рабочая папка сайта — отсюда берём адрес репозитория и ключи
 WORK="${CHINANA_NEWS_DIR:-$HOME/Library/Application Support/chinana-news/repo}"
 REMOTE="$(git -C "$SRC" remote get-url origin)"
+
+# При пробуждении Mac сеть и DNS поднимаются не сразу — ждём до 90 с
+net_ok=0
+for _ in $(seq 1 18); do
+  if curl -fsSI --max-time 5 https://github.com >/dev/null 2>&1; then
+    net_ok=1
+    break
+  fi
+  sleep 5
+done
+if [ "$net_ok" -ne 1 ]; then
+  echo "Сеть не поднялась за 90 с: github.com недоступен" >&2
+  exit 1
+fi
 
 if [ ! -d "$WORK/.git" ]; then
   mkdir -p "$(dirname "$WORK")"
