@@ -1,0 +1,705 @@
+{
+ "host": "chinana.ru",
+ "generated": "2026-11-28T08:16:36.632Z",
+ "period": [
+  "2026-10-31",
+  "2026-11-27"
+ ],
+ "webmaster": {
+  "host": "https://chinana.ru/",
+  "sitemapAdded": {
+   "url": "https://chinana.ru/sitemap.xml",
+   "status": 504,
+   "body": ""
+  },
+  "verified": true,
+  "candidates": [
+   "https://chinana.ru/ verified=true"
+  ],
+  "summary": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/summary: {\"host_id\":null,\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
+  },
+  "queries": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/search-queries/popular: {\"host_id\":null,\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
+  },
+  "history": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/search-queries/all/history: {\"host_id\":null,\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
+  },
+  "indexing": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/indexing/history: {\"host_id\":null,\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
+  },
+  "inSearch": {
+   "error": "404 https://api.webmaster.yandex.net/v4/user/120314602/hosts/https%3Achinana.ru%3A443/search-urls/in-search/history: {\"host_id\":null,\"error_message\":\"Host \\\"https:chinana.ru:443\\\" is not loaded in Ya.Webmaster yet\",\"error_code\":\"HOST_NOT_LOADED\"}"
+  },
+  "sitemaps": {
+   "sitemaps": []
+  },
+  "diagnostics": {
+   "problems": {
+    "NO_METRIKA_COUNTER_BINDING": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DOCUMENTS_MISSING_DESCRIPTION": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NOT_IN_SPRAV": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_METRIKA_COUNTER_CRAWL_ENABLED": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "SOFT_404": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "URL_ALERT_4XX": {
+     "severity": "RECOMMENDATION",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "DNS_ERROR": {
+     "severity": "FATAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "FAVICON_ERROR": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "VIDEOHOST_OFFER_NEED_PAPER": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_REGIONS": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "ERROR_IN_ROBOTS_TXT": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "FAVICON_PROBLEM": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "MAIN_PAGE_REDIRECTS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "TOO_MANY_DOMAINS_ON_SEARCH": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "BIG_FAVICON_ABSENT": {
+     "severity": "RECOMMENDATION",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DUPLICATE_CONTENT_ATTRS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_SITEMAP_MODIFICATIONS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DOCUMENTS_MISSING_TITLE": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "DISALLOWED_IN_ROBOTS": {
+     "severity": "FATAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "URL_ALERT_5XX": {
+     "severity": "CRITICAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "SLOW_AVG_RESPONSE_TIME": {
+     "severity": "CRITICAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "DUPLICATE_PAGES": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "VIDEOHOST_OFFER_FAILED": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_SITEMAPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "MAIN_PAGE_ERROR": {
+     "severity": "FATAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "INSIGNIFICANT_CGI_PARAMETER": {
+     "severity": "RECOMMENDATION",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "THREATS": {
+     "severity": "FATAL",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NO_ROBOTS_TXT": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "CONNECT_FAILED": {
+     "severity": "FATAL",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    },
+    "ERRORS_IN_SITEMAPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "MAIN_MIRROR_IS_NOT_HTTPS": {
+     "severity": "POSSIBLE_PROBLEM",
+     "state": "ABSENT",
+     "last_state_update": null
+    },
+    "NOT_MOBILE_FRIENDLY": {
+     "severity": "RECOMMENDATION",
+     "state": "NOT_APPLICABLE",
+     "last_state_update": null
+    }
+   }
+  }
+ },
+ "metrika": {
+  "counter": {
+   "id": 114137119,
+   "site": "chinana.ru",
+   "status": "Active"
+  },
+  "metrics": [
+   "ym:s:visits",
+   "ym:s:users",
+   "ym:s:bounceRate",
+   "ym:s:avgVisitDurationSeconds"
+  ],
+  "sources": {
+   "totals": [
+    94,
+    83,
+    72.34042553,
+    75.20212766
+   ],
+   "rows": [
+    {
+     "key": "Direct traffic",
+     "values": [
+      78,
+      67,
+      76.92307692,
+      44.69230769
+     ]
+    },
+    {
+     "key": "Search engine traffic",
+     "values": [
+      9,
+      9,
+      22.22222222,
+      395.11111111
+     ]
+    },
+    {
+     "key": "Social network traffic",
+     "values": [
+      6,
+      6,
+      100,
+      0.16666667
+     ]
+    },
+    {
+     "key": "Link traffic",
+     "values": [
+      1,
+      1,
+      0,
+      26
+     ]
+    }
+   ]
+  },
+  "referers": {
+   "totals": [
+    16,
+    16,
+    50,
+    223.9375
+   ],
+   "rows": [
+    {
+     "key": "google.com",
+     "values": [
+      8,
+      8,
+      25,
+      442.625
+     ]
+    },
+    {
+     "key": "facebook.com",
+     "values": [
+      5,
+      5,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "dataindex.pro",
+     "values": [
+      1,
+      1,
+      0,
+      26
+     ]
+    },
+    {
+     "key": "instagram.com",
+     "values": [
+      1,
+      1,
+      100,
+      1
+     ]
+    },
+    {
+     "key": "yandex.ru",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    }
+   ]
+  },
+  "ai": [],
+  "landing": {
+   "totals": [
+    94,
+    83,
+    72.34042553,
+    75.20212766
+   ],
+   "rows": [
+    {
+     "key": "/",
+     "values": [
+      83,
+      72,
+      78.31325301,
+      42.27710843
+     ]
+    },
+    {
+     "key": "/contacts/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/wiki/academic-year/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/blog/chinese-new-year-2027/",
+     "values": [
+      1,
+      1,
+      0,
+      17
+     ]
+    },
+    {
+     "key": "/library/radicals/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/news/2026-11-18-wuhan-6ba707/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/products/Magnitnie_prisoski",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/programs/foundation/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/programs/language-year/",
+     "values": [
+      1,
+      1,
+      0,
+      3
+     ]
+    },
+    {
+     "key": "/universities/tongji/",
+     "values": [
+      1,
+      1,
+      0,
+      3464
+     ]
+    }
+   ]
+  },
+  "landing90": {
+   "totals": [
+    94,
+    83,
+    72.34042553,
+    75.20212766
+   ],
+   "rows": [
+    {
+     "key": "/",
+     "values": [
+      83,
+      72,
+      78.31325301,
+      42.27710843
+     ]
+    },
+    {
+     "key": "/contacts/",
+     "values": [
+      2,
+      2,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/wiki/academic-year/",
+     "values": [
+      2,
+      2,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/blog/chinese-new-year-2027/",
+     "values": [
+      1,
+      1,
+      0,
+      17
+     ]
+    },
+    {
+     "key": "/library/radicals/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/news/2026-11-18-wuhan-6ba707/",
+     "values": [
+      1,
+      1,
+      0,
+      15
+     ]
+    },
+    {
+     "key": "/products/Magnitnie_prisoski",
+     "values": [
+      1,
+      1,
+      0,
+      16
+     ]
+    },
+    {
+     "key": "/programs/foundation/",
+     "values": [
+      1,
+      1,
+      100,
+      0
+     ]
+    },
+    {
+     "key": "/programs/language-year/",
+     "values": [
+      1,
+      1,
+      0,
+      3
+     ]
+    },
+    {
+     "key": "/universities/tongji/",
+     "values": [
+      1,
+      1,
+      0,
+      3464
+     ]
+    }
+   ]
+  },
+  "daily": {
+   "totals": [
+    94,
+    83
+   ],
+   "rows": [
+    {
+     "key": "2026-11-09",
+     "values": [
+      14,
+      11
+     ]
+    },
+    {
+     "key": "2026-11-10",
+     "values": [
+      14,
+      13
+     ]
+    },
+    {
+     "key": "2026-11-11",
+     "values": [
+      3,
+      3
+     ]
+    },
+    {
+     "key": "2026-11-12",
+     "values": [
+      3,
+      3
+     ]
+    },
+    {
+     "key": "2026-11-13",
+     "values": [
+      1,
+      1
+     ]
+    },
+    {
+     "key": "2026-11-14",
+     "values": [
+      7,
+      7
+     ]
+    },
+    {
+     "key": "2026-11-16",
+     "values": [
+      2,
+      2
+     ]
+    },
+    {
+     "key": "2026-11-17",
+     "values": [
+      8,
+      8
+     ]
+    },
+    {
+     "key": "2026-11-18",
+     "values": [
+      11,
+      9
+     ]
+    },
+    {
+     "key": "2026-11-19",
+     "values": [
+      1,
+      1
+     ]
+    },
+    {
+     "key": "2026-11-20",
+     "values": [
+      3,
+      3
+     ]
+    },
+    {
+     "key": "2026-11-21",
+     "values": [
+      5,
+      5
+     ]
+    },
+    {
+     "key": "2026-11-22",
+     "values": [
+      1,
+      1
+     ]
+    },
+    {
+     "key": "2026-11-24",
+     "values": [
+      5,
+      5
+     ]
+    },
+    {
+     "key": "2026-11-25",
+     "values": [
+      4,
+      4
+     ]
+    },
+    {
+     "key": "2026-11-26",
+     "values": [
+      8,
+      8
+     ]
+    },
+    {
+     "key": "2026-11-27",
+     "values": [
+      4,
+      4
+     ]
+    }
+   ]
+  },
+  "goalsAny": {
+   "totals": [
+    2
+   ],
+   "rows": [
+    {
+     "key": "Direct traffic",
+     "values": [
+      2
+     ]
+    }
+   ]
+  },
+  "leads": {
+   "goals": [
+    {
+     "id": 680094072,
+     "name": "Автоцель: отправка формы"
+    },
+    {
+     "id": 685916218,
+     "name": "Заявка отправлена (lead_sent)"
+    },
+    {
+     "id": 685916287,
+     "name": "Открыта форма заявки (lead_open)"
+    }
+   ],
+   "bySource": {
+    "totals": [
+     0,
+     0,
+     0
+    ],
+    "rows": []
+   },
+   "byLanding": {
+    "totals": [
+     0,
+     0,
+     0
+    ],
+    "rows": []
+   },
+   "daily": {
+    "totals": [
+     0,
+     0,
+     0
+    ],
+    "rows": []
+   },
+   "byLanding90": {
+    "totals": [
+     0,
+     0,
+     0
+    ],
+    "rows": []
+   }
+  }
+ }
+}
