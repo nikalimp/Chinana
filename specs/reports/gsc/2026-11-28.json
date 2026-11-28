@@ -1,6 +1,6 @@
 {
  "site": "https://chinana.ru/",
- "generated": "2026-11-28T08:16:34.061Z",
+ "generated": "2026-11-28T12:55:49.554Z",
  "period": {
   "current": [
    "2026-10-29",
@@ -2758,7 +2758,7 @@
    ]
   }
  ],
- "sitemapUrls": 106,
+ "sitemapUrls": 114,
  "pagesWithImpressions": 46,
  "bySection": {
   "/": {
@@ -2792,7 +2792,7 @@
    "impressions": 4
   },
   "/news/": {
-   "urls": 36,
+   "urls": 44,
    "withImpressions": 2,
    "clicks": 1,
    "impressions": 2
@@ -3279,7 +3279,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-27-sichuan-a76fd2/",
+   "url": "https://chinana.ru/news/2026-11-28-heilongjiang-936ae8/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
@@ -3324,7 +3324,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-27-peking-a7ef10/",
+   "url": "https://chinana.ru/news/2026-11-28-hit-431a16/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
@@ -3358,7 +3358,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-27-sysu-e2eae3/",
+   "url": "https://chinana.ru/news/2026-11-28-hit-85a70e/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
@@ -3392,7 +3392,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-27-zhejiang-a3c082/",
+   "url": "https://chinana.ru/news/2026-11-28-peking-c29ceb/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
@@ -3427,7 +3427,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-27-sjtu-6e5ea2/",
+   "url": "https://chinana.ru/news/2026-11-28-peking-cbacfb/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
@@ -3462,7 +3462,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-27-xiamen-ec8b48/",
+   "url": "https://chinana.ru/news/2026-11-28-sysu-079f73/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
@@ -3496,7 +3496,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-27-sysu-fdfda5/",
+   "url": "https://chinana.ru/news/2026-11-28-sysu-13a9e5/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
@@ -3530,7 +3530,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-27-sjtu-f83cf3/",
+   "url": "https://chinana.ru/news/2026-11-28-zhejiang-0ffd22/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
@@ -3554,7 +3554,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-26-peking-233a90/",
+   "url": "https://chinana.ru/news/2026-11-27-sichuan-a76fd2/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
@@ -3578,7 +3578,7 @@
    "richResults": []
   },
   {
-   "url": "https://chinana.ru/news/2026-11-26-peking-5c77d6/",
+   "url": "https://chinana.ru/news/2026-11-27-peking-a7ef10/",
    "hasImpressions": false,
    "verdict": "NEUTRAL",
    "coverageState": "URL неизвестен Google",
